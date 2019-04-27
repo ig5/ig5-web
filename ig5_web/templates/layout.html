@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+    <!-- Title -->
+    <title>{% block title %}{% endblock %} | IG5</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/style/favicon.ico')}}"/>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"/>
+    {% endblock %}
+  </head>
+  <body>
+    <div id="navigation_bar"></div>
+    <div id="wrapper">
+      <div id="header">
+        <ul id="navigation">
+          <!-- TODO -->
+        </ul>
+        <span id="description">International Geodetic Pentathlon Lučenec</span>
+      </div>
+      <div id="border">
+        <div id="content">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="footer_content">
+        <p>Copyrihgt &copy; IG5 | Aktualizované:</p>
+      </div>
+    </div>
+    {% block scripts %}
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% import "macros.j2" as macros %}
+
+{% block title %}Kontakty{% endblock %}
+
+{% block content %}
+{% set you_will_be_in_touch_with = "Komunikovať s Vami budú:" %}
+{% set pavol_fodor_description = "Ing. Pavol Fodor - autor a hlavný organizátor IG5" %}
+
+<h2>Občianske združenie STAV-GEO</h2>
+<p>{{ you_will_be_in_touch_with }}</p>
+<ul>
+  <li><a href="mailto:geostav08@gmail.com">Ing. Angela Fajdová</a></li>
+  <li><a href="mailto:geostav08@gmail.com">{{ pavol_fodor_description }}</a></li>
+</ul>
+
+<h2>Stredná priemyselná škola stavebná Oskara Winklera Lučenec</h2>
+<p>{{ you_will_be_in_touch_with }}</p>
+<ul>
+  <li><a href="mailto:riaditel@spsstavebnalc.edu.sk">Mgr. Ladislav Vikor - riaditeľ školy</a></li>
+  <li><a href="mailto:bonacs74@yahoo.co.uk">Mgr. Csaba Bóna - zástupca riaditeľa školy</a></li>
+</ul>
+
+<h2>Komunikácia vedúcich družstiev</h2>
+<ul>
+  <li><a href="mailto:palf@seznam.cz">{{ pavol_fodor_description }}</a></li>
+</ul>
+
+<h2>Geodetické školy</h2>
+<p>
+  Kontakty (linky na weby) všetkých škôl, ktoré sa zúčastnili súťaze:
+</p>
+{{ macros.school_list_by_country(schools) }}
+{{ macros.google_map() }}
+
+<h2>Web stavgeo.sk</h2>
+<p>
+  Akékoľvek nápady, tipy alebo pripomienky (hlásie chýb) ohľadne webu píšte na adresu:
+  <a href="mailto:stavgeo.web@gmail.com">stavgeo.web@gmail.com</a>.
+  <br>
+  A môžete aj priložiť ruku k dielu: <a href="https://github.com/ig5">github.com/ig5</a>
+</p>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{{
+    macros.google_map_scripts(
+      schools["googleMapsSettings"]["center"]|join(","),
+      schools["googleMapsSettings"]["zoom"],
+      schools["schools"]|safe,
+      gmaps_api_key
+    )
+}}
+{% endblock %}

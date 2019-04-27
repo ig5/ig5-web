@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+
+{% macro _colored_city(school) -%}
+  <span class="blue">{{ school.city }}</span>
+{%- endmacro %}
+
+
+{% macro _school_list(schools) %}
+  <ul>
+  {%- for school in schools %}
+    <li>
+      <a href="{{ school.url }}">{{ school.name|replace(school.city, _colored_city(school)) -}}</a>
+    </li>
+  {%- endfor %}
+  </ul>
+{%- endmacro %}
+
+
+{% macro school_list_by_country(schools) %}
+  {% set schools_grouped = {} %}
+
+  {# Group schools by country. #}
+  {% for school in schools["schools"] -%}
+    {% if school.country not in schools_grouped -%}
+      {% do schools_grouped.update({school.country: []}) -%}
+    {% endif -%}
+
+    {% do schools_grouped[school.country].append(school) -%}
+  {% endfor %}
+
+  {# Render schools by country. #}
+  {% for country, schools in schools_grouped.items() -%}
+    {% if country == "sk" %}
+    <h3>Slovensko</h3>
+    {% elif country == "cz" %}
+    <h3>Česko</h3>
+    {% elif country == "hu" %}
+    <h3>Maďarsko</h3>
+    {% endif -%}
+
+    {{ _school_list(schools) }}
+  {% endfor %}
+{%- endmacro %}
+
+
+{% macro google_map() %}
+  <div id="elevation_chart" style="position:absolute; z-index:0; margin-top:75px"></div>
+  <div id="map_canvas" style="width: 100%; height:550px; position:relative"></div>
+{%- endmacro %}
+
+
+{% macro google_map_scripts(center, zoom, points, gmaps_api_key) %}
+  <!-- Google maps -->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ gmaps_api_key }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/maps.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/vendor/markerwithlabel.js')}}"></script>
+  <script type="text/javascript">
+    var center = new google.maps.LatLng({{ center }});
+    var zoom = {{ zoom }};
+    var points = {{ points }};
+
+    $(document).ready(function() {
+    		maps_initialize()
+    });
+  </script>
+{%- endmacro %}
