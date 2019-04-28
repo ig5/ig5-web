@@ -263,11 +263,11 @@ a[href^="#"]:last-child {
   float: left;
 }
 .rLeft {
-  width: 50%;
+  width: 45%;
   float: left;
 }
 .rRight {
-  width: 50%;
+  width: 45%;
   float: right;
 }
 

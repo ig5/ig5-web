@@ -65,8 +65,9 @@ function maps_initialize(){
 		map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
 	// variables to get current file name
 	var url = window.location.pathname,
-	    filename = url.substring(url.lastIndexOf('/')+1);
-	if (filename.indexOf('rocnik.php') !== -1){
+	    year = url.substring(url.lastIndexOf('/')+1);
+
+	if (year.startsWith("20")){
 		// create the DIV to hold the control and call the ProfileControl() constructor passing in this DIV
 		var profileControlDiv = document.createElement('DIV'),
 		    profileControl = new ProfileControl(profileControlDiv, map);
@@ -169,10 +170,9 @@ function maps_initialize(){
 		routePoints.push(new google.maps.LatLng(pointLat,pointLon));
 
 		// just for site "kontakty.php" - creates a Lucenec centered star shape
-		// if(point[4]){
-		// 	routePoints.push(new google.maps.LatLng(48.328132,19.656845));
-		// }
-		routePoints.push(new google.maps.LatLng(48.328132,19.656845));
+		if (isSchool) {
+			routePoints.push(new google.maps.LatLng(48.328132,19.656845));
+		}
 
 		// infowindow with its content
 		var infowindow = new google.maps.InfoWindow({});
@@ -230,9 +230,11 @@ function plotElevation(results, status) {
 
 		// extract vipPoints - start, stanoviska, ciel
 		var vipPoints = [];
+		var point;
 		for (var i = 0; i < points.length; i++){
-			if (points[i][0] === "Štart" || points[i][0] === "Cieľ" || (points[i][0].length < 15)){
-				vipPoints.push([points[i][1],points[i][2],points[i][0]]);
+			point = points[i];
+			if (point.name === "Štart" || point.name === "Cieľ" || (point.name.length < 15)){
+				vipPoints.push([point.coordinates[0],point.coordinates[1],point.name]);
 			}
 		}
 

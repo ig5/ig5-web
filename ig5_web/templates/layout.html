@@ -15,7 +15,22 @@
     <div id="wrapper">
       <div id="header">
         <ul id="navigation">
-          <!-- TODO -->
+          {% for navigation_item in navigation_bar -%}
+            {% if navigation_item is mapping %}
+              <li {% if active_page.startswith("results") -%}class="active"{% endif -%}>
+                <span>{{ navigation_item.keys()|first }} <span class="rotated">&raquo</span></span>
+                <div>
+                  <ul>
+                    {% for subnav_item in navigation_item.values()|first %}
+                      {{ macros.navigation_item(subnav_item, active_page) }}
+                    {% endfor %}
+                  </ul>
+                </div>
+              </li>
+            {% else %}
+              {{ macros.navigation_item(navigation_item, active_page) }}
+            {% endif %}
+          {% endfor -%}
         </ul>
         <span id="description">International Geodetic Pentathlon Lučenec</span>
       </div>
@@ -23,12 +38,13 @@
         <div id="content">
           {% block content %}
           {% endblock %}
+          <div style="width: 100%; display: flex"></div>
         </div>
       </div>
     </div>
     <div id="footer">
       <div id="footer_content">
-        <p>Copyrihgt &copy; IG5 | Aktualizované:</p>
+        <p>Copyrihgt IG5 {{ copyright_year }}</p>
       </div>
     </div>
     {% block scripts %}

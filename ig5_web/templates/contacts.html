@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% import "macros.j2" as macros %}
 
+{% set active_page = "contacts" -%}
 {% block title %}Kontakty{% endblock %}
 
 {% block content %}
@@ -14,6 +15,7 @@
   <li><a href="mailto:geostav08@gmail.com">{{ pavol_fodor_description }}</a></li>
 </ul>
 
+
 <h2>Stredná priemyselná škola stavebná Oskara Winklera Lučenec</h2>
 <p>{{ you_will_be_in_touch_with }}</p>
 <ul>
@@ -21,10 +23,12 @@
   <li><a href="mailto:bonacs74@yahoo.co.uk">Mgr. Csaba Bóna - zástupca riaditeľa školy</a></li>
 </ul>
 
+
 <h2>Komunikácia vedúcich družstiev</h2>
 <ul>
   <li><a href="mailto:palf@seznam.cz">{{ pavol_fodor_description }}</a></li>
 </ul>
+
 
 <h2>Geodetické školy</h2>
 <p>
@@ -32,6 +36,7 @@
 </p>
 {{ macros.school_list_by_country(schools) }}
 {{ macros.google_map() }}
+
 
 <h2>Web stavgeo.sk</h2>
 <p>
@@ -46,9 +51,9 @@
 {{ super() }}
 {{
     macros.google_map_scripts(
-      schools["googleMapsSettings"]["center"]|join(","),
-      schools["googleMapsSettings"]["zoom"],
-      schools["schools"]|safe,
+      schools.googleMapsSettings.center|join(","),
+      schools.googleMapsSettings.zoom,
+      schools.schools|safe,
       gmaps_api_key
     )
 }}

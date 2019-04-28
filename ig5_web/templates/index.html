@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
+{% import "macros.j2" as macros %}
 
+{% set active_page = "index" -%}
 {% block title %}Medzinárodný geodetický päťboj Lučenec{% endblock %}
 
 {% block content %}
@@ -21,4 +23,75 @@
   <br><br>
   Za podporu vo fáze prípravy ďakujeme <span class="blue">Geotech</span> s.r.o.; Bratislava.
 </p>
+
+
+<h2>13. ročník IG5</h2>
+<p class="author">Pridal: Dm | 09.02.2019</p>
+{% set href = macros.added_summary_href(2018) %}
+<p>
+  Pridané zhrnutie <span class="blue">13. ročníka</span> súťaže, viď.
+  <a href="{{ href }}">{{ href }}</a>.
+</p>
+
+
+<h2>12. ročník IG5</h2>
+<p class="author">Pridal: Dm | 06.07.2017</p>
+{% set href = macros.added_summary_href(2017) %}
+<p>
+  Pridané zhrnutie <span class="blue">12. ročníka</span> súťaže, viď.
+  <a href="{{ href }}">{{ href }}</a>.
+</p>
+
+
+<h2>11. ročník IG5</h2>
+<p class="author">Pridal: Dm | 06.05.2016</p>
+{% set href = macros.added_summary_href(2016) %}
+<p>
+  Pridané zhrnutie <span class="blue">11. ročníka</span> súťaže, viď.
+  <a href="{{ href }}">{{ href }}</a>.
+</p>
+
+
+<h2>9. a 10. ročník IG5</h2>
+<p class="author">Pridal: Dm | 09.04.2016</p>
+{% set href9 = macros.added_summary_href(2014) %}
+{% set href10 = macros.added_summary_href(2015) %}
+<p>
+  Pridané zhrnutie <span class="blue">9. a 10. ročníka</span> súťaže, viď.
+  <a href="{{ href9 }}">{{ href9 }}</a> a
+  <a href="{{ href10 }}">{{ href10 }}</a>.
+
+
+<h2>11. ročník IG5</h2>
+<p class="author">Pridal: Pf | 18.03.2016</p>
+<p>
+  11. ročník IG5 sa uskutoční <span class="blue">15. - 16. apríla 2016</span> a
+  načrieme v ňom do našej histórie.
+</p>
+
+
+<h2>8. ročník GIG5</h2>
+<p class="author">Pridal: Dm | 08.05.2014</p>
+{% set href = macros.added_summary_href(2013) %}
+<p>
+  Pridané zhrnutie <span class="blue">8. ročníka</span> súťaže, viď.
+  <a href="{{ href10 }}">{{ href10 }}</a>.
+</p>
+
+
+<h2>9. ročník IG5</h2>
+<p class="author">Pridal: Pf | 28.03.2014</p>
+<p>
+  9. ročník IG5 sa uskutoční <span class="blue">11. - 13. apríla 2014</span> na pôde strednej priemyselnej školy <span class="blue">Letohrad</span>.
+  <br><br>
+  SPŠS Oskara Winklera Lučenec na trasu vystrojil <span class="blue">Sport-outdoor</span> Lučenec a na ceste do Letohradu podporili partneri:</p>
+  <ul  class="arrow">
+    <li>Geodetická kancelária: <span class="blue">GRUY</span> s.r.o.; Lučenec</li>
+    <li>Geodetická kancelária: <span class="blue">Sekerka, Molnárová</span>; Lučenec</li>
+    <li>Geodetická kancelária: <span class="blue">Maroš Galád</span>; Lučenec</li>
+    <li><span class="blue">GEODETI G5</span> s.r.o.; Lučenec</li>
+    <li>Občianske združenie <span class="blue">STAV-GEO</span>; Lučenec</li>
+    <li>Občianske združenie <span class="blue">SCHOLARIS</span>; Lučenec</li>
+    <li><span class="blue">Komora geodetov a kartografov</span></li>
+  </ul>
 {% endblock %}

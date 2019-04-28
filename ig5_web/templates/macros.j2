@@ -1,6 +1,3 @@
-{% extends "layout.html" %}
-
-
 {% macro _colored_city(school) -%}
   <span class="blue">{{ school.city }}</span>
 {%- endmacro %}
@@ -17,30 +14,80 @@
 {%- endmacro %}
 
 
-{% macro school_list_by_country(schools) %}
+{% macro school_list_by_country(schools, year=none) %}
   {% set schools_grouped = {} %}
 
   {# Group schools by country. #}
-  {% for school in schools["schools"] -%}
+  {% for school in schools.schools -%}
     {% if school.country not in schools_grouped -%}
       {% do schools_grouped.update({school.country: []}) -%}
     {% endif -%}
 
-    {% do schools_grouped[school.country].append(school) -%}
+    {%- if year is not none and year|int not in school.attended -%}
+    {%- else -%}
+      {% do schools_grouped[school.country].append(school) -%}
+    {%- endif -%}
   {% endfor %}
 
   {# Render schools by country. #}
-  {% for country, schools in schools_grouped.items() -%}
-    {% if country == "sk" %}
-    <h3>Slovensko</h3>
-    {% elif country == "cz" %}
-    <h3>Česko</h3>
-    {% elif country == "hu" %}
-    <h3>Maďarsko</h3>
+  {# The order is 'sk', 'hu', 'cz' due to schools.json order #}
+  {%- for country, schools in schools_grouped.items() -%}
+    {% if schools %}
+      {% if country == "sk" %}
+      <h3>Slovensko</h3>
+      {% elif country == "cz" %}
+      <h3>Česko</h3>
+      {% elif country == "hu" %}
+      <h3>Maďarsko</h3>
+      {% endif -%}
     {% endif -%}
 
     {{ _school_list(schools) }}
   {% endfor %}
+{%- endmacro %}
+
+
+{% macro school_count_by_year(schools, year) -%}
+  {% set year = year|int %}
+  {% set attended = namespace(count=0) %}
+
+  {%- for school in schools.schools -%}
+    {% if year in school.attended -%}
+      {% set attended.count = attended.count + 1 -%}
+    {% endif -%}
+  {% endfor -%}
+
+  {{ attended.count }}
+{%- endmacro %}
+
+
+{% macro sponsor_list_by_year(sponsors, year) %}
+  {% set sponsors_grouped = [] %}
+
+  {# Group sponsors by year. #}
+  {% for sponsor in sponsors.sponsors -%}
+    {%- if year|int in sponsor.supported -%}
+      {% do sponsors_grouped.append(sponsor) -%}
+    {%- endif -%}
+  {% endfor %}
+
+  {% if sponsors_grouped %}
+    Sponzori, vďaka ktorým sa súťaž mohla uskutočniť:
+
+    <div id="sponzoring">
+      <ul class="sponzoring_text">
+      {% for sponsor in sponsors_grouped|sort(attribute="name") %}
+        {% if not sponsor.url %}
+        <li>{{ sponsor.name }}</li>
+        {% else %}
+        <li>
+          <a href="{{ sponsor.url }}">{{ sponsor.name }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
 {%- endmacro %}
 
 
@@ -65,4 +112,21 @@
     		maps_initialize()
     });
   </script>
+{%- endmacro %}
+
+
+{% macro navigation_item(navigation_item, active_page) -%}
+  {% set href = navigation_item[0] %}
+  {% set id_ = navigation_item[1] %}
+  {% set caption = navigation_item[2]|safe %}
+  <a href="{{ href|e }}" title="{{ caption|e }}">
+    <li {% if id_ == active_page -%}class="active"{% endif -%}>
+      {{ caption|e }}
+    </li>
+  </a>
+{%- endmacro %}
+
+
+{% macro added_summary_href(year) -%}
+  {{ "https://stavgeo" ~ url_for("summary", year=year) }}
 {%- endmacro %}

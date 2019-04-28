@@ -1,0 +1,874 @@
+{
+  "sponsors": [
+    {
+      "name": "GEODETI G5 s.r.o., Lučenec",
+      "url": "http://www.geodetig5.sk/",
+      "supported": [
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2014
+      ]
+    },
+    {
+      "name": "PRINT TRADE s.r.o., Lučenec",
+      "url": "http://www.printtrade.sk/news.php",
+      "supported": [
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ]
+    },
+    {
+      "name": "GEOPA - Ing.Karol Pavlovič, Trenčianske Mitice",
+      "url": "",
+      "supported": [
+        2006,
+        2007,
+        2008,
+        2011,
+        2012
+      ]
+    },
+    {
+      "name": "kníhkupectvo Phoenix Lučenec",
+      "url": "",
+      "supported": [
+        2006,
+        2009,
+        2010
+      ]
+    },
+    {
+      "name": "Nicholtrackt s.r.o., Lučenec",
+      "url": "http://www.nicholtrackt.sk/lucenec",
+      "supported": [
+        2006,
+        2007,
+        2008
+      ]
+    },
+    {
+      "name": "SPŠ stavebná Oskara Winklera Lučenec",
+      "url": "http://www.spsstavebnalc.edu.sk/",
+      "supported": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2016,
+        2017
+      ]
+    },
+    {
+      "name": "Banskobystrický samosprávny kraj",
+      "url": "http://www.vucbb.sk/portal/urad-bbsk",
+      "supported": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012
+      ]
+    },
+    {
+      "name": "Mesto Lučenec",
+      "url": "http://www.lucenec.sk/",
+      "supported": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2017
+      ]
+    },
+    {
+      "name": "PRP s.r.o., Veľký Krtíš",
+      "url": "http://www.prp.sk/",
+      "supported": [
+        2007
+      ]
+    },
+    {
+      "name": "Vacko s.r.o., Rimavská Sobota",
+      "url": "http://www.tetovacky.sk/sk/tetovacky.html",
+      "supported": [
+        2007
+      ]
+    },
+    {
+      "name": "VOPOS - TERM s.r.o., Lučenec",
+      "url": "http://www.vopos-term.sk/",
+      "supported": [
+        2007
+      ]
+    },
+    {
+      "name": "Obec Praha",
+      "url": "",
+      "supported": [
+        2008
+      ]
+    },
+    {
+      "name": "Obec Divín",
+      "url": "http://www.divin.sk/",
+      "supported": [
+        2008,
+        2017
+      ]
+    },
+    {
+      "name": "Slovenská sporiteľňa",
+      "url": "http://www.slsp.sk/",
+      "supported": [
+        2008,
+        2009,
+        2011,
+        2012,
+        2013
+      ]
+    },
+    {
+      "name": "ČSOB",
+      "url": "http://www.csob.sk/",
+      "supported": [
+        2012,
+        2013
+      ]
+    },
+    {
+      "name": "adik71 - Torty od mamy",
+      "url": "http://www.tortyodmamy.sk/users/adik71",
+      "supported": [
+        2012
+      ]
+    },
+    {
+      "name": "Pekáreň GM PLUS, s.r.o., Detva",
+      "url": "",
+      "supported": [
+        2012
+      ]
+    },
+    {
+      "name": "Allianz - Slovenská poisťovňa",
+      "url": "http://www.allianzsp.sk/",
+      "supported": [
+        2007,
+        2008
+      ]
+    },
+    {
+      "name": "Geodetická kancelária: Róbert Sekerka, Lučenec",
+      "url": "http://www.sekerkageodet.sk/",
+      "supported": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2016,
+        2017
+      ]
+    },
+    {
+      "name": "Geodetická kancelária: GRUY s.r.o., Lučenec",
+      "url": "",
+      "supported": [
+        2008,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014
+      ]
+    },
+    {
+      "name": "LUNACO s.r.o., Lučenec",
+      "url": "http://www.lunaco.sk/",
+      "supported": [
+        2008,
+        2009,
+        2010
+      ]
+    },
+    {
+      "name": "Maštinská",
+      "url": "https://sites.google.com/site/mastinska/",
+      "supported": [
+        2008
+      ]
+    },
+    {
+      "name": "FELDSAM s.r.o., Lučenec",
+      "url": "",
+      "supported": [
+        2008
+      ]
+    },
+    {
+      "name": "Zeměměřič",
+      "url": "http://www.zememeric.cz/",
+      "supported": [
+        2008,
+        2009,
+        2010
+      ]
+    },
+    {
+      "name": "GeoBusiness",
+      "url": "http://www.geobusiness.cz/",
+      "supported": [
+        2008,
+        2010
+      ]
+    },
+    {
+      "name": "FVM KSZI Budapest",
+      "url": "",
+      "supported": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013
+      ]
+    },
+    {
+      "name": "Občianske združenie STAV-GEO Lučenec",
+      "url": "http://www.stavgeo.sk/",
+      "supported": [
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2017
+      ]
+    },
+    {
+      "name": "Orange Slovensko a.s.",
+      "url": "http://www.orange.sk/",
+      "supported": [
+        2009
+      ]
+    },
+    {
+      "name": "GARMIN Slovakia",
+      "url": "http://www.garmin.sk/",
+      "supported": [
+        2009,
+        2010,
+        2011,
+        2012,
+        2018
+      ]
+    },
+    {
+      "name": "RED BULL Slovensko",
+      "url": "http://www.redbull.sk/cs/Satellite/sk_SK/RED-BULL-SLOVENSKO/001242776438278",
+      "supported": [
+        2009
+      ]
+    },
+    {
+      "name": "Obec Budiná",
+      "url": "",
+      "supported": [
+        2009
+      ]
+    },
+    {
+      "name": "GEFOS Slovakia s.r.o.",
+      "url": "http://www.gefos.sk/",
+      "supported": [
+        2009,
+        2010,
+        2011,
+        2012
+      ]
+    },
+    {
+      "name": "AGIS Slovakia s.r.o.",
+      "url": "http://www.agis.sk/o-nas/",
+      "supported": [
+        2009
+      ]
+    },
+    {
+      "name": "Komora geodetov a kartografov",
+      "url": "http://www.kgk.sk/home.php",
+      "supported": [
+        2009,
+        2010,
+        2013,
+        2014,
+        2016,
+        2018
+      ]
+    },
+    {
+      "name": "KAGEOD - geodetické práce, Zvolen",
+      "url": "http://www.kageod.sk/",
+      "supported": [
+        2009
+      ]
+    },
+    {
+      "name": "GEO IGS s.r.o., Bratislava",
+      "url": "http://www.geoigs.sk/templates/tem_highergrounds/uvod.html",
+      "supported": [
+        2009
+      ]
+    },
+    {
+      "name": "Ing. Eva Gertnerová, Lučenec",
+      "url": "",
+      "supported": [
+        2009,
+        2010
+      ]
+    },
+    {
+      "name": "GeoMM - Ing. Marek Matiaš",
+      "url": "",
+      "supported": [
+        2009
+      ]
+    },
+    {
+      "name": "Ing. Viktor Furik, Košice",
+      "url": "",
+      "supported": [
+        2009,
+        2010,
+        2011,
+        2012
+      ]
+    },
+    {
+      "name": "Ing. Karol Klincko, Lučenec",
+      "url": "",
+      "supported": [
+        2013
+      ]
+    },
+    {
+      "name": "Peter Fodor",
+      "url": "",
+      "supported": [
+        2013
+      ]
+    },
+    {
+      "name": "Jozef Szabó",
+      "url": "",
+      "supported": [
+        2013
+      ]
+    },
+    {
+      "name": "Tomáš Kováč",
+      "url": "",
+      "supported": [
+        2013
+      ]
+    },
+    {
+      "name": "GEOPLUS Prešov - Ing.Viera Petrušková",
+      "url": "",
+      "supported": [
+        2009,
+        2010,
+        2011,
+        2012
+      ]
+    },
+    {
+      "name": "Geodézia GP Lučenec",
+      "url": "",
+      "supported": [
+        2009,
+        2010,
+        2016,
+        2017
+      ]
+    },
+    {
+      "name": "Pittel+Brauswetter s.r.o.",
+      "url": "http://www.pittelbrausewetter.sk/SK/index.htm",
+      "supported": [
+        2009,
+        2010
+      ]
+    },
+    {
+      "name": "Obec Radzovce",
+      "url": "http://www.radzovce.sk/",
+      "supported": [
+        2010
+      ]
+    },
+    {
+      "name": "Obec Šiatorská Bukovinka",
+      "url": "http://www.siatbukovinka.szm.com/",
+      "supported": [
+        2010
+      ]
+    },
+    {
+      "name": "Lekáreň Hviezda",
+      "url": "",
+      "supported": [
+        2010,
+        2011,
+        2012,
+        2013
+      ]
+    },
+    {
+      "name": "D&J Design s.r.o., Lučenec",
+      "url": "http://www.djdesign.sk/",
+      "supported": [
+        2013
+      ]
+    },
+    {
+      "name": "GEODETICCA VISION, s.r.o., Košice",
+      "url": "http://www.geodeticca.sk/stranka/vision",
+      "supported": [
+        2010,
+        2011,
+        2012,
+        2013
+      ]
+    },
+    {
+      "name": "Autosport Szilagyi, Lovinobaňa",
+      "url": "http://www.autosportszilagyi.sk/",
+      "supported": [
+        2010
+      ]
+    },
+    {
+      "name": "KIA - Autokomplex, Lučenec",
+      "url": "http://www.autokomplex.mazdadealer.sk/",
+      "supported": [
+        2010
+      ]
+    },
+    {
+      "name": "Autocentrum Bystriansky, Lučenec",
+      "url": "http://www.bystriansky.sk/",
+      "supported": [
+        2010,
+        2011,
+        2012
+      ]
+    },
+    {
+      "name": "Kočiš - výroba nábytku",
+      "url": "http://www.kocis.sk/",
+      "supported": [
+        2010,
+        2013
+      ]
+    },
+    {
+      "name": "Venus Bene",
+      "url": "http://www.venusbene.sk/",
+      "supported": [
+        2010
+      ]
+    },
+    {
+      "name": "Zuzana Lajgútová",
+      "url": "",
+      "supported": [
+        2010
+      ]
+    },
+    {
+      "name": "Zuzana Vargová",
+      "url": "",
+      "supported": [
+        2010
+      ]
+    },
+    {
+      "name": "Jozef Varga",
+      "url": "",
+      "supported": [
+        2013
+      ]
+    },
+    {
+      "name": "Walter Barta",
+      "url": "",
+      "supported": [
+        2013
+      ]
+    },
+    {
+      "name": "PZ Panica-Valice",
+      "url": "http://www.lovuzdar.sk/video-1218/spolocna-polovacka-pz-panica-valice",
+      "supported": [
+        2010,
+        2011
+      ]
+    },
+    {
+      "name": "JR stav",
+      "url": "http://www.jrstav.sk/",
+      "supported": [
+        2010
+      ]
+    },
+    {
+      "name": "Obec Hajnáčka",
+      "url": "http://hajnacka.webnode.sk/",
+      "supported": [
+        2011,
+        2012
+      ]
+    },
+    {
+      "name": "Obec Gemerský Jablonec",
+      "url": "http://www.gemerskyjablonec.ocu.sk/",
+      "supported": [
+        2011,
+        2012
+      ]
+    },
+    {
+      "name": "Geodetická kancelária: Galád, Lučenec",
+      "url": "",
+      "supported": [
+        2011,
+        2012,
+        2013,
+        2014
+      ]
+    },
+    {
+      "name": "Geodetická kancelária: Ing. Tibor Anderkó, Rimavská Sobota",
+      "url": "",
+      "supported": [
+        2012
+      ]
+    },
+    {
+      "name": "Geotech",
+      "url": "http://www.geotech.sk/",
+      "supported": [
+        2011,
+        2012,
+        2016,
+        2017,
+        2018
+      ]
+    },
+    {
+      "name": "ZRŠ - O.W. Lučenec",
+      "url": "",
+      "supported": [
+        2011,
+        2012,
+        2013
+      ]
+    },
+    {
+      "name": "Občianske združenie SCHOLARIS",
+      "url": "",
+      "supported": [
+        2013,
+        2016,
+        2017
+      ]
+    },
+    {
+      "name": "QUICK Servis",
+      "url": "",
+      "supported": [
+        2012,
+        2017
+      ]
+    },
+    {
+      "name": "Ing. Pavol Jucha - Poľovnícke združenie Petrovec",
+      "url": "",
+      "supported": [
+        2013
+      ]
+    },
+    {
+      "name": "Sport-outdoor",
+      "url": "http://www.sport-outdoor.sk/",
+      "supported": [
+        2014
+      ]
+    },
+    {
+      "name": "ArcGEO Information Systems",
+      "url": "http://www.arcgeo.sk/",
+      "supported": []
+    },
+    {
+      "name": "Marian Bálint",
+      "url": "",
+      "supported": [
+        2016
+      ]
+    },
+    {
+      "name": "Euro sweet",
+      "url": "",
+      "supported": [
+        2016
+      ]
+    },
+    {
+      "name": "Generali",
+      "url": "http://www.generali.sk/",
+      "supported": [
+        2016
+      ]
+    },
+    {
+      "name": "Autoškola Gonda",
+      "url": "http://www.autoskolagonda.sk/",
+      "supported": [
+        2016,
+        2017
+      ]
+    },
+    {
+      "name": "G.P.G. PLUS s.r.o.",
+      "url": "",
+      "supported": [
+        2016,
+        2017
+      ]
+    },
+    {
+      "name": "Ipolytarnóc",
+      "url": "http://osmaradvanyok.hu/index.php?p=en_home",
+      "supported": [
+        2016
+      ]
+    },
+    {
+      "name": "KOLEK s.r.o.",
+      "url": "http://www.kolek.sk/",
+      "supported": [
+        2016
+      ]
+    },
+    {
+      "name": "Leica Geosystems",
+      "url": "http://leica-geosystems.com/",
+      "supported": [
+        2016,
+        2017,
+        2018
+      ]
+    },
+    {
+      "name": "Lipovany",
+      "url": "http://www.lipovany.sk/",
+      "supported": [
+        2016
+      ]
+    },
+    {
+      "name": "Polichno",
+      "url": "http://www.polichno.sk/wp/",
+      "supported": [
+        2017
+      ]
+    },
+    {
+      "name": "Europea",
+      "url": "http://www.europea-hungary.hu/index.php/en/",
+      "supported": [
+        2016,
+        2017
+      ]
+    },
+    {
+      "name": "Pleš",
+      "url": "http://www.obecples.biznisweb.sk/",
+      "supported": [
+        2016
+      ]
+    },
+    {
+      "name": "Redox",
+      "url": "http://www.redox.sk/",
+      "supported": [
+        2016
+      ]
+    },
+    {
+      "name": "Ing. Ján Šága, Poltár",
+      "url": "",
+      "supported": [
+        2016,
+        2017
+      ]
+    },
+    {
+      "name": "Úrad geodézie, kartografie a katastra Slovenskej republiky",
+      "url": "http://www.skgeodesy.sk/sk/",
+      "supported": [
+        2016
+      ]
+    },
+    {
+      "name": "ZA-MAX, s.r.o.",
+      "url": "http://www.za-max.sk/",
+      "supported": [
+        2016
+      ]
+    },
+    {
+      "name": "Rodičia a priatelia Strednej priemyselnej školy stavebnej",
+      "url": "",
+      "supported": [
+        2016,
+        2017
+      ]
+    },
+    {
+      "name": "Baksa Krisztián",
+      "url": "",
+      "supported": [
+        2016
+      ]
+    },
+    {
+      "name": "Topografický ústav plukovníka Jána Lipského",
+      "url": "http://www.topu.mil.sk/",
+      "supported": [
+        2016
+      ]
+    },
+    {
+      "name": "Obuv Berevi",
+      "url": "http://www.berevi.sk/",
+      "supported": [
+        2017
+      ]
+    },
+    {
+      "name": "Obuv Berevi",
+      "url": "http://www.starvys.sk/",
+      "supported": [
+        2017
+      ]
+    },
+    {
+      "name": "Hostinec u Ťapákov",
+      "url": "https://www.facebook.com/utapakov1914/",
+      "supported": [
+        2017
+      ]
+    },
+    {
+      "name": "Žilinský samosprávny kraj",
+      "url": "http://www.zilinskazupa.sk/",
+      "supported": [
+        2018
+      ]
+    },
+    {
+      "name": "SURVEYE: Geodetické, GPS a oftalmologické prístroje značiek TOPCON a SOKKIA",
+      "url": "http://www.surveye.sk/",
+      "supported": [
+        2018
+      ]
+    },
+    {
+      "name": "Žilinský samosprávny kraj",
+      "url": "https://www.geoteam.sk/",
+      "supported": [
+        2018
+      ]
+    },
+    {
+      "name": "Váhostav",
+      "url": "http://www.vahostav-sk.sk/",
+      "supported": [
+        2018
+      ]
+    },
+    {
+      "name": "Geodetické práce Geometrické plány v Žiline",
+      "url": "http://www.obsogeo.sk/",
+      "supported": [
+        2018
+      ]
+    },
+    {
+      "name": "Považské múzeum v Žiline",
+      "url": "https://pmza.sk/",
+      "supported": [
+        2018
+      ]
+    },
+    {
+      "name": "Brodno",
+      "url": "http://brodno.sk/",
+      "supported": [
+        2018
+      ]
+    },
+    {
+      "name": "SRRZ-RZ pri Strednej priemyselnej škole stavebnej Žilina",
+      "url": "",
+      "supported": [
+        2018
+      ]
+    },
+    {
+      "name": "Žilina",
+      "url": "http://www.zilina.sk/",
+      "supported": [
+        2018
+      ]
+    },
+    {
+      "name": "meraj.sk",
+      "url": "https://www.meraj.sk/",
+      "supported": [
+        2018
+      ]
+    },
+    {
+      "name": "Geotronics",
+      "url": "http://www.geotronics.sk/",
+      "supported": [
+        2018
+      ]
+    }
+  ]
+}
