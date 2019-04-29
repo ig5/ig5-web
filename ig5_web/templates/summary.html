@@ -9,7 +9,7 @@
 {% block title %}Výsledky {{ summary_number }}. ročníka{% endblock %}
 
 {% block content %}
-<h1>{{ summary_number }}. ročník IG5</h1>
+<h1>{{ summary_number }}. ročník {% if summary_data.basic.mainSponsor %}{{ summary_data.basic.mainSponsor }}{% endif %} IG5</h1>
 <div id="sub_nav">
   <a href="#basic">Základné údaje</a>
   <a href="#schools">Zúčastnené školy</a>
@@ -24,7 +24,7 @@
   {% if docs %}
   <a href="#downloads">Na stiahnutie</a>
   {% endif %}
-  {% if special %}
+  {% if summary_data.special %}
   <a href="#special">Sprievodná akcia</a>
   {% endif %}
 </div>
@@ -39,9 +39,7 @@
   <li><span class="red">Počet súťažných týmov: </span>{{ summary_data.basic.teamCount }}</li>
   <li><span class="red">Celkový počet účastníkov: </span>{{ summary_data.basic.teamCount * 3 }}</li>
 </ul>
-<p>
-  {{ macros.sponsor_list_by_year(sponsors, year) }}
-</p>
+{{ macros.sponsor_list_by_year(sponsors, year) }}
 
 
 <h2>Zúčastnené školy<a name="schools"></a></h2>
@@ -91,23 +89,12 @@
 
 
 <h2>Fotogaléria<a name="fotos"></a></h2>
-<div class="gallery">
-  {% set base_path = summary_img_dir + "/" + year %}
-  {% for photo in photos %}
-    <div class="thumbnail">
-      {% set href_thumbnail = url_for("static", filename=base_path + "/thumbnails/" + photo) %}
-      {% set href_photo = url_for("static", filename=base_path + "/images/" + photo) %}
-      <a data-fancybox="images" class="thumbnailhover" rel="gallery" title="{{ photo }}" href="{{ href_photo }}">
-        <img src="{{ href_thumbnail }}" title="{{ photo }}" alt="{{ photo }}" height="113">
-      </a>
-    </div>
-  {% endfor %}
-</div>
+{{ macros.photo_gallery(summary_img_dir + "/" + year, photos) }}
 
 
 {% if summary_data.video %}
 <h2>Video<a name="video"></a></h2>
-<iframe width="100%" height="550" src="{{ summary_data.video }}" frameborder="0"></iframe>'
+<iframe width="100%" height="550" src="{{ summary_data.video }}" frameborder="0"></iframe>
 {% endif %}
 
 
@@ -118,6 +105,11 @@
   <li><a href="{{ url_for("static", filename="doc/" + name) }}">{{ label }} ({{ size }} mb)</a></li>
 {% endfor %}
 </ul>
+{% endif %}
+
+
+{% if summary_data.special %}
+{% include "special/summary/" ~ year ~ ".html" %}
 {% endif %}
 {% endblock %}
 

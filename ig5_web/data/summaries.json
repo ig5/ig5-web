@@ -20,8 +20,7 @@
           "zoom": 14,
           "center": [48.331, 19.63]
         },
-        "points": [
-          {
+        "points": [{
             "coordinates": [48.33059, 19.66024],
             "description": "Námestie Republiky, Lučenec",
             "name": "Štart"
@@ -84,8 +83,7 @@
           "zoom": 13,
           "center": [48.315, 19.625]
         },
-        "points": [
-          {
+        "points": [{
             "coordinates": [48.33093, 19.66107],
             "description": "Námestie Republiky, Lučenec",
             "name": "Štart"
@@ -148,6 +146,306 @@
         ]
       },
       "video": "https://www.youtube.com/embed/CIvA6AypOKE"
+    },
+    "2008": {
+      "basic": {
+        "date": "18. - 19. apríl",
+        "organizer": "SPŠ stavebná Oskara Winklera Lučenec",
+        "teamCount": 27
+      },
+      "results": {
+        "category1": ["Praha B 34", "Žilina B 39", "Lučenec B 66"],
+        "category2": ["Praha B 34", "Lučenec B 66", "Žilina B 39"]
+      },
+      "route": {
+        "location": "Praha - Políchno - Tuhár - Divín",
+        "start": "SZ obce Praha",
+        "finish": "Zrúcanina hradu Divín",
+        "length": 12,
+        "orientationSiteCount": 7,
+        "googleMapsSettings": {
+          "zoom": 12,
+          "center": [48.407, 19.515]
+        },
+        "points": [{
+            "coordinates": [48.36226, 19.50607],
+            "description": "SZ obce Praha",
+            "name": "Štart"
+          },
+          {
+            "coordinates": [48.3699, 19.49772],
+            "description": "",
+            "name": "1. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.37558, 19.49323],
+            "description": "Trigonometrické určenie výšky predmetu",
+            "name": "1. stanovisko"
+          },
+          {
+            "coordinates": [48.39118, 19.48883],
+            "description": "",
+            "name": "2. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.39505, 19.49462],
+            "description": "Vedomostný test",
+            "name": "2. stanovisko"
+          },
+          {
+            "coordinates": [48.40658, 19.49237],
+            "description": "",
+            "name": "3. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.41458, 19.49705],
+            "description": "",
+            "name": "4. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.42373, 19.50165],
+            "description": "Centrácia a horizontácia prístroja",
+            "name": "3. stanovisko"
+          },
+          {
+            "coordinates": [48.42592, 19.50757],
+            "description": "",
+            "name": "5. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.42825, 19.5085],
+            "description": "",
+            "name": "6. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.4301, 19.50872],
+            "description": "",
+            "name": "7. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.42962, 19.52068],
+            "description": "Určenie nivelačného prevýšenia",
+            "name": "4. stanovisko"
+          },
+          {
+            "coordinates": [48.44737, 19.53264],
+            "description": "Určenie výmery",
+            "name": "5. stanovisko"
+          },
+          {
+            "coordinates": [48.44837, 19.53313],
+            "description": "Zrúcanina hradu Divín",
+            "name": "Cieľ"
+          }
+        ]
+      },
+      "video": "https://www.youtube.com/embed/30_g-M6mJbk"
+    },
+    "2009": {
+      "basic": {
+        "date": "24. - 25. apríl",
+        "organizer": "Občianske združenie STAV-GEO Lučenec a SPŠ stavebná Oskara Winklera Lučenec",
+        "teamCount": 25,
+        "mainSponsor": "Garmin"
+      },
+      "results": {
+        "category1": ["Praha A", "Lučenec B", "Žilina A"],
+        "category2": ["Žilina A", "Lučenec B", "Praha A"]
+      },
+      "route": {
+        "location": "Kataster obce Budiná",
+        "start": "SZ obce Budiná",
+        "finish": "Budiná - Kamenné vráta",
+        "length": 10,
+        "orientationSiteCount": 6,
+        "googleMapsSettings": {
+          "zoom": 13,
+          "center": [48.47185, 19.46745]
+        },
+        "points": [{
+            "coordinates": [48.4578, 19.476],
+            "description": "SZ obce Budiná",
+            "name": "Štart"
+          },
+          {
+            "coordinates": [48.46415, 19.47042],
+            "description": "Určenie nivelačného prevýšenia",
+            "name": "1. stanovisko"
+          },
+          {
+            "coordinates": [48.46658, 19.47152],
+            "description": "",
+            "name": "1. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.46978, 19.46822],
+            "description": "",
+            "name": "2. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.47185, 19.46745],
+            "description": "",
+            "name": "3. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.4783, 19.46638],
+            "description": "Vedomostný test",
+            "name": "2. stanovisko"
+          },
+          {
+            "coordinates": [48.48133, 19.46068],
+            "description": "Určenie výmery",
+            "name": "3. stanovisko"
+          },
+          {
+            "coordinates": [48.48598, 19.46178],
+            "description": "",
+            "name": "4. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.48772, 19.44743],
+            "description": "Trigonometrické určenie výšky predmetu",
+            "name": "4. stanovisko"
+          },
+          {
+            "coordinates": [48.48023, 19.45447],
+            "description": "",
+            "name": "5. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.47328, 19.45222],
+            "description": "Centrácia a horizontácia prístroja",
+            "name": "5. stanovisko"
+          },
+          {
+            "coordinates": [48.47135, 19.44957],
+            "description": "",
+            "name": "6. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.46575, 19.46472],
+            "description": "Budiná - kamenné vráta",
+            "name": "Cieľ"
+          }
+        ]
+      },
+      "video": "https://www.youtube.com/embed/hRkiAtpn3t0",
+      "special": true
+    },
+    "2010": {
+      "basic": {
+        "date": "23. - 24. apríl",
+        "organizer": "Občianske združenie STAV-GEO Lučenec a SPŠ stavebná Oskara Winklera Lučenec",
+        "teamCount": 32,
+        "mainSponsor": "Garmin"
+      },
+      "results": {
+        "category1": ["Lučenec C", "Praha A", "Žilina A"],
+        "category2": ["Lučenec C", "Praha C", "Trenčín A"]
+      },
+      "route": {
+        "location": "Cerová vrchovina",
+        "start": "JV Obce Radzovce",
+        "finish": "Zrúcanina hradu Šomoška",
+        "length": 12,
+        "orientationSiteCount": 12,
+        "googleMapsSettings": {
+          "zoom": 13,
+          "center": [48.19358, 19.86]
+        },
+        "points": [{
+            "coordinates": [48.21774, 19.83122],
+            "description": "JV Obce Radzovce",
+            "name": "Štart"
+          },
+          {
+            "coordinates": [48.21238, 19.83843],
+            "description": "",
+            "name": "1. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.20397, 19.84247],
+            "description": "",
+            "name": "2. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.20473, 19.84815],
+            "description": "",
+            "name": "3. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.20515, 19.84942],
+            "description": "",
+            "name": "4. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.2056, 19.8515],
+            "description": "",
+            "name": "5. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.2056, 19.85617],
+            "description": "",
+            "name": "6. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.20603, 19.86088],
+            "description": "Vedomostný test",
+            "name": "1. stanovisko"
+          },
+          {
+            "coordinates": [48.19358, 19.87573],
+            "description": "",
+            "name": "7. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.19017, 19.87858],
+            "description": "Určenie výmery",
+            "name": "2. stanovisko"
+          },
+          {
+            "coordinates": [48.18365, 19.87553],
+            "description": "",
+            "name": "8. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.18302, 19.86572],
+            "description": "",
+            "name": "9. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.18222, 19.86305],
+            "description": "",
+            "name": "10. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.18355, 19.86108],
+            "description": "Určenie nivelačného prevýšenia",
+            "name": "3. stanovisko"
+          },
+          {
+            "coordinates": [48.17993, 19.86125],
+            "description": "Trigonometrické určenie výšky predmetu",
+            "name": "4. stanovisko"
+          },
+          {
+            "coordinates": [48.17522, 19.85851],
+            "description": "Centrácia a horizontácia prístroja",
+            "name": "5. stanovisko"
+          },
+          {
+            "coordinates": [48.17207, 19.85763],
+            "description": "",
+            "name": "12. orientačné stanovisko"
+          },
+          {
+            "coordinates": [48.17142, 19.85705],
+            "description": "Zrúcanina hradu Šomoška",
+            "name": "Cieľ"
+          }
+        ]
+      },
+      "video": "https://www.youtube.com/embed/uRFKdplSoNg"
     }
   }
 }

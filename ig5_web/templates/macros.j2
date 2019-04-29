@@ -72,7 +72,7 @@
   {% endfor %}
 
   {% if sponsors_grouped %}
-    Sponzori, vďaka ktorým sa súťaž mohla uskutočniť:
+    <p>Sponzori, vďaka ktorým sa súťaž mohla uskutočniť:</p>
 
     <div id="sponzoring">
       <ul class="sponzoring_text">
@@ -129,4 +129,19 @@
 
 {% macro added_summary_href(year) -%}
   {{ "https://stavgeo" ~ url_for("summary", year=year) }}
+{%- endmacro %}
+
+
+{% macro photo_gallery(base_path, photos) -%}
+<div class="gallery">
+  {% for photo in photos %}
+    <div class="thumbnail">
+      {% set href_thumbnail = url_for("static", filename=base_path + "/thumbnails/" + photo) %}
+      {% set href_photo = url_for("static", filename=base_path + "/images/" + photo) %}
+      <a data-fancybox="images" class="thumbnailhover" rel="gallery" title="{{ photo }}" href="{{ href_photo }}">
+        <img src="{{ href_thumbnail }}" title="{{ photo }}" alt="{{ photo }}" height="113">
+      </a>
+    </div>
+  {% endfor %}
+</div>
 {%- endmacro %}

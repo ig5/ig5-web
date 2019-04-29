@@ -19,11 +19,10 @@ with open(os.path.join(data_dir, "sponsors.json")) as f:
 
 with open(os.path.join(data_dir, "summaries.json")) as f:
     summaries = json.load(f)
+years = summaries["summaries"].keys()
 
 load_dotenv(os.path.join(os.path.dirname(here), ".env"))
 gmaps_api_key = os.environ["GMAPS_API_KEY"]
-
-years = summaries["summaries"].keys()
 
 
 app = Flask(__name__)
@@ -59,8 +58,16 @@ def index():
     return render_template("index.html")
 
 
-def get_photos(year):
-    path = os.path.join(summary_photos_dir, str(year), "thumbnails")
+def get_photos(year, special=False):
+    year = str(year)
+    base_path = os.path.join(summary_photos_dir, year)
+    if special:
+        base_path = os.path.join(base_path, "special")
+
+    path = os.path.join(base_path, "thumbnails")
+    if not os.path.exists(path):
+        return []
+
     return sorted(os.listdir(path))
 
 
@@ -102,6 +109,7 @@ def summary(year):
         schools=schools,
         summaries=summaries,
         photos=get_photos(year),
+        photos_special=get_photos(year, True),
         docs=get_docs(year),
         gmaps_api_key=gmaps_api_key,
     )
