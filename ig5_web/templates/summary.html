@@ -24,7 +24,7 @@
   {% if docs %}
   <a href="#downloads">Na stiahnutie</a>
   {% endif %}
-  {% if summary_data.special %}
+  {% if summary_data.hasSpecial %}
   <a href="#special">Sprievodná akcia</a>
   {% endif %}
 </div>
@@ -39,7 +39,7 @@
   <li><span class="red">Počet súťažných týmov: </span>{{ summary_data.basic.teamCount }}</li>
   <li><span class="red">Celkový počet účastníkov: </span>{{ summary_data.basic.teamCount * 3 }}</li>
 </ul>
-{{ macros.sponsor_list_by_year(sponsors, year) }}
+{{ macros.sponsor_list_by_year(sponsors, year, summary_data.basic.sponsorsSpecial) }}
 
 
 <h2>Zúčastnené školy<a name="schools"></a></h2>
@@ -108,21 +108,23 @@
 {% endif %}
 
 
-{% if summary_data.special %}
+{% if summary_data.hasSpecial %}
 {% include "special/summary/" ~ year ~ ".html" %}
 {% endif %}
 {% endblock %}
 
 {% block scripts %}
-{{ super() }}
-{{
-    macros.google_map_scripts(
-      summary_data.route.googleMapsSettings.center|join(","),
-      summary_data.route.googleMapsSettings.zoom,
-      summary_data.route.points|safe,
-      gmaps_api_key
-    )
-}}
+  {{ super() }}
+  {% if summary_data.route %}
+    {{
+        macros.google_map_scripts(
+          summary_data.route.googleMapsSettings.center|join(","),
+          summary_data.route.googleMapsSettings.zoom,
+          summary_data.route.points|safe,
+          gmaps_api_key
+        )
+    }}
+  {% endif %}
 
 <!-- Fancybox -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />

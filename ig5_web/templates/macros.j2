@@ -61,7 +61,7 @@
 {%- endmacro %}
 
 
-{% macro sponsor_list_by_year(sponsors, year) %}
+{% macro sponsor_list_by_year(sponsors, year, special) %}
   {% set sponsors_grouped = [] %}
 
   {# Group sponsors by year. #}
@@ -72,7 +72,13 @@
   {% endfor %}
 
   {% if sponsors_grouped %}
-    <p>Sponzori, vďaka ktorým sa súťaž mohla uskutočniť:</p>
+    <p>
+    {% if not special %}
+    Sponzori, vďaka ktorým sa súťaž mohla uskutočniť:
+    {% else %}
+    {{ special }}
+    {% endif %}
+    </p>
 
     <div id="sponzoring">
       <ul class="sponzoring_text">

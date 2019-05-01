@@ -329,6 +329,7 @@ a[href^="#"]:last-child {
   display: block;
 }
 .thumbnail img {
+  max-width: 150px;
   margin: auto;
   display: block;
   border: 2px solid #0093dd;
