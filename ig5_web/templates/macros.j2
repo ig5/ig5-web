@@ -1,13 +1,7 @@
 {% macro school_list(schools) %}
-  {%- for country_code, country_schools in schools.items() -%}
+  {%- for country, country_schools in schools.items() -%}
     {% if country_schools %}
-      {% if country_code == "sk" %}
-      <h3>Slovensko</h3>
-      {% elif country_code == "hu" %}
-      <h3>Maďarsko</h3>
-      {% elif country_code == "cz" %}
-      <h3>Česko</h3>
-      {% endif -%}
+      <h3>{{ country }}</h3>
     {% endif -%}
 
     <ul>

@@ -4,7 +4,7 @@
     "center": [48.328132, 19.656845]
   },
   "schools": {
-    "sk": [{
+    "Slovensko": [{
         "city": "Banská Štiavnica",
         "name": "SPŠ Samuela Mikovíniho",
         "url": "http://mikovini.edupage.sk/",
@@ -204,7 +204,7 @@
         ]
       }
     ],
-    "hu": [{
+    "Maďarsko": [{
         "city": "Békéscsaba",
         "name": "Vásárhelyi Pál Műszaki Szakközépiskola",
         "url": "http://vizmu.net/",
@@ -330,7 +330,7 @@
         ]
       }
     ],
-    "cz": [{
+    "Česko": [{
         "city": "Brno",
         "name": "Střední průmyslová škola stavební",
         "url": "http://www.spsstavbrno.cz/",

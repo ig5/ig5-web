@@ -52,7 +52,7 @@ def filter_schools_by_year(schools, year):
     year = int(year)
     filtered_schools = {}
 
-    for country_code, country_schools in schools["schools"].items():
+    for country, country_schools in schools["schools"].items():
         filtered_country_schools = []
 
         for school in country_schools:
@@ -60,7 +60,7 @@ def filter_schools_by_year(schools, year):
                 filtered_country_schools.append(school)
 
         if filtered_country_schools:
-            filtered_schools[country_code] = filtered_country_schools
+            filtered_schools[country] = filtered_country_schools
 
     return {"schools": filtered_schools}
 
