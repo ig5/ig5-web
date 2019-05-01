@@ -34,7 +34,7 @@
 <p>
   Kontakty (linky na weby) všetkých škôl, ktoré sa zúčastnili súťaze:
 </p>
-{{ macros.school_list_by_country(schools) }}
+{{ macros.school_list(schools.schools) }}
 {{ macros.google_map() }}
 
 
@@ -53,7 +53,7 @@
     macros.google_map_scripts(
       schools.googleMapsSettings.center|join(","),
       schools.googleMapsSettings.zoom,
-      schools.schools|safe,
+      schools_flattened|safe,
       gmaps_api_key
     )
 }}

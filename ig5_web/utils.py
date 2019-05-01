@@ -1,24 +1,9 @@
 from datetime import datetime
+import itertools
 import json
 import os
 
 from ig5_web import constants
-
-
-def read_data():
-    with open(os.path.join(constants.data_dir, "schools.json")) as f:
-        # TODO Sort alphabetically and take utf-8 into consideration.
-        schools = json.load(f)
-
-    with open(os.path.join(constants.data_dir, "sponsors.json")) as f:
-        # TODO Sort alphabetically and take utf-8 into consideration.
-        sponsors = json.load(f)
-
-    with open(os.path.join(constants.data_dir, "summaries.json")) as f:
-        summaries = json.load(f)
-
-    years = summaries["summaries"].keys()
-    return schools, sponsors, summaries, years
 
 
 def prepare_template_context(years):
@@ -43,6 +28,49 @@ def prepare_template_context(years):
         summary_img_dir=constants.summary_img_dir,
         copyright_year=datetime.now().year,
     )
+
+
+def read_data():
+    with open(os.path.join(constants.data_dir, "schools.json")) as f:
+        schools = json.load(f)
+
+    with open(os.path.join(constants.data_dir, "sponsors.json")) as f:
+        sponsors = json.load(f)
+
+    with open(os.path.join(constants.data_dir, "summaries.json")) as f:
+        summaries = json.load(f)
+
+    return schools, sponsors, summaries, summaries.keys()
+
+
+def filter_sponsors_by_year(sponsors, year):
+    year = int(year)
+    return [sponsor for sponsor in sponsors if year in sponsor["supported"]]
+
+
+def filter_schools_by_year(schools, year):
+    year = int(year)
+    filtered_schools = {}
+
+    for country_code, country_schools in schools["schools"].items():
+        filtered_country_schools = []
+
+        for school in country_schools:
+            if year in school["attended"]:
+                filtered_country_schools.append(school)
+
+        if filtered_country_schools:
+            filtered_schools[country_code] = filtered_country_schools
+
+    return {"schools": filtered_schools}
+
+
+def flatten_schools(schools):
+    return list(itertools.chain.from_iterable(schools["schools"].values()))
+
+
+def school_count(schools):
+    return len(flatten_schools(schools))
 
 
 def get_photos(year, special=False):

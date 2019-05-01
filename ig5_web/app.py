@@ -24,17 +24,19 @@ def summary(year):
     if year not in years:
         abort(404)
 
-    context = dict(
+    attended_schools = utils.filter_schools_by_year(schools, year)
+    return render_template(
+        "summary.html",
         year=year,
-        sponsors=sponsors,
-        schools=schools,
-        summaries=summaries,
+        summary=summaries[year],
+        sponsors=utils.filter_sponsors_by_year(sponsors, year),
+        school_count=utils.school_count(attended_schools),
+        schools=attended_schools,
         photos=utils.get_photos(year),
         photos_special=utils.get_photos(year, True),
         docs=utils.get_docs(year),
         gmaps_api_key=constants.gmaps_api_key,
     )
-    return render_template("summary.html", **context)
 
 
 @app.route("/vysledky/<path:to_file>")
@@ -44,8 +46,12 @@ def summary_static_files_hack(to_file):
 
 @app.route("/kontakty")
 def contacts():
-    context = dict(schools=schools, gmaps_api_key=constants.gmaps_api_key)
-    return render_template("contacts.html", **context)
+    return render_template(
+        "contacts.html",
+        schools=schools,
+        schools_flattened=utils.flatten_schools(schools),
+        gmaps_api_key=constants.gmaps_api_key,
+    )
 
 
 if __name__ == "__main__":

@@ -1,486 +1,466 @@
 {
   "googleMapsSettings": {
     "zoom": 6,
-    "center": [48.328132,19.656845]
+    "center": [48.328132, 19.656845]
   },
-  "schools": [
-    {
-      "country": "sk",
-      "city": "Banská Štiavnica",
-      "name": "SPŠ Samuela Mikovíniho Banská Štiavnica",
-      "url": "http://mikovini.edupage.sk/",
-      "coordinates": [
-        48.4592,
-        18.898
-      ],
-      "attended": [
-        2006,
-        2007,
-        2008,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2018
-      ]
-    },
-    {
-      "country": "sk",
-      "city": "Bratislava",
-      "name": "SGS Bratislava",
-      "url": "https://stav-geo.edupage.org/",
-      "coordinates": [
-        48.15395,
-        17.1208
-      ],
-      "attended": [
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "sk",
-      "city": "Košice",
-      "name": "SPŠ stavebná a geodetická Košice",
-      "url": "http://www.spssagke.edu.sk/",
-      "coordinates": [
-        48.72605,
-        21.26306
-      ],
-      "attended": [
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2013
-      ]
-    },
-    {
-      "country": "sk",
-      "city": "Lučenec",
-      "name": "SPŠ stavebná Oskara Winklera Lučenec",
-      "url": "https://spssow.edupage.org/",
-      "coordinates": [
-        48.328132,
-        19.656845
-      ],
-      "attended": [
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "sk",
-      "city": "Nitra",
-      "name": "SPŠ stavebná Nitra",
-      "url": "http://www.spssnr.sk/",
-      "coordinates": [
-        48.2968,
-        18.078
-      ],
-      "attended": [
-        2012,
-        2013,
-        2016,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "sk",
-      "city": "Prešov",
-      "name": "SPŠ stavebná Prešov",
-      "url": "https://spsstavpo.edupage.org/",
-      "coordinates": [
-        48.9915,
-        21.24839
-      ],
-      "attended": [
-        2007,
-        2008,
-        2009,
-        2010,
-        2011
-      ]
-    },
-    {
-      "country": "sk",
-      "city": "Spišská Nová Ves",
-      "name": "SPŠ Spišská Nová Ves",
-      "url": "https://soussnv.edupage.org/",
-      "coordinates": [
-        48.94079,
-        20.5777
-      ],
-      "attended": [
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013
-      ]
-    },
-    {
-      "country": "sk",
-      "city": "Trenčín",
-      "name": "SPŠ stavebná Emila Belluša Trenčín",
-      "url": "http://www.sosstn.sk/",
-      "coordinates": [
-        48.8976,
-        18.02291
-      ],
-      "attended": [
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "sk",
-      "city": "Trnava",
-      "name": "SPŠ stavebná Trnava",
-      "url": "http://www.spsstt.sk/",
-      "coordinates": [
-        48.36722,
-        17.57127
-      ],
-      "attended": [
-        2006,
-        2007,
-        2012,
-        2013
-      ]
-    },
-    {
-      "country": "sk",
-      "city": "Žilina",
-      "name": "SPŠ stavebná Žilina",
-      "url": "http://www.spssza.sk/",
-      "coordinates": [
-        49.2224,
-        18.73518
-      ],
-      "attended": [
-        2006,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "hu",
-      "city": "Békéscsaba",
-      "name": "Vásárhelyi Pál Műszaki Szakközépiskola Békéscsaba",
-      "url": "http://vizmu.net/",
-      "coordinates": [
-        46.68068,
-        21.10388
-      ],
-      "attended": [
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "hu",
-      "city": "Budapest",
-      "name": "Varga Márton Kertészeti és Földmérési Szakképző Iskola, Kollégium, FVM Gyakorlóiskola Budapest",
-      "url": "http://www.vmszki.hu/",
-      "coordinates": [
-        47.51049,
-        19.12054
-      ],
-      "attended": [
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2012,
-        2013,
-        2014,
-        2015
-      ]
-    },
-    {
-      "country": "hu",
-      "city": "Miskolc",
-      "name": "Kós Károly Építőipari Szakközépiskola Miskolc",
-      "url": "http://pc1.koosk-misk.sulinet.hu/",
-      "coordinates": [
-        48.11642,
-        20.7728
-      ],
-      "attended": [
-        2007,
-        2008,
-        2012,
-        2013,
-        2015,
-        2016
-      ]
-    },
-    {
-      "country": "hu",
-      "city": "Pécs",
-      "name": "Pollack Mihály Műszaki Szakközépiskola, Szakiskola és Kollégium Pécs",
-      "url": "http://www.pollack.hu/",
-      "coordinates": [
-        46.07006,
-        18.2333
-      ],
-      "attended": [
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "hu",
-      "city": "Székesfehérvár",
-      "name": "Belvárosi I. István Középiskola Jáky József Tagintézménye Székesfehérvár",
-      "url": "http://jaky.hu/",
-      "coordinates": [
-        47.18864,
-        18.42005
-      ],
-      "attended": [
-        2007,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "hu",
-      "city": "Szombathely",
-      "name": "Élelmiszeripari és Földmérési Szakképző Iskola és Kollégium Szombathely",
-      "url": "http://efszk.sulinet.hu/",
-      "coordinates": [
-        47.22855,
-        16.60724
-      ],
-      "attended": [
-        2006,
-        2007,
-        2008,
-        2010,
-        2012,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "cz",
-      "city": "České Budějovice",
-      "name": "Střední průmyslová škola stavební České Budějovice",
-      "url": "http://www.spsstavcb.cz/",
-      "coordinates": [
-        48.979079,
-        14.469362
-      ],
-      "attended": [
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "cz",
-      "city": "Brno",
-      "name": "Střední průmyslová škola stavební Brno",
-      "url": "http://www.spsstavbrno.cz/",
-      "coordinates": [
-        49.2018,
-        16.6131
-      ],
-      "attended": [
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "cz",
-      "city": "Duchcov",
-      "name": "Střední průmyslová škola Duchcov",
-      "url": "https://www.gspsd.cz",
-      "coordinates": [
-        50.60546,
-        13.74848
-      ],
-      "attended": [
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "cz",
-      "city": "Letohrad",
-      "name": "Průmyslová střední škola Letohrad",
-      "url": "http://www.pssletohrad.cz/",
-      "coordinates": [
-        50.03841,
-        16.49
-      ],
-      "attended": [
-        2010,
-        2011,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "cz",
-      "city": "Opava",
-      "name": "Střední průmyslová škola stavební Opava",
-      "url": "http://www.spsopava.cz",
-      "coordinates": [
-        49.9361,
-        17.8993
-      ],
-      "attended": [
-        2012,
-        2013,
-        2014,
-        2015,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "cz",
-      "city": "Ostrava",
-      "name": "Střední průmyslová škola stavební Ostrava",
-      "url": "http://www.stav-ova.cz/",
-      "coordinates": [
-        49.79913,
-        18.2408
-      ],
-      "attended": [
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2016,
-        2017,
-        2018
-      ]
-    },
-    {
-      "country": "cz",
-      "city": "Praha",
-      "name": "Střední průmyslová škola zeměměřická Praha",
-      "url": "http://www.spszem.cz/",
-      "coordinates": [
-        50.09168,
-        14.51245
-      ],
-      "attended": [
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018
-      ]
-    }
-  ]
+  "schools": {
+    "sk": [{
+        "city": "Banská Štiavnica",
+        "name": "SPŠ Samuela Mikovíniho",
+        "url": "http://mikovini.edupage.sk/",
+        "coordinates": [
+          48.4592,
+          18.898
+        ],
+        "attended": [
+          2006,
+          2007,
+          2008,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2018
+        ]
+      },
+      {
+        "city": "Bratislava",
+        "name": "SGS",
+        "url": "https://stav-geo.edupage.org/",
+        "coordinates": [
+          48.15395,
+          17.1208
+        ],
+        "attended": [
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "Košice",
+        "name": "SPŠ stavebná a geodetická",
+        "url": "http://www.spssagke.edu.sk/",
+        "coordinates": [
+          48.72605,
+          21.26306
+        ],
+        "attended": [
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2013
+        ]
+      },
+      {
+        "city": "Lučenec",
+        "name": "SPŠ stavebná Oskara Winklera",
+        "url": "https://spssow.edupage.org/",
+        "coordinates": [
+          48.328132,
+          19.656845
+        ],
+        "attended": [
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "Nitra",
+        "name": "SPŠ stavebná",
+        "url": "http://www.spssnr.sk/",
+        "coordinates": [
+          48.2968,
+          18.078
+        ],
+        "attended": [
+          2012,
+          2013,
+          2016,
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "Prešov",
+        "name": "SPŠ stavebná",
+        "url": "https://spsstavpo.edupage.org/",
+        "coordinates": [
+          48.9915,
+          21.24839
+        ],
+        "attended": [
+          2007,
+          2008,
+          2009,
+          2010,
+          2011
+        ]
+      },
+      {
+        "city": "Spišská Nová Ves",
+        "name": "SPŠ",
+        "url": "https://soussnv.edupage.org/",
+        "coordinates": [
+          48.94079,
+          20.5777
+        ],
+        "attended": [
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013
+        ]
+      },
+      {
+        "city": "Trenčín",
+        "name": "SPŠ stavebná Emila Belluša",
+        "url": "http://www.sosstn.sk/",
+        "coordinates": [
+          48.8976,
+          18.02291
+        ],
+        "attended": [
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "Trnava",
+        "name": "SPŠ stavebná",
+        "url": "http://www.spsstt.sk/",
+        "coordinates": [
+          48.36722,
+          17.57127
+        ],
+        "attended": [
+          2006,
+          2007,
+          2012,
+          2013
+        ]
+      },
+      {
+        "city": "Žilina",
+        "name": "SPŠ stavebná",
+        "url": "http://www.spssza.sk/",
+        "coordinates": [
+          49.2224,
+          18.73518
+        ],
+        "attended": [
+          2006,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ]
+      }
+    ],
+    "hu": [{
+        "city": "Békéscsaba",
+        "name": "Vásárhelyi Pál Műszaki Szakközépiskola",
+        "url": "http://vizmu.net/",
+        "coordinates": [
+          46.68068,
+          21.10388
+        ],
+        "attended": [
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "Budapest",
+        "name": "Varga Márton Kertészeti és Földmérési Szakképző Iskola, Kollégium, FVM Gyakorlóiskola",
+        "url": "http://www.vmszki.hu/",
+        "coordinates": [
+          47.51049,
+          19.12054
+        ],
+        "attended": [
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2012,
+          2013,
+          2014,
+          2015
+        ]
+      },
+      {
+        "city": "Miskolc",
+        "name": "Kós Károly Építőipari Szakközépiskola",
+        "url": "http://pc1.koosk-misk.sulinet.hu/",
+        "coordinates": [
+          48.11642,
+          20.7728
+        ],
+        "attended": [
+          2007,
+          2008,
+          2012,
+          2013,
+          2015,
+          2016
+        ]
+      },
+      {
+        "city": "Pécs",
+        "name": "Pollack Mihály Műszaki Szakközépiskola, Szakiskola és Kollégium",
+        "url": "http://www.pollack.hu/",
+        "coordinates": [
+          46.07006,
+          18.2333
+        ],
+        "attended": [
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "Székesfehérvár",
+        "name": "Belvárosi I. István Középiskola Jáky József Tagintézménye",
+        "url": "http://jaky.hu/",
+        "coordinates": [
+          47.18864,
+          18.42005
+        ],
+        "attended": [
+          2007,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "Szombathely",
+        "name": "Élelmiszeripari és Földmérési Szakképző Iskola és Kollégium",
+        "url": "http://efszk.sulinet.hu/",
+        "coordinates": [
+          47.22855,
+          16.60724
+        ],
+        "attended": [
+          2006,
+          2007,
+          2008,
+          2010,
+          2012,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ]
+      }
+    ],
+    "cz": [{
+        "city": "Brno",
+        "name": "Střední průmyslová škola stavební",
+        "url": "http://www.spsstavbrno.cz/",
+        "coordinates": [
+          49.2018,
+          16.6131
+        ],
+        "attended": [
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "České Budějovice",
+        "name": "Střední průmyslová škola stavební",
+        "url": "http://www.spsstavcb.cz/",
+        "coordinates": [
+          48.979079,
+          14.469362
+        ],
+        "attended": [
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "Duchcov",
+        "name": "Gymnázium a Střední průmyslová škola",
+        "url": "https://www.gspsd.cz",
+        "coordinates": [
+          50.60546,
+          13.74848
+        ],
+        "attended": [
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "Letohrad",
+        "name": "Průmyslová střední škola",
+        "url": "http://www.pssletohrad.cz/",
+        "coordinates": [
+          50.03841,
+          16.49
+        ],
+        "attended": [
+          2010,
+          2011,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "Opava",
+        "name": "Střední průmyslová škola stavební",
+        "url": "http://www.spsopava.cz",
+        "coordinates": [
+          49.9361,
+          17.8993
+        ],
+        "attended": [
+          2012,
+          2013,
+          2014,
+          2015,
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "Ostrava",
+        "name": "Střední průmyslová škola stavební",
+        "url": "http://www.stav-ova.cz/",
+        "coordinates": [
+          49.79913,
+          18.2408
+        ],
+        "attended": [
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2016,
+          2017,
+          2018
+        ]
+      },
+      {
+        "city": "Praha",
+        "name": "Střední průmyslová škola zeměměřická",
+        "url": "http://www.spszem.cz/",
+        "coordinates": [
+          50.09168,
+          14.51245
+        ],
+        "attended": [
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ]
+      }
+    ]
+  }
 }
