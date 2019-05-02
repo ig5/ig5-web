@@ -78,8 +78,9 @@
 {%- endmacro %}
 
 
-{% macro added_summary_href(year) -%}
-  {{ "https://stavgeo" ~ url_for("summary", year=year) }}
+{% macro added_summary_link(order) -%}
+  {% set href = url_for("summary", order=order, _external=True) %}
+  <a href="{{ href }}">{{ href }}</a>
 {%- endmacro %}
 
 

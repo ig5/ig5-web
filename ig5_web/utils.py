@@ -3,22 +3,24 @@ import itertools
 import json
 import os
 
+from flask import url_for
+
 from ig5_web import constants
 
 
 def prepare_template_context(years):
     navigation_bar = [
-        ("/", "index", "Novinky"),
-        ("/kontakty", "contacts", "Kontakty"),
+        (url_for("index"), "index", "Novinky"),
+        (url_for("contacts"), "contacts", "Kontakty"),
     ]
 
     results_subnav = []
-    for index, year in enumerate(years, 1):
+    for order, year in years.items():
         results_subnav.append(
             (
-                f"/vysledky/{year}",
+                url_for("summary", order=order),
                 f"results-{year}",
-                f"{index}. ročník &nbsp;<sub>{year}</sub>",
+                f"{order}. ročník &nbsp;<sub>{year}</sub>",
             )
         )
 
@@ -40,7 +42,10 @@ def read_data():
     with open(os.path.join(constants.data_dir, "summaries.json")) as f:
         summaries = json.load(f)
 
-    return schools, sponsors, summaries, summaries.keys()
+    years = {
+        order: year for order, year in enumerate(summaries.keys(), start=1)
+    }
+    return schools, sponsors, summaries, years
 
 
 def filter_sponsors_by_year(sponsors, year):

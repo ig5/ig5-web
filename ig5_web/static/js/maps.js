@@ -65,9 +65,9 @@ function maps_initialize(){
 		map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
 	// variables to get current file name
 	var url = window.location.pathname,
-	    year = url.substring(url.lastIndexOf('/')+1);
+	    filename = url.substring(url.lastIndexOf('/')+1);
 
-	if (year.startsWith("20")){
+	if (filename.indexOf('rocnik.html') !== -1){
 		// create the DIV to hold the control and call the ProfileControl() constructor passing in this DIV
 		var profileControlDiv = document.createElement('DIV'),
 		    profileControl = new ProfileControl(profileControlDiv, map);

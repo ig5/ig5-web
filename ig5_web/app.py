@@ -1,4 +1,4 @@
-from flask import abort, Flask, render_template, send_from_directory
+from flask import abort, Flask, render_template
 
 from ig5_web import constants
 from ig5_web import utils
@@ -19,14 +19,16 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/vysledky/<string:year>")
-def summary(year):
-    if year not in years:
+@app.route("/<int:order>rocnik.html")
+def summary(order):
+    year = years.get(order)
+    if year is None:
         abort(404)
 
     attended_schools = utils.filter_schools_by_year(schools, year)
     return render_template(
         "summary.html",
+        order=order,
         year=year,
         summary=summaries[year],
         sponsors=utils.filter_sponsors_by_year(sponsors, year),
@@ -39,12 +41,7 @@ def summary(year):
     )
 
 
-@app.route("/vysledky/<path:to_file>")
-def summary_static_files_hack(to_file):
-    return send_from_directory("", to_file)
-
-
-@app.route("/kontakty")
+@app.route("/kontakty.html")
 def contacts():
     return render_template(
         "contacts.html",

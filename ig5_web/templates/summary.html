@@ -2,13 +2,10 @@
 {% import "macros.j2" as macros %}
 
 {% set active_page = "results-" ~ year -%}
-{# Competition started in 2006. Thus subtracting 2005 gives index number #}
-{% set summary_number = year|int - 2005 %}
-
-{% block title %}Výsledky {{ summary_number }}. ročníka{% endblock %}
+{% block title %}Výsledky {{ order }}. ročníka{% endblock %}
 
 {% block content %}
-<h1>{{ summary_number }}. ročník {% if summary.basic.mainSponsor %}{{ summary.basic.mainSponsor }}{% endif %} IG5</h1>
+<h1>{{ order }}. ročník {% if summary.basic.mainSponsor %}{{ summary.basic.mainSponsor }}{% endif %} IG5</h1>
 <div id="sub_nav">
   <a href="#basic">Základné údaje</a>
   <a href="#schools">Zúčastnené školy</a>
