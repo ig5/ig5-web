@@ -1,7 +1,7 @@
-from datetime import datetime
 import itertools
 import json
 import os
+from unicodedata import normalize
 
 from flask import url_for
 
@@ -10,7 +10,7 @@ here = os.path.dirname(os.path.abspath(__file__))
 static_path = os.path.join(here, "static")
 
 
-def prepare_template_context(years):
+def build_navbar(years):
     navigation_bar = [
         (url_for("index"), "index", "Novinky"),
         (url_for("about"), "about", "O IG5"),
@@ -28,9 +28,18 @@ def prepare_template_context(years):
         )
     navigation_bar.insert(2, {"Výsledky": results_subnav})
 
-    return dict(
-        navigation_bar=navigation_bar, copyright_year=datetime.now().year
-    )
+    return navigation_bar
+
+
+def to_ascii(string):
+    normalized = normalize("NFKD", string).encode("ASCII", "ignore")
+    return normalized.decode("utf-8").lower()
+
+
+def inplace_list_of_dicts_sort(list_of_dicts, key):
+    for item in list_of_dicts:
+        item["normalized_name"] = to_ascii(item[key])
+    list_of_dicts.sort(key=lambda x: x["normalized_name"])
 
 
 def read_data():
@@ -38,9 +47,12 @@ def read_data():
 
     with open(os.path.join(data_dir, "schools.json")) as f:
         schools = json.load(f)
+        for country, country_schools in schools["schools"].items():
+            inplace_list_of_dicts_sort(country_schools, "city")
 
     with open(os.path.join(data_dir, "sponsors.json")) as f:
         sponsors = json.load(f)
+        inplace_list_of_dicts_sort(sponsors, "name")
 
     with open(os.path.join(data_dir, "summaries.json")) as f:
         summaries = json.load(f)

@@ -15,5 +15,5 @@ def summary():
 
 
 if __name__ == "__main__":
-    # freezer.freeze()
-    freezer.run(debug=True)
+    freezer.freeze()
+    # freezer.run(debug=True)

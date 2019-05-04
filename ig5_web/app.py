@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 
 from dotenv import load_dotenv
@@ -16,7 +17,10 @@ gmaps_api_key = os.environ["GMAPS_API_KEY"]
 
 @app.context_processor
 def inject_variables():
-    return utils.prepare_template_context(years)
+    return dict(
+        navigation_bar=utils.build_navbar(years),
+        copyright_year=datetime.now().year,
+    )
 
 
 @app.route("/")

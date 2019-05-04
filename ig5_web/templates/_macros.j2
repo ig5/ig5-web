@@ -27,7 +27,7 @@
 
     <div id="sponzoring">
       <ul class="sponzoring_text">
-      {% for sponsor in sponsors|sort(attribute="name") %}
+      {% for sponsor in sponsors %}
         {% if not sponsor.url %}
         <li>{{ sponsor.name }}</li>
         {% else %}
