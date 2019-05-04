@@ -1,7 +1,6 @@
 from datetime import datetime
 import os
 
-from dotenv import load_dotenv
 from flask import abort, Flask, render_template
 from flask_htmlmin import HTMLMIN
 from flask_pretty import Prettify
@@ -19,8 +18,6 @@ Prettify(app)
 HTMLMIN(app)
 
 schools, sponsors, summaries, years = utils.read_data()
-load_dotenv(os.path.join(os.path.dirname(utils.here), ".env"))
-gmaps_api_key = os.environ["GMAPS_API_KEY"]
 
 
 @app.context_processor
@@ -70,7 +67,6 @@ def summary(order):
         photos=utils.get_photos(photos_dir),
         photos_special=utils.get_photos(os.path.join(photos_dir, "special")),
         docs=utils.get_docs(year),
-        gmaps_api_key=gmaps_api_key,
     )
 
 
@@ -80,7 +76,6 @@ def contacts():
         "contacts.html",
         schools=schools,
         schools_flattened=utils.flatten_schools(schools),
-        gmaps_api_key=gmaps_api_key,
     )
 
 
