@@ -4,14 +4,15 @@
 {% block title %}Bližšie informácie o súťaži a organizátorovi{% endblock %}
 
 {% block content %}
-<h1>International Geodetic Pentathlon<br>Medzinárodný geodetický 5-boj</h1>
+<h1>International Geodetic Pentathlon<br>Medzinárodný geodetický Päťboj</h1>
 
 <p>
-  Medzinárodný geodetický 5-boj (International Geodetic Pentathlon — IG5) je
-  <span class="blue">medzinárodná súťaž</span>, ktorej cieľom je
-  umožniť vytvorenie kontaktov medzi žiakmi <span class="blue">geodetických škôl</span>,
-  porovnať ich teoretické vedomosti a praktické zručnosti a v neposlednom rade
-  vytvoriť priestor pre výmenu skúseností medzi pedagógmi a školami.
+  Medzinárodný Geodetický Päťboj (International Geodetic Pentathlon) alebo aj
+  <span class="blue">IG5</span> je <span class="blue">medzinárodná súťaž</span>,
+  ktorej cieľom je umožniť vytvorenie kontaktov medzi žiakmi
+  <span class="blue">geodetických škôl</span>, porovnať ich teoretické vedomosti
+  a praktické zručnosti a v neposlednom rade vytvoriť priestor pre výmenu
+  skúseností medzi pedagógmi a školami.
 </p>
 
 <p>
@@ -160,9 +161,11 @@
 </p>
 
 <p>
-  Súťaže sa zúčastňuje <span class="blue">25 - 32 družstiev</span> z
-  <span class="blue">21 škôl</span> z <span class="blue">3 krajín
-  </span>(Slovensko, Česko, Maďarsko).
+  Súťaže sa zúčastňuje
+  <span class="blue">{{ team_count_min }} - {{ team_count_max }} družstiev</span> z
+  <span class="blue">{{ school_count }} škôl</span> z
+  <span class="blue">{{ country_count }} krajín</span>
+  ({{ countries|join(', ') }}).
 </p>
 
 <iframe width="100%" height="550" src="https://www.youtube.com/embed/n0Q31HEGfXI" frameborder="0"></iframe>
