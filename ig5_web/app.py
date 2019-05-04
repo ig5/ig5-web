@@ -3,12 +3,20 @@ import os
 
 from dotenv import load_dotenv
 from flask import abort, Flask, render_template
+from flask_htmlmin import HTMLMIN
+from flask_pretty import Prettify
 
 from ig5_web import utils
 
 
 app = Flask(__name__)
+minify_html = True
+# minify_page = False
+app.config["MINIFY_PAGE"] = minify_html
+app.config["PRETTIFY"] = not minify_html
 app.jinja_env.add_extension("jinja2.ext.do")
+Prettify(app)
+HTMLMIN(app)
 
 schools, sponsors, summaries, years = utils.read_data()
 load_dotenv(os.path.join(os.path.dirname(utils.here), ".env"))
