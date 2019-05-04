@@ -1,12 +1,11 @@
 {% extends "layout.html" %}
-{% import "macros.j2" as macros %}
 
 {% set active_page = "contacts" -%}
 {% block title %}Kontakty{% endblock %}
 
 {% block content %}
 {% set you_will_be_in_touch_with = "Komunikovať s Vami budú:" %}
-{% set pavol_fodor_description = "Ing. Pavol Fodor - autor a hlavný organizátor IG5" %}
+{% set pavol_fodor_description = "Ing. Pavol Fodor" ~ pavol_fodor_description_suffix %}
 
 <h2>Občianske združenie STAV-GEO</h2>
 <p>{{ you_will_be_in_touch_with }}</p>

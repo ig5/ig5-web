@@ -13,6 +13,7 @@ __pycache__/
 # Local
 **helper.py
 ig5_web/static/doc/*
+ig5_web/static/img/about/*
 ig5_web/static/img/summary/*
 
 # Frozen-Flask

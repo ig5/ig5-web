@@ -1,0 +1,259 @@
+{% extends "layout.html" %}
+
+{% set active_page = "about" -%}
+{% block title %}Bližšie informácie o súťaži a organizátorovi{% endblock %}
+
+{% block content %}
+<h1>International Geodetic Pentathlon<br>Medzinárodný geodetický 5-boj</h1>
+
+<p>
+  Medzinárodný geodetický 5-boj (International Geodetic Pentathlon — IG5) je
+  <span class="blue">medzinárodná súťaž</span>, ktorej cieľom je
+  umožniť vytvorenie kontaktov medzi žiakmi <span class="blue">geodetických škôl</span>,
+  porovnať ich teoretické vedomosti a praktické zručnosti a v neposlednom rade
+  vytvoriť priestor pre výmenu skúseností medzi pedagógmi a školami.
+</p>
+
+<p>
+  Náplňou súťaže je
+  <span class="blue">absolvovanie niekoľko km dlhej trasy so stanoviskami</span>,
+  na ktorých sa vykonávajú jednotlivé súťažné disciplíny -
+  <span class="blue">typické činnosti geodeta a vedomostný test</span> z oblasti
+  geodézie, kartografie, fotogrametrie, GIS, ...
+</p>
+
+<p>
+  <a id="show" href="javascript:toggle('questions','show');">Zobraziť zoznam otázok a úloh »</a>
+</p>
+<div id="questions" style="display:none">
+  <h2>Zoznam možných praktických úloh</h2>
+    <ol class="tasks">
+      <li>Centrácia a horizontácia geodetického prístroja (rýchlosť a presnosť)</li>
+      <li>Vyhľadanie geodetického bodu podľa polohopisnej situácie doplnenej vodorovnými dĺžkami (rýchlosť)</li>
+      <li>Určenie prevýšenia medzi dvojicou bodov niveláciou (rýchlosť a presnosť)</li>
+      <li>Zameranie vodorovného uhla optickým teodolitom (rýchlosť a presnosť)</li>
+      <li>Meranie dĺžky pásmom (rýchlosť a presnosť)</li>
+      <li>Trigonometrické určenie výšky objektu (rýchlosť a presnosť)</li>
+      <li>Určenie výmery</li>
+      <li>Orientácia na „slepej“ mape Európy (presnosť v časovom limite – poloha štátov, hlavných a najväčších miest, hlavných pohorí, riek a jazier)</li>
+    </ol>
+
+  <h2>Zoznam otázok pre vedomostný test</h2>
+    <ol class="questions">
+      <li>Družicový systém GPS vznikol na základe využití poznatkov z predchádzajúcich</li>
+      <li>Záložné pohotovostné družice má byť možné umiestniť na obežnej dráhe a uviesť do plného chodu do</li>
+      <li>Písmeno F v názve družíc bloku IIF znamená</li>
+      <li>Monitorovacia stanica Diego García sa nachádza v</li>
+      <li>Master Control Station sa nachádza</li>
+      <li>Výška dráh družíc GPS nad Zemou je približne</li>
+      <li>Skratka PRN v problematike GPS znamená</li>
+      <li>Vysielacia frekvencia L1 = 1575.42 MHz je vo vzťahu k základnej f0</li>
+      <li>Rámec (frame) ako časť navigačnej správy má dĺžku</li>
+      <li>Menej presné parametre obežných dráh všetkých družíc umiestnených v kozmickom segmente (v podobe keplerovských efemeríd) a údaje o
+      stave týchto družíc sú prenášané v časti správy nazvanej</li>
+      <li>Čas GPS je uvádzaný</li>
+      <li>C/A kód znamená</li>
+      <li>Zabudované mechanizmy umožňujúce zneprístupnenie neautorizovaným užívateľom sa nazývajú</li>
+      <li>Medzi chyby pri určovaní polohy patria chyby z</li>
+      <li>Statické merania vykonávame</li>
+      <li>Systém Galileo má pre kozmický segment globálneho komponentu plánovaných</li>
+      <li>Družice systému Galileo majú byť umiestnené</li>
+      <li>Hlavné riadiace centrum systému GLONASS sa nachádza neďaleko</li>
+      <li>Výpočet parametrov obežnej dráhy družice s využitím Dopplerovho efektu vyriešili na</li>
+      <li>Systém NAVSTAR je</li>
+      <li>Charakterizujte dôveryhodnosť GIS informácií</li>
+      <li>Je výhodnejšie používanie rastrového, alebo vektorového dátového modelu</li>
+      <li>Pri tvorbe GIS sa vždy máme snažiť o zaobstaranie čo najväčšieho objemu informácií</li>
+      <li>Historické informácie z hľadiska GIS</li>
+      <li>V pravom slova zmysle raster znamená</li>
+      <li>Línia (line) v GIS – e sa exaktne popisuje</li>
+      <li>Primárny kľúč je množina atribútov relácie s vlastnosťami</li>
+      <li>Štruktúra TIN je využívaná</li>
+      <li>Primárne zdroje údajov pre GIS sú</li>
+      <li>Booleovské operátory mapovej algebry sú</li>
+      <li>Veľkosť, vzor, farba, forma, ... sú parametre vyjadrujúce možnosti</li>
+      <li>Pri manipulácii s rastrovými dátami používaný výraz „edge-matching“ znamená</li>
+      <li>Objekty objektovo orientovaného modelu komunikujú navzájom</li>
+      <li>Vzťah trojuholníkov Delaunay a vrcholov Voronoi polygónu je</li>
+      <li>Medzi líniové pokrytie nepatria</li>
+      <li>Moduly pre transformáciu – reštrukturalizáciu by ste zaradili medzi</li>
+      <li>Geoobjekty sa navzájom odlišujú</li>
+      <li>Priestorová interpolácia v GIS – e znamená</li>
+      <li>Trojrozmerná bunka rastra sa nazýva</li>
+      <li>Líniové objekty v rastrovej reprezentácii sú</li>
+      <li>Vrstevnice sú</li>
+      <li>Interval vrstevníc je</li>
+      <li>Spádnica je čiara , ktorá spája body</li>
+      <li>Chrbátnica má zo všetkých spádnic na ploche chrbátu</li>
+      <li>Údolnica spája</li>
+      <li>Vodorovný chrbát má pretiahnutý tvar v smere</li>
+      <li>Tvarovou čiarou sedla je štvoruholník</li>
+      <li>Rebro je terénny tvar pretiahnutý obyčajne</li>
+      <li>Terasa je terénny tvar pretiahnutý</li>
+      <li>Brehy bývalých riečisk sa volajú</li>
+      <li>Terénny tvar, ktorý sa nachádza na úpätnici je</li>
+      <li>Niveláciu používame na určenie</li>
+      <li>Ktorú súčiastku by ste na kompenzátorovom nivelačnom prístroji nenašli</li>
+      <li>Ak používame dve nivelačné laty pri nivelačnom ťahu, zvolíme si</li>
+      <li>Ťahovú niveláciu je najvhodnejšie vykonať</li>
+      <li>Pri trigonometrickom určovaní výšok opravu zo zakrivenia Zeme a refrakcie vždy</li>
+      <li>Tachymetrickou metódou určujeme</li>
+      <li>Komparácia je</li>
+      <li>Inerciálne meračské systémy sú zariadenia umiestnené</li>
+      <li>Gauss-Krügerove zobrazenie je</li>
+      <li>Čo znamená slovo „kartografia“</li>
+      <li>Čím sa zaoberá matematická kartografia</li>
+      <li>K mapám veľkej mierky patria...</li>
+      <li>Aké hodnoty potrebujeme poznať na výpočet vzdialenosti medzi dvoma bodmi na poludníku</li>
+      <li>Polomer ľubovolnej rovnobežky vypočítame zo vzťahu...</li>
+      <li>Čo vyjadruje pomer medzi vzdialenosťou na mape a na origináli (guľa, elipsoid)</li>
+      <li>Maximálne uhlové skreslenie je vyjadrené vzťahom...</li>
+      <li>Na vyjadrenie plošného skreslenia používame vzťah...</li>
+      <li>„Azimutálne“ zobrazenie znamená...</li>
+      <li>Zobrazenie, pri ktorom sa neskresľujú plochy sa nazýva...</li>
+      <li>Tranzverzálna poloha zobrazenia znamená...</li>
+      <li>Čo je ortodróma</li>
+      <li>Čo je loxodróma</li>
+      <li>Zemepisná dĺţka je uhol...</li>
+      <li>Čo znamená „stereografické“ zobrazenie</li>
+      <li>Pseudocylindrické zobrazenie znamená, že...</li>
+      <li>Zobrazovacie metódy podľa zobrazovacej plochy delíme na...</li>
+      <li>Nakresli: valcové zobrazenie vo všeobecnej polohe</li>
+      <li>Štvorcová mapa vznikne, keď požijeme pri zobrazení...</li>
+      <li>Ofsetová tlač je tlač...</li>
+      <li>Prvky vnútornej orientácie sú</li>
+      <li>Orientácia snímok vzhľadom na existujúci súradnicový systém sa nazýva</li>
+      <li>Prvky vonkajšej orientácie sú</li>
+      <li>Vlicovacie body sú</li>
+      <li>Horizontálnu paralaxu vypočítame zo vzťahu</li>
+      <li>Stereokomparátor slúži na meranie</li>
+      <li>Na mechanické vyhodnotenie snímok slúži</li>
+      <li>Letecké meračské snímky so sklonom osi záberu do 10o označujeme</li>
+      <li>Pre stereoskopické vyhodnotenie leteckých snímok sa vyžaduje minimálny stereoskopický pozdĺžny prekryt</li>
+      <li>Výšku letu určíme na základe</li>
+      <li>Statoskop slúži na</li>
+      <li>Ortogonálne prekreslená snímka sa nazýva</li>
+      <li>Ortofotomapa vznikne</li>
+      <li>Metóda zberu a spracovanie informácii pomocou nekontaktných snímacích systémov sa nazýva</li>
+      <li>Priečny prekryt leteckých snímok je</li>
+      <li>Umelé stereoskopické videnie umožňuje</li>
+      <li>Snímky vyhotovené fotografovaním objektu súčasne vo viacerých spektrálnych pásmach nazývame</li>
+      <li>Orientácia snímok do polohy identickej s okamihom expozície sa označuje</li>
+      <li>Konštanta fotokomory je</li>
+      <li>Pomocou pozemných staníc sa prevádza navigácia</li>
+    </ol>
+</div>
+
+<p>
+  Na jednotlivé stanoviská sa súťažiaci navigujú pomocou
+  <span class="blue">ručného navigačného zariadenia GPS</span>, zoznamu súradníc
+  stanovísk v systéme WGS-84, ...
+</p>
+
+<p>
+  Disciplíny sa hodnotia podľa vopred stanovených a známych pravidiel. Súťažia
+  <span class="blue">trojčlenné zmiešané družstvá v dvoch disciplínach</span>.
+  Prvou je dosiahnutie najlepšieho času (k času absolvovania celej trasy a všetkých
+  stanovísk sa pridávajú plusové a mínusové minúty za kvalitu a rýchlosť pri vykonávaní
+  jednotlivých úloh), druhou disciplínou - vyhodnotenie kvality a rýchlosti vo
+  vykonávaní úloh na stanoviskách bez ohľadu na celkový čas.
+</p>
+
+<p>
+  Súťaže sa zúčastňuje <span class="blue">25 - 32 družstiev</span> z
+  <span class="blue">21 škôl</span> z <span class="blue">3 krajín
+  </span>(Slovensko, Česko, Maďarsko).
+</p>
+
+<iframe width="100%" height="550" src="https://www.youtube.com/embed/n0Q31HEGfXI" frameborder="0"></iframe>
+
+
+<h2>Výzva pre súťažiacich</h2>
+<p>
+  Zúčastnili ste sa súťaže a chcete sa <span class="blue">podeliť so svojimi zážitkami</span> aj s inými?
+  Plánujete, že sa jej v budúcnosti zúčastníte a máte <span class="blue">otázky</span>?
+  Máte <span class="blue">nápad na zlepšenie</span> a myslíte, že je realizovateľný?
+  Potom neváhajte a napíšte na <a href="mailto:palf2xx@gmail.com">palf2xx@gmail.com</a>
+  {{ pavol_fodor_description_suffix }}.
+</p>
+
+
+<h2>Na stiahnutie<a name="downloads"></a></h2>
+<ul>
+  <li><a href="{{ url_for('static', filename='doc/_prihlaska.doc') }}">Prihláška (0.75 Mb)</a></li>
+  <li><a href="{{ url_for('static', filename='doc/_otazky_a_ulohy.pdf') }}">Otázky a úlohy (0.1 Mb)</a></li>
+  <li><a href="{{ url_for('static', filename='doc/_organizacny_statut.pdf') }}">Organizačný štatút IG5 (0.14 Mb)</a></li>
+  <li><a href="{{ url_for('static', filename='doc/_10_rokov_IG5_rating.xlsx') }}">10 rokov IG5 - rating (0.03 Mb)</a></li>
+</ul>
+
+
+<h1>STAV-GEO — hlavný organizátor IG5</h1>
+<p>
+  <img
+    src="{{ url_for('static', filename='img/about/stavgeo_logo.png') }}"
+    style="padding-right:20px; float:left"
+    title="Stav-geo logo"
+    alt="Stav-geo logo"
+  >
+  O.z. STAV-GEO vzniklo v prvom rade na
+  <span class="blue">podporu skvalitnenia výuky a mimoškolských odborných aktivít</span>
+  pre študentov našej školy - SPŠ stavebnej Oskara Winklera v Lučenci.
+</p>
+
+<p>
+  Občianske združenie STAV-GEO je vlastníkom živnostenského oprávnenia s oprávnením na
+  <span class="blue">činnosť geodetickú a reklamnú</span>.
+</p>
+
+<p>
+  Počas trvania našej činnosti máme za sebou niekoľko polohopisných plánov
+  doplnených o databázy a taktiež zameranie a spracovanie polohopisu a výškopisu
+  v predprojektovej aj porealizačnej fáze. Dávame tak našim
+  <span class="blue">žiakom možnosť pracovať už počas štúdia na škole na reálnych geodetických zákazkách</span>.
+  Zabezpečujeme tiež najmä prostredníctvom súťaže IG5 reklamnú činnosť pre našich partnerov.
+</p>
+
+{{ macros.photo_gallery(photos) }}
+
+<h3>Informácie o určenej právnickej osobe</h3>
+<ul>
+  <li><span class="red">Názov: </span>STAV-GEO</li>
+  <li><span class="red">Forma: </span>Občianske združenie </li>
+  <li><span class="red">Adresa: </span>Boženy Němcovej 1; 984 15 Lučenec</li>
+  <li><span class="red">Rok registrácie: </span>2003</li>
+  <li><span class="red">IČO: </span>37893670</li>
+  <li><span class="red">DIČ: </span>2021967761</li>
+  <li><span class="red">Bankový účet: </span>SK38 5200 0000 0000 0579 1630</li>
+</ul>
+
+<h3>Predmet činnosti</h3>
+<ol>
+  <li>Ciele združenia v súlade s právnym poriadkom Slovenskej republiky sú zamerané na financovanie a rozvoj vybraných hospodárskych, vzdelávacích
+  a kultúrnych aktivít</li>
+  <li>Pri napĺňaní cieľa združenie plánuje:
+    <ul class="arrow">
+      <li>podporovať fyzické a duševné zdravie ako aj duchovný rast žiakov, učiteľov a rodičov v procese výchovy a vzdelávania</li>
+      <li>zabezpečiť pozitívne zmeny individuálneho a spoločenského vedomia za účelom humanizácie mládeže</li>
+      <li>podporovať rozvoj vzdelávania mládeže a ich uplatňovanie v spoločenskej praxi</li>
+      <li>organizačne a materiálne sa podielať na realizácii rekvalifikačných programov v záujme aktívnej zamestnanosti občanov</li>
+      <li>financovať náklady spojené s rozvojom ďalších aktivít SPŠ stavebnej v Lučenci v súlade s predmetom činnosti školy </li>
+      <li>vytvárať ekonomické podmienky a potrebné štruktúry pre napĺňanie cieľov združenia</li>
+    </ul>
+  </li>
+</ol>
+
+
+<h2>Na stiahnutie<a name="downloads"></a></h2>
+<ul>
+  <li><a href="{{ url_for('static', filename='doc/_navrh_formy_spoluprace.pdf') }}">Návrh formy spolupráce (0.11 Mb)</a></li>
+</ul>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<!-- Accordion -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/accordion.js') }}"></script>
+<!-- Fancybox -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+{% endblock %}

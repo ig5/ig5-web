@@ -5,12 +5,15 @@ import os
 
 from flask import url_for
 
-from ig5_web import constants
+
+here = os.path.dirname(os.path.abspath(__file__))
+static_path = os.path.join(here, "static")
 
 
 def prepare_template_context(years):
     navigation_bar = [
         (url_for("index"), "index", "Novinky"),
+        (url_for("about"), "about", "O IG5"),
         (url_for("contacts"), "contacts", "Kontakty"),
     ]
 
@@ -23,23 +26,23 @@ def prepare_template_context(years):
                 f"{order}. ročník &nbsp;<sub>{year}</sub>",
             )
         )
+    navigation_bar.insert(2, {"Výsledky": results_subnav})
 
-    navigation_bar.insert(1, {"Výsledky": results_subnav})
     return dict(
-        navigation_bar=navigation_bar,
-        summary_img_dir=constants.summary_img_dir,
-        copyright_year=datetime.now().year,
+        navigation_bar=navigation_bar, copyright_year=datetime.now().year
     )
 
 
 def read_data():
-    with open(os.path.join(constants.data_dir, "schools.json")) as f:
+    data_dir = os.path.join(here, "data")
+
+    with open(os.path.join(data_dir, "schools.json")) as f:
         schools = json.load(f)
 
-    with open(os.path.join(constants.data_dir, "sponsors.json")) as f:
+    with open(os.path.join(data_dir, "sponsors.json")) as f:
         sponsors = json.load(f)
 
-    with open(os.path.join(constants.data_dir, "summaries.json")) as f:
+    with open(os.path.join(data_dir, "summaries.json")) as f:
         summaries = json.load(f)
 
     years = {
@@ -78,16 +81,21 @@ def school_count(schools):
     return len(flatten_schools(schools))
 
 
-def get_photos(year, special=False):
-    base_path = os.path.join(constants.summary_photos_dir, year)
-    if special:
-        base_path = os.path.join(base_path, "special")
+def get_photos(photos_dir):
+    photos_dir = os.path.join("img", photos_dir)
 
-    path = os.path.join(base_path, "thumbnails")
-    if not os.path.exists(path):
+    thumbnails_path = os.path.join(static_path, photos_dir, "thumbnails")
+    if not os.path.exists(thumbnails_path):
         return []
 
-    return sorted(os.listdir(path))
+    names = sorted(os.listdir(thumbnails_path))
+    thumbnails = []
+    images = []
+    for name in names:
+        thumbnails.append(os.path.join(photos_dir, "thumbnails", name))
+        images.append(os.path.join(photos_dir, "images", name))
+
+    return list(zip(names, thumbnails, images))
 
 
 def get_docs(year):
@@ -105,7 +113,7 @@ def get_docs(year):
         "10_rokov_IG5_rating": "10 rokov IG5 - rating",
     }
 
-    path = os.path.join(constants.here, "static", "doc")
+    path = os.path.join(static_path, "doc")
     for doc in sorted(os.listdir(path)):
         if doc.startswith(year):
             doc_path = os.path.join(path, doc)

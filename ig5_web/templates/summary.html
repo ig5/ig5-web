@@ -1,5 +1,4 @@
 {% extends "layout.html" %}
-{% import "macros.j2" as macros %}
 
 {% set active_page = "results-" ~ year -%}
 {% block title %}Výsledky {{ order }}. ročníka{% endblock %}
@@ -84,7 +83,7 @@
 
 
 <h2>Fotogaléria<a name="fotos"></a></h2>
-{{ macros.photo_gallery(summary_img_dir + "/" + year, photos) }}
+{{ macros.photo_gallery(photos) }}
 
 
 {% if summary.video %}
