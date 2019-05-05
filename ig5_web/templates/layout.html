@@ -32,7 +32,7 @@
             <a class="navbar-brand" href="{{ url_for('index') }}">
               <img src="{{ url_for('static', filename='img/style/logo.png') }}" alt="" width="190">
             </a>
-            <ul class="nav nav-pills flex-column pl-lg-0">
+            <ul class="nav nav-pills flex-column">
               {% for navigation_item in navigation_bar -%}
                 {% if navigation_item is mapping %}
                   <li class="nav-item dropdown">
