@@ -23,7 +23,7 @@ def build_navbar(years):
             (
                 url_for("summary", order=order),
                 f"results-{year}",
-                f"{order}. ročník &nbsp;<sub>{year}</sub>",
+                f"{year} | {order}. ročník",
             )
         )
     navigation_bar.insert(2, {"Výsledky": results_subnav})

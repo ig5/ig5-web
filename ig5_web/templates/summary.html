@@ -6,18 +6,18 @@
 {% block content %}
 <h1>{{ order }}. ročník {% if summary.basic.mainSponsor %}{{ summary.basic.mainSponsor }}{% endif %} IG5</h1>
 <div id="sub_nav">
-  <a href="#basic">Základné údaje</a>
-  <a href="#schools">Zúčastnené školy</a>
-  <a href="#results">Výsledky</a>
+  <a href="#basic">Základné údaje</a> &middot;
+  <a href="#schools">Zúčastnené školy</a> &middot;
+  <a href="#results">Výsledky</a> {% if summary.route %} &middot; {% endif %}
   {% if summary.route %}
-  <a href="#route">Trasa</a>
+  <a href="#route">Trasa</a> &middot;
   {% endif %}
-  <a href="#fotos">Fotogaléria</a>
+  <a href="#fotos">Fotogaléria</a> {% if summary.video or docs %} &middot; {% endif %}
   {% if summary.video %}
-  <a href="#video">Video</a>
+  <a href="#video">Video</a> {% if docs %} &middot; {% endif %}
   {% endif %}
   {% if docs %}
-  <a href="#downloads">Na stiahnutie</a>
+  <a href="#downloads">Na stiahnutie</a> {% if summary.hasSpecial %} &middot; {% endif %}
   {% endif %}
   {% if summary.hasSpecial %}
   <a href="#special">Sprievodná akcia</a>
@@ -41,10 +41,10 @@
 
 
 <h2>Výsledky<a name="results"></a></h2>
-<div class="results" style="width: 100%;">
+<div class="row">
   {% set float_to = "left" %}
   {% if "category1" in summary.results %}
-    <div class="rLeft" style="float:{{ float_to }};">
+    <div class="col-lg-6">
       <h3>1. Kategória</h3>
       <h4>Celkový čas absolvovania trasy a jednotlivých úloh na stanoviskách s pridelenými trestnými a bonusovými minútami</h4>
       <ol>
@@ -57,7 +57,7 @@
   {% endif %}
 
   {% if "category2" in summary.results %}
-    <div class="rRight" style="float:{{ float_to }};">
+    <div class="col-lg-6">
       <h3>2. Kategória</h3>
       <h4>Kvalita a rýchlosť vykonávania úloh na stanoviskách bez ohľadu na celkový čas</h4>
       <ol>

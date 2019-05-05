@@ -32,11 +32,13 @@ function ProfileControl(controlDiv, map) {
 		var chart = document.getElementById('elevation_chart');
 		if(chart.style.zIndex == 0) {
 			chart.style.zIndex = 10;
+			chart.style.display = "block";
 			controlText.innerHTML = 'Skryť profil';
 			controlUI.title = 'Kliknutím zrušíte zobrazenie vertikálneho profilu priebehu terénu na trase';
 		}
 		else{
 			chart.style.zIndex = 0;
+			chart.style.display = "none";
 			controlText.innerHTML = 'Vertikálny profil';
 		}
 	});
@@ -290,7 +292,7 @@ function plotElevation(results, status) {
 
 		// draw the chart using the data within its DIV
 		chart.draw(data, {
-			width: 960,
+			width: $('#map_canvas').width(),
 			height: 400,
 			title: 'VERTIKÁLNY PROFIL PRIEBEHU TERÉNU NA TRASE V SMERE ŠTART -> CIEĽ',
 			titleTextStyle: { color: '#db3041' },

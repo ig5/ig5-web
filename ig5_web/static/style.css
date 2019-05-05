@@ -1,218 +1,42 @@
-/* basic */
 body {
-  margin: 0 auto;
-  font-size: 17px;
-  line-height: 25px;
+  font-size: 1.1rem;
   font-family: Georgia, "MgOpen Canonica", "URW Bookman L", serif;
-  background: url(img/style/background.png) repeat;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+/* Headings --------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  color: #0093dd;
   font-family: Arial, "Nimbus Sans L", FreeSans, sans-serif;
 }
 h1 {
-  font-size: 30px;
-  line-height: 35px;
   text-align: center;
-  margin-bottom: 0;
-  color: #0093dd;
-  /*text-shadow: 1px 1px 1px #006699*/
 }
-h2 {
-  font-size: 25px;
-  line-height: 30px;
-  text-align: left;
-  margin-top: 30px;
-  margin-bottom: 0;
-  color: #0093dd;
-  /*text-shadow: 1px 1px 1px #006699*/
-}
-h3 {
-  font-size: 20px;
-  line-height: 25px;
-  text-align: left;
-  margin-top: 10px;
-  padding-top: 5px;
-  margin-bottom: 0;
+h3, h4 {
   color: #db3041;
-  /*text-shadow: 1px 1px #99222e*/
 }
 h4 {
-  font-weight: normal;
-  margin-top: 0;
-  margin-bottom: -10px;
-  color: #db3041;
+  font-size: 1.15rem;
 }
+
+/* Basic elements --------------------------------------------------------- */
 p {
-  padding: 10px 15px 0 15px;
   color: #373737;
+}
+ul {
+  list-style: none;
 }
 iframe {
-  padding-top: 10px;
+  margin-bottom: 1rem;
 }
 
-/* layout */
-#border {
-  width: 1046px;
-  margin: auto;
-  margin-top: 20px;
-  border: 10px solid #fff;
-}
-#wrapper {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 auto;
-  position: relative;
-}
-#header {
-  width: 1024px;
-  margin: auto;
-  height: 210px;
-  line-height: 18px;
-  background: url(img/style/logo_new.png) no-repeat center 2px;
-  /*text-shadow: 1px 1px 1px #555;*/
-}
-
-/* navigation */
-#navigation_bar {
-  width: 100%;
-  height: 60px;
-  position: absolute;
-  border-top: 2px solid #db3041;
-  background: url(img/style/bar_navigation.png) repeat-x;
-}
-#navigation {
-  float: left;
-  margin: 0 auto 0 -45px;
-  padding: 0 auto;
-}
-#navigation li {
-  display: inline;
-  float: left;
-  position: relative;
-  list-style: none;
-  padding: 17px 15px;
-  color: #fff;
-  text-align: center;
-}
-
-#navigation a {
-  text-decoration: none;
-}
-
-/* styling volume year */
-sub {
-  bottom: 5px;
-  position: absolute;
-}
-/* rotating arrow to indicate where the submenu is */
-.rotated {
-  margin-left: 5px;
-  /*-moz-transform: rotate(90deg);
-				-webkit-transform:rotate(90deg);
-				-ms-transform:rotate(90deg);
-				-o-transform:rotate(90deg);*/
-}
-#navigation li a {
-  text-decoration: none;
-  color: #fff;
-}
-#navigation li:hover {
-  background-color: #db3041;
-}
-/* three column submenu */
-#navigation li div {
-  display: none;
-  margin-top: 16px;
-  width: 345px; /* ________________________________________________________________potom zmenit na 445 */
-}
-#navigation li:hover div {
-  display: block;
-  position: absolute;
-}
-#navigation li ul {
-  display: none;
-}
-#navigation li:hover ul {
-  display: block;
-  position: absolute;
-  margin-left: -60px;
-}
-#navigation li ul li {
-  top: 1px;
-  width: 110px;
-  padding: 14px 25px 16px 8px;
-  border-top: 1px solid #00aaff;
-  border-left: 1px solid #00aaff;
-  border-bottom: 1px solid #0077b3;
-  border-right: 1px solid #0077b3;
-  background-color: #0093dd;
-  text-align: left;
-}
-
-#navigation .active {
-  background-color: #db3041;
-}
-#navigation .active:hover {
-  cursor: default;
-}
-/* page description (or title if you like) */
-#description {
-  display: block;
-  padding-top: 17px;
-  float: right;
-  color: #fff;
-}
-
-/* content */
-#content {
-  width: 1024px;
-  margin: auto;
-  padding: 10px;
-  border: 1px solid #cccccc;
-  background-color: #fff;
-}
-#content p,
-li,
-a,
-div {
+/* Links ------------------------------------------------------------------ */
+a {
   color: #373737;
+  text-decoration: underline;
 }
-#content ul {
-  list-style: none;
-}
-#content ul li {
-  margin-left: -25px;
-}
-#content a:hover {
+a:hover {
+  color: #373737;
   text-decoration: none;
-}
-#sub_nav {
-  text-align: center;
-  padding-bottom: 20px;
-}
-#sponzoring {
-  text-align: center;
-}
-ul.sponzoring_text li {
-  display: inline-block;
-  padding-right: 50px;
-}
-/* arrow in front of text */
-ul.arrow li:before {
-  content: "\00BB \0020";
-}
-/* database of questions */
-ol.questions li:after {
-  content: " ?";
-}
-/* practical tasks */
-ol.tasks li {
-  list-style-type: upper-alpha;
 }
 /* file type icons */
 a[href$=".pdf"] {
@@ -235,43 +59,74 @@ a[href^="mailto"] {
   padding-right: 20px;
   background: transparent url(img/style/icon_email.gif) no-repeat center right;
 }
-/* internal links (results submenu) styling */
-a[href^="#"] {
-  padding-left: 5px;
-  padding-right: 8px;
-  border-right: 1px solid #373737;
+
+/* Custom ids and classes ------------------------------------------------- */
+#content {
+  padding-top: 2rem;
 }
-a[href^="#"]:last-child {
-  border: none;
-  padding-right: none;
+#sub_nav {
+  text-align: center;
+  padding-bottom: 20px;
 }
-/* for red ul headings */
-.red {
-  color: #db3041;
+#sponzoring {
+  text-align: center;
+}
+#sponzoring ul li {
+  display: inline-block;
+  padding-right: 30px;
+}
+#map_canvas {
+  margin-bottom: 1rem;
 }
 /* for blue highlighting */
 .blue {
   color: #0093dd;
 }
-/* author and date styling for news */
-.author {
-  margin: 0;
-  padding: 0;
+/* for red ul headings */
+.red {
+  color: #db3041;
 }
-/* results styling */
-.results {
-  float: left;
+ul.arrow li:before {
+  content: "\00BB \0020";
 }
-.rLeft {
-  width: 45%;
-  float: left;
+/* About - practical tasks and questions */
+ol.tasks li {
+  list-style-type: upper-alpha;
 }
-.rRight {
-  width: 45%;
-  float: right;
+ol.questions li:after {
+  content: "?";
 }
 
-/* google maps labeling */
+/* Gallery ---------------------------------------------------------------- */
+.gallery {
+  float: left;
+  padding-top: 20px;
+  width: 100%;
+}
+.thumbnail {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 0px 21px;
+}
+.thumbnailhover {
+  color: #fff !important;
+  display: block;
+}
+.thumbnail img {
+  max-width: 150px;
+  margin: auto;
+  display: block;
+  border: 2px solid #0093dd;
+  /*-moz-box-shadow: 2px 2px 2px #ccc;
+		-webkit-box-shadow: 2px 2px 2px #ccc;
+		box-shadow: 2px 2px 2px #ccc*/
+}
+.thumbnail img:hover {
+  border: 2px solid #db3041;
+}
+
+/* Google maps labeling --------------------------------------------------- */
 #HomeControl,
 #ProfileControl {
   margin-top: 5px;
@@ -312,69 +167,44 @@ a[href^="#"]:last-child {
   background-color: #808080;
   border: 2px solid #fff;
 }
-/* gallery styling */
-.gallery {
-  float: left;
-  padding-top: 20px;
-  width: 100%;
-}
-.thumbnail {
-  float: left;
-  width: 150px;
-  height: 150px;
-  margin: 0px 21px;
-}
-.thumbnailhover {
-  color: #fff !important;
-  display: block;
-}
-.thumbnail img {
-  max-width: 150px;
-  margin: auto;
-  display: block;
-  border: 2px solid #0093dd;
-  /*-moz-box-shadow: 2px 2px 2px #ccc;
-		-webkit-box-shadow: 2px 2px 2px #ccc;
-		box-shadow: 2px 2px 2px #ccc*/
-}
-.thumbnail img:hover {
-  border: 2px solid #db3041;
+
+
+/* Bootstrap nav override ------------------------------------------------- */
+.navbar-brand {
+  margin-right: 0rem;
 }
 
-/* footer */
-#footer {
-  width: 100%;
-  float: left;
-  border-bottom: 2px solid #db3041;
-  background: url(img/style/bar_footer.png) repeat-x left bottom;
-  /*text-shadow: 1px 1px 1px #555;*/
+.navbar, .nav {
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
-#footer_content {
-  width: 1024px;
-  margin: auto;
-  height: 60px;
-  /*background:url(img/style/icon_facebook.png) no-repeat right 12px*/
+
+.dropdown-item {
+  font-size: 1.1rem;
 }
-#footer_content p {
-  padding-top: 22px;
-  padding-bottom: 0;
-  color: #fff;
+
+.nav-pills .nav-item {
+  padding-top: .5rem;
 }
-#footer_content a {
-  color: #fff;
-  text-decoration: underline;
-}
-#footer_content a:hover {
-  color: #fff;
+
+.nav-pills .nav-link,
+.dropdown-item {
   text-decoration: none;
 }
 
-/* scroll to top styling */
-.top_scroll {
-  padding: 10px;
-  color: #fff;
+.dropdown-item:hover {
+  text-decoration: none;
+  color: #ffffff;
   background-color: #0093dd;
 }
-.top_scroll:hover {
-  text-decoration: underline;
+
+.nav-pills .nav-link:hover,
+.nav-pills .show>.nav-link {
+  color: #ffffff;
+  background-color: #0093dd;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .dropdown-item.active {
+  background-color: #db3041;
 }

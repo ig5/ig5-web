@@ -7,55 +7,72 @@
   <head>
     {% block head %}
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <meta name="keywords" content="ig5,medzinarodny,geodeticky,patboj,lucenec,international,geodetic,pentathlon">
     <!-- Title -->
     <title>{% block title %}{% endblock %} | IG5</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ url_for('static', filename='img/style/favicon.ico')}}"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/style/favicon.ico') }}"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"/>
     {% endblock %}
   </head>
   <body>
-    <div id="navigation_bar"></div>
-    <div id="wrapper">
-      <div id="header">
-        <ul id="navigation">
-          {% for navigation_item in navigation_bar -%}
-            {% if navigation_item is mapping %}
-              <li {% if active_page.startswith("results") -%}class="active"{% endif -%}>
-                <span>{{ navigation_item.keys()|first }} <span class="rotated">&raquo</span></span>
-                <div>
-                  <ul>
-                    {% for subnav_item in navigation_item.values()|first %}
-                      {{ macros.navigation_item(subnav_item, active_page) }}
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+          <!--
+            .sticky-top  makes sure the logo an navigation alaways sticks to top
+            but then not all dropdown items are visible
+          -->
+          <nav class="navbar justify-content-center">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+              <img src="{{ url_for('static', filename='img/style/logo.png') }}" alt="" width="190">
+            </a>
+            <ul class="nav nav-pills flex-column pl-lg-0">
+              {% for navigation_item in navigation_bar -%}
+                {% if navigation_item is mapping %}
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if active_page.startswith('results') -%}active{% endif -%}" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                      {{ navigation_item.keys()|first }}
+                    </a>
+                    <div class="dropdown-menu">
+                    {% for href, id_, caption in navigation_item.values()|first %}
+                      <a class="dropdown-item {% if id_ == active_page -%}active{% endif -%}" href="{{ href|e }}" title="{{ caption|e }}">
+                        {{ caption|safe|e }}
+                      </a>
                     {% endfor %}
-                  </ul>
-                </div>
-              </li>
-            {% else %}
-              {{ macros.navigation_item(navigation_item, active_page) }}
-            {% endif %}
-          {% endfor -%}
-        </ul>
-        <span id="description">International Geodetic Pentathlon Lučenec</span>
-      </div>
-      <div id="border">
-        <div id="content">
-          {% block content %}
-          {% endblock %}
-          <div style="width: 100%; display: flex"></div>
+                    </div>
+                  </li>
+                {% else %}
+                  {{ macros.navigation_item(navigation_item, active_page) }}
+                {% endif %}
+              {% endfor -%}
+            </ul>
+          </nav>
+        </div>
+        <div class="col">
+          <div id="content" class="container">
+            {% block content %}
+            {% endblock %}
+          </div>
         </div>
       </div>
     </div>
-    <div id="footer">
-      <div id="footer_content">
-        <p>Copyrihgt IG5 {{ copyright_year }}</p>
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="text-muted">&copy; {{ copyright_year }} IG5</span>
       </div>
-    </div>
+    </footer>
+
     {% block scripts %}
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- jQuery and Bootstrap related -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     {% endblock %}
   </body>
 </html>
