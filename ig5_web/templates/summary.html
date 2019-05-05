@@ -6,18 +6,18 @@
 {% block content %}
 <h1>{{ order }}. ročník {% if summary.basic.mainSponsor %}{{ summary.basic.mainSponsor }}{% endif %} IG5</h1>
 <div id="sub_nav">
-  <a href="#basic">Základné údaje</a> &middot;
-  <a href="#schools">Zúčastnené školy</a> &middot;
-  <a href="#results">Výsledky</a> {% if summary.route %} &middot; {% endif %}
+  <a href="#basic">Základné údaje</a> &bull;
+  <a href="#schools">Zúčastnené školy</a> &bull;
+  <a href="#results">Výsledky</a> {% if summary.route %} &bull; {% endif %}
   {% if summary.route %}
-  <a href="#route">Trasa</a> &middot;
+  <a href="#route">Trasa</a> &bull;
   {% endif %}
-  <a href="#fotos">Fotogaléria</a> {% if summary.video or docs %} &middot; {% endif %}
+  <a href="#fotos">Fotogaléria</a> {% if summary.video or docs %} &bull; {% endif %}
   {% if summary.video %}
-  <a href="#video">Video</a> {% if docs %} &middot; {% endif %}
+  <a href="#video">Video</a> {% if docs %} &bull; {% endif %}
   {% endif %}
   {% if docs %}
-  <a href="#downloads">Na stiahnutie</a> {% if summary.hasSpecial %} &middot; {% endif %}
+  <a href="#downloads">Na stiahnutie</a> {% if summary.hasSpecial %} &bull; {% endif %}
   {% endif %}
   {% if summary.hasSpecial %}
   <a href="#special">Sprievodná akcia</a>
@@ -26,7 +26,7 @@
 
 
 <h2>Základné údaje<a name="basic"></a></h2>
-<ul>
+<ul class="no-bullet">
   <li><span class="red">Dátum: </span>{{ summary.basic.date }} {{ year }}</li>
   <li><span class="red">Organizátor: </span>{{ summary.basic.organizer }}</li>
   <li><span class="red">Počet zúčastnených škôl: </span>{{ school_count }}</li>
@@ -71,7 +71,7 @@
 
 {% if summary.route %}
 <h2>Trasa<a name="route"></a></h2>
-<ul class="route">
+<ul id="route" class="no-bullet">
   <li><span class="red">Lokalita: </span>{{ summary.route.location }}</li>
   <li><span class="red">Štart: </span>{{ summary.route.start }}</li>
   <li><span class="red">Cieľ: </span>{{ summary.route.finish }}</li>

@@ -22,9 +22,6 @@ h4 {
 p {
   color: #373737;
 }
-ul {
-  list-style: none;
-}
 iframe {
   margin-bottom: 1rem;
 }
@@ -86,8 +83,8 @@ a[href^="mailto"] {
 .red {
   color: #db3041;
 }
-ul.arrow li:before {
-  content: "\00BB \0020";
+ul.no-bullet {
+  list-style: none;
 }
 /* About - practical tasks and questions */
 ol.tasks li {
