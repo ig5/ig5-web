@@ -41,33 +41,29 @@
 
 
 <h2>Výsledky<a name="results"></a></h2>
-<div class="row">
-  {% set float_to = "left" %}
-  {% if "category1" in summary.results %}
-    <div class="col-lg-6">
-      <h3>1. Kategória</h3>
-      <h4>Celkový čas absolvovania trasy a jednotlivých úloh na stanoviskách s pridelenými trestnými a bonusovými minútami</h4>
-      <ol>
-      {% for result in summary.results.category1 %}
-        <li>{{ result }}</li>
-      {% endfor %}
-      </ol>
-    </div>
-    {% set float_to = "right" %}
-  {% endif %}
+{% if "category1" in summary.results %}
+  <div>
+    <h3>1. Kategória</h3>
+    <h4>Celkový čas absolvovania trasy a jednotlivých úloh na stanoviskách s pridelenými trestnými a bonusovými minútami</h4>
+    <ol>
+    {% for result in summary.results.category1 %}
+      <li>{{ result }}</li>
+    {% endfor %}
+    </ol>
+  </div>
+{% endif %}
 
-  {% if "category2" in summary.results %}
-    <div class="col-lg-6">
-      <h3>2. Kategória</h3>
-      <h4>Kvalita a rýchlosť vykonávania úloh na stanoviskách bez ohľadu na celkový čas</h4>
-      <ol>
-      {% for result in summary.results.category2 %}
-        <li>{{ result }}</li>
-      {% endfor %}
-      </ol>
-    </div>
-  {% endif %}
-</div>
+{% if "category2" in summary.results %}
+  <div>
+    <h3>2. Kategória</h3>
+    <h4>Kvalita a rýchlosť vykonávania úloh na stanoviskách bez ohľadu na celkový čas</h4>
+    <ol>
+    {% for result in summary.results.category2 %}
+      <li>{{ result }}</li>
+    {% endfor %}
+    </ol>
+  </div>
+{% endif %}
 
 {% if summary.route %}
 <h2>Trasa<a name="route"></a></h2>
