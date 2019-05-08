@@ -24,7 +24,5 @@ the flask app.
 
 ## TODO
 
-- [ ] add existing helper scripts
-  - for parsing route coordinates, resizing and adding watermark to images, ...
 - [ ] move photos to a hosted photo-gallery
 - [ ] add multi-language support
