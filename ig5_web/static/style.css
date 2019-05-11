@@ -167,40 +167,34 @@ ol.questions li:after {
 
 
 /* Bootstrap nav override ------------------------------------------------- */
-.navbar-brand {
-  margin-right: 0rem;
-}
-
-.navbar, .nav {
-  padding-top: 1rem;
-}
-
 .dropdown-item {
   font-size: 1.1rem;
 }
 
 .nav-pills .nav-item {
-  padding-top: .5rem;
+  margin: .15rem 2rem;
 }
 
 .nav-pills .nav-link,
 .dropdown-item {
+  color: #373737 !important;
   text-decoration: none;
 }
 
 .dropdown-item:hover {
   text-decoration: none;
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #0093dd;
 }
 
 .nav-pills .nav-link:hover,
 .nav-pills .show>.nav-link {
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #0093dd;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .dropdown-item.active {
+  color: #ffffff !important;
   background-color: #db3041;
 }

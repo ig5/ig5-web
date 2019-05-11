@@ -1,3 +1,31 @@
+{% macro navbar(nav_items, active_page) %}
+  {% for nav_item in nav_items -%}
+    {% if nav_item is mapping %}
+      <li class="nav-item mx-lg-1 mx-md-1 dropdown">
+        <a class="nav-link dropdown-toggle {% if active_page.startswith('results') -%}active{% endif -%}" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          {{ nav_item.keys()|first }}
+        </a>
+        <div class="dropdown-menu">
+        {% for href, id_, caption in nav_item.values()|first %}
+          <a class="dropdown-item {% if id_ == active_page -%}active{% endif -%}" href="{{ href|e }}" title="{{ caption|e }}">
+            {{ caption|safe|e }}
+          </a>
+        {% endfor %}
+        </div>
+      </li>
+    {% else %}
+      {% set href = nav_item[0] %}
+      {% set id_ = nav_item[1] %}
+      {% set caption = nav_item[2]|safe %}
+      <li class="nav-item mx-lg-1 mx-md-1">
+        <a class="nav-link {% if id_ == active_page -%}active{% endif -%}" href="{{ href|e }}" title="{{ caption|e }}">
+          {{ caption|e }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor -%}
+{%- endmacro %}
+
 {% macro school_list(schools) %}
   {%- for country, country_schools in schools.items() -%}
     {% if country_schools %}
@@ -63,18 +91,6 @@
     		maps_initialize()
     });
   </script>
-{%- endmacro %}
-
-
-{% macro navigation_item(navigation_item, active_page) -%}
-  {% set href = navigation_item[0] %}
-  {% set id_ = navigation_item[1] %}
-  {% set caption = navigation_item[2]|safe %}
-  <li class="nav-item">
-    <a class="nav-link {% if id_ == active_page -%}active{% endif -%}" href="{{ href|e }}" title="{{ caption|e }}">
-      {{ caption|e }}
-    </a>
-  </li>
 {%- endmacro %}
 
 
