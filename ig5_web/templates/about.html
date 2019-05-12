@@ -2,6 +2,11 @@
 
 {% set active_page = "about" -%}
 {% block title %}Bližšie informácie o súťaži a organizátorovi{% endblock %}
+{% block head %}
+{{ super() }}
+<!-- Fancybox -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+{% endblock %}
 
 {% block content %}
 <h1>International Geodetic Pentathlon<br>Medzinárodný geodetický Päťboj</h1>
@@ -257,6 +262,5 @@
 <!-- Accordion -->
 <script type="text/javascript" src="{{ url_for('static', filename='js/accordion.js') }}"></script>
 <!-- Fancybox -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 {% endblock %}

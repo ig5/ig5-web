@@ -2,30 +2,35 @@
 
 {% set active_page = "results-" ~ year -%}
 {% block title %}Výsledky {{ order }}. ročníka{% endblock %}
+{% block head %}
+{{ super() }}
+<!-- Fancybox -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+{% endblock %}
 
 {% block content %}
 <h1>{{ order }}. ročník {% if summary.basic.mainSponsor %}{{ summary.basic.mainSponsor }}{% endif %} IG5</h1>
 <div id="sub_nav">
-  <a href="#basic">Základné údaje</a> &bull;
-  <a href="#schools">Zúčastnené školy</a> &bull;
-  <a href="#results">Výsledky</a> {% if summary.route %} &bull; {% endif %}
+  <a href="#basic">Základné údaje</a>
+  &bull; <a href="#schools">Zúčastnené školy</a>
+  &bull; <a href="#results">Výsledky</a>
   {% if summary.route %}
-  <a href="#route">Trasa</a> &bull;
+  &bull; <a href="#route">Trasa</a>
   {% endif %}
-  <a href="#fotos">Fotogaléria</a> {% if summary.video or docs %} &bull; {% endif %}
+  &bull; <a href="#fotos">Fotogaléria</a>
   {% if summary.video %}
-  <a href="#video">Video</a> {% if docs %} &bull; {% endif %}
+  &bull; <a href="#video">Video</a>
   {% endif %}
   {% if docs %}
-  <a href="#downloads">Na stiahnutie</a> {% if summary.hasSpecial %} &bull; {% endif %}
+  &bull; <a href="#downloads">Na stiahnutie</a>
   {% endif %}
   {% if summary.hasSpecial %}
-  <a href="#special">Sprievodná akcia</a>
+  &bull; <a href="#special">Sprievodná akcia</a>
   {% endif %}
 </div>
 
 
-<h2>Základné údaje<a name="basic"></a></h2>
+<a name="basic" href="#basic"><h2>Základné údaje</h2></a>
 <ul class="no-bullet">
   <li><span class="red">Dátum: </span>{{ summary.basic.date }} {{ year }}</li>
   <li><span class="red">Organizátor: </span>{{ summary.basic.organizer }}</li>
@@ -36,11 +41,11 @@
 {{ macros.sponsor_list(sponsors, summary.basic.sponsorsSpecial) }}
 
 
-<h2>Zúčastnené školy<a name="schools"></a></h2>
+<a name="schools" href="#schools"><h2>Zúčastnené školy</h2></a>
 {{ macros.school_list(schools.schools) }}
 
 
-<h2>Výsledky<a name="results"></a></h2>
+<a name="results" href="#results"><h2>Výsledky</h2></a>
 {% if "category1" in summary.results %}
   <div>
     <h3>1. Kategória</h3>
@@ -66,8 +71,8 @@
 {% endif %}
 
 {% if summary.route %}
-<h2>Trasa<a name="route"></a></h2>
-<ul id="route" class="no-bullet">
+<a name="route" href="#route"><h2>Trasa</h2></a>
+<ul id="route-desc" class="no-bullet">
   <li><span class="red">Lokalita: </span>{{ summary.route.location }}</li>
   <li><span class="red">Štart: </span>{{ summary.route.start }}</li>
   <li><span class="red">Cieľ: </span>{{ summary.route.finish }}</li>
@@ -78,18 +83,18 @@
 {% endif %}
 
 
-<h2>Fotogaléria<a name="fotos"></a></h2>
+<a name="fotos" href="#fotos"><h2>Fotogaléria</h2></a>
 {{ macros.photo_gallery(photos) }}
 
 
 {% if summary.video %}
-<h2>Video<a name="video"></a></h2>
+<a name="video" href="#video"><h2>Video</h2></a>
 <iframe width="100%" height="550" src="{{ summary.video }}" frameborder="0"></iframe>
 {% endif %}
 
 
 {% if docs %}
-<h2>Na stiahnutie<a name="downloads"></a></h2>
+<a name="downloads" href="#downloads"><h2>Na stiahnutie</h2></a>
 <ul>
 {% for name, size, label in docs %}
   <li><a href="{{ url_for("static", filename="doc/" + name) }}">{{ label }} ({{ size }} mb)</a></li>
@@ -116,6 +121,5 @@
   {% endif %}
 
 <!-- Fancybox -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 {% endblock %}

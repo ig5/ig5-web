@@ -56,6 +56,13 @@ a[href^="mailto"] {
   padding-right: 20px;
   background: transparent url(img/style/icon_email.gif) no-repeat center right;
 }
+/* Summary headers local links */
+a[name] {
+  text-decoration: none !important;
+}
+a[name]:hover h2:after {
+  content: " #";
+}
 
 /* Custom ids and classes ------------------------------------------------- */
 #content {
@@ -95,30 +102,15 @@ ol.questions li:after {
 }
 
 /* Gallery ---------------------------------------------------------------- */
-.gallery {
-  float: left;
-  padding-top: 20px;
-  width: 100%;
-}
 .thumbnail {
-  float: left;
-  width: 150px;
-  height: 150px;
-  margin: 0px 21px;
+  padding-bottom: 1rem;
 }
-.thumbnailhover {
-  color: #fff !important;
-  display: block;
-}
+
 .thumbnail img {
-  max-width: 150px;
-  margin: auto;
-  display: block;
+  max-height: 113px;
   border: 2px solid #0093dd;
-  /*-moz-box-shadow: 2px 2px 2px #ccc;
-		-webkit-box-shadow: 2px 2px 2px #ccc;
-		box-shadow: 2px 2px 2px #ccc*/
 }
+
 .thumbnail img:hover {
   border: 2px solid #db3041;
 }

@@ -307,5 +307,5 @@ function plotElevation(results, status) {
 		});
 	}
 	// insert height info to route information
-	$('ul#route li:nth-child(4)').after('<li><span class="red">Nadmorská výška: </span>'+ minH + ' - ' + maxH + ' m n.m. </li>');
+	$('ul#route-desc li:nth-child(4)').after('<li><span class="red">Nadmorská výška: </span>'+ minH + ' - ' + maxH + ' m n.m. </li>');
 }

@@ -101,15 +101,13 @@
 
 
 {% macro photo_gallery(photos) -%}
-<div class="gallery">
+<div class="row text-center">
   {% for name, thumbnail, image in photos %}
-    <div class="thumbnail">
-      {% set href_thumbnail = url_for("static", filename=thumbnail) %}
-      {% set href_image = url_for("static", filename=image) %}
-      <a data-fancybox="images" class="thumbnailhover" rel="gallery" title="{{ name }}" href="{{ href_image }}">
-        <img src="{{ href_thumbnail }}" title="{{ name }}" alt="{{ name }}" height="113">
-      </a>
-    </div>
+    {% set href_thumbnail = url_for("static", filename=thumbnail) %}
+    {% set href_image = url_for("static", filename=image) %}
+    <a class="thumbnail col-sm-3" title="{{ name }}" href="{{ href_image }}" data-fancybox="images" rel="gallery">
+      <img class="img-fluid" src="{{ href_thumbnail }}" title="{{ name }}" alt="{{ name }}">
+    </a>
   {% endfor %}
 </div>
 {%- endmacro %}
