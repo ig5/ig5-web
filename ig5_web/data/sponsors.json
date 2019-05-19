@@ -306,6 +306,14 @@
     ]
   },
   {
+    "name": "GEFOS a.s.",
+    "url": "http://www.gefos.cz/",
+    "supported": [
+      2019
+    ]
+  },
+
+  {
     "name": "AGIS Slovakia s.r.o.",
     "url": "http://www.agis.sk/o-nas/",
     "supported": [
@@ -866,6 +874,104 @@
     "url": "http://www.geotronics.sk/",
     "supported": [
       2018
+    ]
+  },
+  {
+    "name": "Český porcelán Dubí",
+    "url": "https://www.cesky.porcelan.cz/",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "Geodex",
+    "url": "http://www.geodex.cz/",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "Hochtief",
+    "url": "http://www.hochtief.cz/",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "Hrdlička spol. s.r.o.",
+    "url": "https://hrdlicka.cz/",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "Katastrální úřad Most",
+    "url": "https://www.cuzk.cz/Urady/Katastralni-urady/Katastralni-urady/Katastralni-urad-pro-Ustecky-kraj/Katastralni-pracoviste/KP-Most/Katastralni-pracoviste-Most.aspx",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "Ing. Mareška Jiří",
+    "url": "https://mareska.cz/",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "Metrostav",
+    "url": "https://www.metrostav.cz",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "Město Duchcov",
+    "url": "http://www.duchcov.cz/",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "Offroad Safari",
+    "url": "https://www.offroadsafari.cz/",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "PKÚ Palivový kombinát Ústí, s.p.",
+    "url": "https://www.pku.cz/",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "SD Group",
+    "url": "http://www.sdas.cz/",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "Strabag",
+    "url": "http://www.strabag.cz/",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "Subterra",
+    "url": "https://www.subterra.cz",
+    "supported": [
+      2019
+    ]
+  },
+  {
+    "name": "Ústecký kraj",
+    "url": "https://www.kr-ustecky.cz/",
+    "supported": [
+      2019
     ]
   }
 ]

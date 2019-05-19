@@ -17,7 +17,9 @@
   {% if summary.route %}
   &bull; <a href="#route">Trasa</a>
   {% endif %}
+  {% if photos %}
   &bull; <a href="#fotos">Fotogaléria</a>
+  {% endif %}
   {% if summary.video %}
   &bull; <a href="#video">Video</a>
   {% endif %}
@@ -83,8 +85,10 @@
 {% endif %}
 
 
+{% if photos %}
 <a name="fotos" href="#fotos"><h2>Fotogaléria</h2></a>
 {{ macros.photo_gallery(photos) }}
+{% endif %}
 
 
 {% if summary.video %}

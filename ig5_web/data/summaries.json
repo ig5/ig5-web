@@ -1335,7 +1335,7 @@
   "2018": {
     "basic": {
       "date": "27. - 28. apríl",
-      "organizer": "Stredná priemyselná škola stavebná, Veľká okružná 25, 010 01 Žilina",
+      "organizer": "Stredná priemyselná škola stavebná Žilina",
       "teamCount": 31
     },
     "results": {
@@ -1518,9 +1518,9 @@
     },
     "route": {
       "location": "Most - Mariánské Radčice - Duchcov",
-      "start": "Most",
-      "finish": "Zámecká zahrada Duchcov",
-      "length": 0,
+      "start": "Kostel Nanebevzetí Panny Marie, Most",
+      "finish": "Zámecká zahrada, Duchcov",
+      "length": 16,
       "orientationSiteCount": 31,
       "googleMapsSettings": {
         "zoom": 12,
