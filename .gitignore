@@ -11,6 +11,7 @@ __pycache__/
 .env
 
 # Local
+meta/
 **helper.py
 ig5_web/static/doc/*
 ig5_web/static/img/about/*
@@ -18,3 +19,4 @@ ig5_web/static/img/summary/*
 
 # Frozen-Flask
 build/
+
