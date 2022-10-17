@@ -2716,5 +2716,25 @@
       ]
     },
     "video": "https://www.youtube.com/embed/3dJJjSuW9og"
+  },
+  "2022": {
+    "basic": {
+      "date": "23. - 24. september",
+      "organizer": "Občianske združenie STAV-GEO Lučenec a SPŠ stavebná Oskara Winklera Lučenec",
+      "teamCount": 28
+    },
+    "results": {
+      "category1": [
+        "Brno B12",
+        "Letohrad A18",
+        "Brno A6"
+      ],
+      "category2": [
+        "Brno B12",
+        "Lučenec B23",
+        "Letohrad A18"
+      ]
+    },
+    "video": "https://www.youtube.com/embed/ecqN5T9JYAU"
   }
 }
