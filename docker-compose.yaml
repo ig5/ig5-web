@@ -5,6 +5,8 @@ services:
     build: .
     image: ig5_web
     command: tail -f /dev/null
+    env_file:
+      - .env
     volumes:
       - .:/code
     ports:

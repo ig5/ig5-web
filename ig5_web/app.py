@@ -7,6 +7,8 @@ from flask_pretty import Prettify
 
 from ig5_web import utils
 
+GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
+
 app = Flask(__name__)
 minify_html = True
 # minify_page = False
@@ -66,6 +68,7 @@ def summary(order):
         photos=utils.get_photos(photos_dir),
         photos_special=utils.get_photos(os.path.join(photos_dir, "special")),
         docs=utils.get_docs(year),
+        google_maps_api_key=GOOGLE_MAPS_API_KEY
     )
 
 
@@ -75,6 +78,7 @@ def contacts():
         "contacts.html",
         schools=schools,
         schools_flattened=utils.flatten_schools(schools),
+        google_maps_api_key=GOOGLE_MAPS_API_KEY
     )
 
 

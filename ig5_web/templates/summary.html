@@ -119,7 +119,8 @@
         macros.google_map_scripts(
           summary.route.googleMapsSettings.center|join(","),
           summary.route.googleMapsSettings.zoom,
-          summary.route.points|safe
+          summary.route.points|safe,
+          google_maps_api_key
         )
     }}
   {% endif %}

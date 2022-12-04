@@ -52,7 +52,8 @@
     macros.google_map_scripts(
       schools.googleMapsSettings.center|join(","),
       schools.googleMapsSettings.zoom,
-      schools_flattened|safe
+      schools_flattened|safe,
+      google_maps_api_key
     )
 }}
 {% endblock %}

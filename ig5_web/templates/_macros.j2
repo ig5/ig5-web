@@ -76,10 +76,10 @@
 {%- endmacro %}
 
 
-{% macro google_map_scripts(center, zoom, points) %}
+{% macro google_map_scripts(center, zoom, points, google_maps_api_key) %}
   <!-- Google maps -->
   <!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script> -->
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa60NYUtPVSbWVzbIxG2FjV9pwn1ucDDw"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='js/maps.js')}}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='js/vendor/markerwithlabel.js')}}"></script>
   <script type="text/javascript">
