@@ -40,7 +40,7 @@ def read_route_lat_lon(lat_lon: str) -> list:
         line = line.strip()
         line = line.split()
 
-        lat_lon.append(line[1], line[2])
+        lat_lon.append((line[1], line[2]))
 
     return lat_lon
 
@@ -51,7 +51,7 @@ def format_coordinate(coordinate: str, indicator: str) -> float:
     coordinate = coordinate.replace(indicator, "")
 
     parts = coordinate.split("°")
-    if len(parts) > 1:
+    if len(parts) > 1 and parts[1]:
         degrees = parts[0]
         minutes = parts[1]
         coordinate = float(degrees) + float(minutes) / 60

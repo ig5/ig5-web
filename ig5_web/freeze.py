@@ -2,7 +2,6 @@ from flask_frozen import Freezer
 
 from ig5_web.app import app, years
 
-
 app.config["SERVER_NAME"] = "stavgeo.sk"
 app.config["PREFERRED_URL_SCHEME"] = "https"
 freezer = Freezer(app)
@@ -16,4 +15,4 @@ def summary():
 
 if __name__ == "__main__":
     freezer.freeze()
-    # freezer.run(debug=True)
+    # freezer.run(debug=True, host="0.0.0.0")

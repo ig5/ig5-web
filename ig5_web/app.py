@@ -1,12 +1,11 @@
-from datetime import datetime
 import os
+from datetime import datetime
 
-from flask import abort, Flask, render_template
+from flask import Flask, abort, render_template
 from flask_htmlmin import HTMLMIN
 from flask_pretty import Prettify
 
 from ig5_web import utils
-
 
 app = Flask(__name__)
 minify_html = True
@@ -80,4 +79,4 @@ def contacts():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")

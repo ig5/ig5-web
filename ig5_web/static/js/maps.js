@@ -10,7 +10,7 @@ function HomeControl(controlDiv, map) {
 	controlUI.appendChild(controlText);
 
 	// setup the click event listener
-	google.maps.event.addDomListener(controlDiv, 'click', function() {
+	google.maps.event.addDomListener(controlDiv, 'click', function () {
 		map.setCenter(center);
 		map.setZoom(zoom);
 	});
@@ -28,15 +28,15 @@ function ProfileControl(controlDiv, map) {
 	controlUI.appendChild(controlText);
 
 	// setup the click event listener
-	google.maps.event.addDomListener(controlDiv, 'click', function() {
+	google.maps.event.addDomListener(controlDiv, 'click', function () {
 		var chart = document.getElementById('elevation_chart');
-		if(chart.style.zIndex == 0) {
+		if (chart.style.zIndex == 0) {
 			chart.style.zIndex = 10;
 			chart.style.display = "block";
 			controlText.innerHTML = 'Skryť profil';
 			controlUI.title = 'Kliknutím zrušíte zobrazenie vertikálneho profilu priebehu terénu na trase';
 		}
-		else{
+		else {
 			chart.style.zIndex = 0;
 			chart.style.display = "none";
 			controlText.innerHTML = 'Vertikálny profil';
@@ -45,59 +45,59 @@ function ProfileControl(controlDiv, map) {
 }
 
 
-	// map initialization function
-	// ***************************
-function maps_initialize(){
+// map initialization function
+// ***************************
+function maps_initialize() {
 	var routePoints = [],       // empty array which will be filled with point coordinates for path displaying
-	    icon,                   // empty icon variable
-	    css,                    // empty CSS class variable
-	    labelContent;           // empty labelContent variable
+		icon,                   // empty icon variable
+		css,                    // empty CSS class variable
+		labelContent;           // empty labelContent variable
 
 	var myOptions = {
 		zoom: zoom,
 		center: center,
 		mapTypeId: google.maps.MapTypeId.HYBRID
 	};
-	var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+	var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
 	// create the DIV to hold the control and call the HomeControl() constructor passing in this DIV
-		var homeControlDiv = document.createElement('DIV'),
-		    homeControl = new HomeControl(homeControlDiv, map);
-		homeControlDiv.index = 1;
-		map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
+	var homeControlDiv = document.createElement('DIV'),
+		homeControl = new HomeControl(homeControlDiv, map);
+	homeControlDiv.index = 1;
+	map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
 	// variables to get current file name
 	var url = window.location.pathname,
-	    filename = url.substring(url.lastIndexOf('/')+1);
+		filename = url.substring(url.lastIndexOf('/') + 1);
 
-	if (filename.indexOf('rocnik.html') !== -1){
-		// create the DIV to hold the control and call the ProfileControl() constructor passing in this DIV
-		var profileControlDiv = document.createElement('DIV'),
-		    profileControl = new ProfileControl(profileControlDiv, map);
-		profileControlDiv.index = 1;
-		map.controls[google.maps.ControlPosition.TOP_RIGHT].push(profileControlDiv);
-	}
+	// if (filename.indexOf('rocnik.html') !== -1){
+	// 	// create the DIV to hold the control and call the ProfileControl() constructor passing in this DIV
+	// 	var profileControlDiv = document.createElement('DIV'),
+	// 	    profileControl = new ProfileControl(profileControlDiv, map);
+	// 	profileControlDiv.index = 1;
+	// 	map.controls[google.maps.ControlPosition.TOP_RIGHT].push(profileControlDiv);
+	// }
 
 
 	// loop through points
 	// *******************
-	for (var i = 0; i < points.length; i++){
-		 var point = points[i];
-		 var pointLat = point.coordinates[0];
-		 var pointLon = point.coordinates[1];
+	for (var i = 0; i < points.length; i++) {
+		var point = points[i];
+		var pointLat = point.coordinates[0];
+		var pointLon = point.coordinates[1];
 
-		 var isSchool = false;
-		 var pointDescription;
-		 if (point.hasOwnProperty('description')) {
-			 pointDescription =  point.description;
-		 } else if (point.hasOwnProperty('city')) {
-			 pointDescription =  point.city;
-			 isSchool = true;
-		 }
+		var isSchool = false;
+		var pointDescription;
+		if (point.hasOwnProperty('description')) {
+			pointDescription = point.description;
+		} else if (point.hasOwnProperty('city')) {
+			pointDescription = point.city;
+			isSchool = true;
+		}
 
 		// compose the message for infowindows
 		var messageBase = "<br>" + "WGS-84: " + "&nbsp N " + pointLat + "°" + "&nbsp&nbsp E " + pointLon + "°";
 		var messagePrefix;
-		if(pointDescription !== ""){
+		if (pointDescription !== "") {
 			messagePrefix = point.name + ": " + pointDescription;
 		}
 		else {
@@ -106,62 +106,43 @@ function maps_initialize(){
 		message = messagePrefix + messageBase
 
 		// compose labelContent
-		var sub;
-		if(isSchool){
+		if (isSchool) {
 			labelContent = point.city;
-			sub = "school";
 		}
 		else {
 			labelContent = point.name;
-			sub = point.name.substring(3,4);
 		}
 
-		switch(sub){
-			// start
-			case "r" :	icon = "static/img/style/maps_start.png";
-						css = "labels start";
-						break;
-			// site
-			case "s" : 	icon = "static/img/style/maps_stanovisko.png"
-						css = "labels stanovisko";
-						break;
-		    // orientate site
-			case "o" : 	icon = "static/img/style/maps_orientacne.png";
-						css = "labels orientacne";
-						break;
-				//
-			case "e" : 	icon = "static/img/style/maps_orientacne.png";
-						css = "labels orientacne";
-						break;
-				// napr. 10. orientačné stanovisko - dvojciferne
-			case " " : 	icon = "static/img/style/maps_orientacne.png";
-						css = "labels orientacne";
-						break;
-			// finish
-			case "ľ" : 	icon = "static/img/style/maps_finish.png";
-						css = "labels finish";
-						break;
-			// schools
-			case "school" :	if(point.city === "Lučenec"){
-								icon = "static/img/style/maps_finish.png";
-								css = "labels finish";
-								break;
-							}
-							else {
-								icon = "static/img/style/maps_start.png";
-								css = "labels start";
-								break;
-							}
+		if (point.name === "Štart") {
+			icon = "static/img/style/maps_start.png";
+			css = "labels start";
+		} else if (point.name === "Cieľ") {
+			icon = "static/img/style/maps_finish.png";
+			css = "labels finish";
+		} else if (point.name.match(/\d. stanovisko/)) {
+			icon = "static/img/style/maps_stanovisko.png"
+			css = "labels stanovisko";
+		} else if (isSchool) {
+			if (point.city === "Lučenec") {
+				icon = "static/img/style/maps_finish.png";
+				css = "labels finish";
+			}
+			else {
+				icon = "static/img/style/maps_start.png";
+				css = "labels start";
+			}
+		} else {
+			icon = "static/img/style/maps_orientacne.png";
+			css = "labels orientacne";
 		}
 
 		// point marker
 		var marker = new MarkerWithLabel({
-			position: new google.maps.LatLng (pointLat,pointLon),
+			position: new google.maps.LatLng(pointLat, pointLon),
 			map: map,
 			labelClass: css,
 			labelContent: labelContent,
-			labelStyle: {opacity:1},
-			// title: point[0],
+			labelStyle: { opacity: labelContent === "" ? 0 : 1 },
 			title: point.name,
 			html: message,
 			icon: icon
@@ -169,16 +150,16 @@ function maps_initialize(){
 
 		// filling array with points coordinates
 		// console.log(point);
-		routePoints.push(new google.maps.LatLng(pointLat,pointLon));
+		routePoints.push(new google.maps.LatLng(pointLat, pointLon));
 
 		// just for site "kontakty.php" - creates a Lucenec centered star shape
 		if (isSchool) {
-			routePoints.push(new google.maps.LatLng(48.328132,19.656845));
+			routePoints.push(new google.maps.LatLng(48.328132, 19.656845));
 		}
 
 		// infowindow with its content
 		var infowindow = new google.maps.InfoWindow({});
-		google.maps.event.addListener(marker, 'click', function() {
+		google.maps.event.addListener(marker, 'click', function () {
 			infowindow.setContent(this.html);
 			infowindow.open(map, this);
 		});
@@ -199,10 +180,10 @@ function maps_initialize(){
 
 	// create an ElevationService object and draw the vertical profile
 	//****************************************************************
-	if(!isSchool){
-		elevator = new google.maps.ElevationService();
-		drawProfile(routePoints);
-	}
+	// if (!isSchool) {
+	// 	elevator = new google.maps.ElevationService();
+	// 	drawProfile(routePoints);
+	// }
 }
 // map initialization function end
 // *******************************
@@ -210,7 +191,8 @@ function maps_initialize(){
 
 // load the Visualization API and the corechart package
 // must be referenced outside of a function
-google.load("visualization", "1", {packages: ["corechart"]});
+// google.charts.load('current', { 'packages': ['corechart'] });
+// google.load("visualization", "1", { packages: ["corechart"] });
 
 function drawProfile(path) {
 	// create a new chart in the elevation_chart DIV
@@ -233,22 +215,22 @@ function plotElevation(results, status) {
 		// extract vipPoints - start, stanoviska, ciel
 		var vipPoints = [];
 		var point;
-		for (var i = 0; i < points.length; i++){
+		for (var i = 0; i < points.length; i++) {
 			point = points[i];
-			if (point.name === "Štart" || point.name === "Cieľ" || (point.name.length < 15)){
-				vipPoints.push([point.coordinates[0],point.coordinates[1],point.name]);
+			if (point.name === "Štart" || point.name === "Cieľ" || (point.name.length < 15)) {
+				vipPoints.push([point.coordinates[0], point.coordinates[1], point.name]);
 			}
 		}
 
 		// get elevation attributes names to an array coz google keeps changing them
 		var elevAttr = [];
-		for(var propertyName in elevations[0].location) {
+		for (var propertyName in elevations[0].location) {
 			elevAttr.push(propertyName);
 		}
 
 		var checked = [],									// will be filled when filtering vipPoints to get them to the graf
 			elevX = elevAttr[0],							// elevation point lat property name
-			elevY = elevAttr[1]								// elevation point lon property name
+			elevY = elevAttr[1],							// elevation point lon property name
 			maxHwindow = 0,									// viewWindow maximum elevation default value
 			maxH = 0,										// route maximum elevation default value
 			minHwindow = 5000,								// viewWindow minimum elevation default value
@@ -258,17 +240,17 @@ function plotElevation(results, status) {
 		data.addColumn('string', 'Poloha');
 		data.addColumn('number', 'Nadmorská výška [m n.m.]');
 		data.addColumn('number', 'Stanovisko');
-		data.addColumn({type: 'string', role: 'annotation'});
+		data.addColumn({ type: 'string', role: 'annotation' });
 		for (var i = 0; i < results.length; i++) {
 			var vyska = parseFloat(elevations[i].elevation.toFixed(2)),
 				lat = elevations[i].location[elevX]().toFixed(5),
 				lon = elevations[i].location[elevY]().toFixed(5),
-			    poloha = 'N:' + lat + '° E:' + lon + '°',
+				poloha = 'N:' + lat + '° E:' + lon + '°',
 				stanovisko = 0;
 
-			for (var ii = 0; ii < vipPoints.length; ii++){
+			for (var ii = 0; ii < vipPoints.length; ii++) {
 				var rozdiel = Math.abs((parseFloat(lat) - vipPoints[ii][0])) + Math.abs((parseFloat(lon) - vipPoints[ii][1]));
-				if (rozdiel < 0.0005 && !(ii in checked)){
+				if (rozdiel < 0.0005 && !(ii in checked)) {
 					checked.push(ii);
 					stanovisko = vyska;
 					annotation = vipPoints[ii][2];
@@ -287,7 +269,7 @@ function plotElevation(results, status) {
 			}
 
 			// fill the table
-			data.addRow([poloha,vyska,stanovisko, annotation]);
+			data.addRow([poloha, vyska, stanovisko, annotation]);
 		}
 
 		// draw the chart using the data within its DIV
@@ -307,5 +289,5 @@ function plotElevation(results, status) {
 		});
 	}
 	// insert height info to route information
-	$('ul#route-desc li:nth-child(4)').after('<li><span class="red">Nadmorská výška: </span>'+ minH + ' - ' + maxH + ' m n.m. </li>');
+	$('ul#route-desc li:nth-child(4)').after('<li><span class="red">Nadmorská výška: </span>' + minH + ' - ' + maxH + ' m n.m. </li>');
 }

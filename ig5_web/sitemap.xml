@@ -9,87 +9,92 @@
 
 <url>
   <loc>https://stavgeo.sk/</loc>
-  <lastmod>2019-08-17T09:07:11+00:00</lastmod>
+  <lastmod>2022-12-04T12:00:46+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/o_ig5.html</loc>
-  <lastmod>2019-08-17T09:07:11+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/1rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:10+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/2rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:10+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/3rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:10+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:39+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/4rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:10+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:39+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/5rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:10+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/6rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:10+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/7rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:10+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/8rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:11+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/9rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:11+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/10rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:10+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/11rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:10+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/12rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:10+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/13rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:10+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/14rocnik.html</loc>
-  <lastmod>2019-08-17T09:07:10+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stavgeo.sk/15rocnik.html</loc>
+  <lastmod>2022-12-04T12:00:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/kontakty.html</loc>
-  <lastmod>2019-08-17T09:07:11+00:00</lastmod>
+  <lastmod>2022-10-17T19:46:47+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -220,6 +225,16 @@
 <url>
   <loc>https://stavgeo.sk/static/doc/2018_trasa.pdf</loc>
   <lastmod>2019-05-04T13:56:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://stavgeo.sk/static/doc/2022_trasa.pdf</loc>
+  <lastmod>2022-10-17T19:39:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://stavgeo.sk/static/doc/2022_vysledky.pdf</loc>
+  <lastmod>2022-12-04T12:03:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 

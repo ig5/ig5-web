@@ -5,7 +5,6 @@ from unicodedata import normalize
 
 from flask import url_for
 
-
 here = os.path.dirname(os.path.abspath(__file__))
 static_path = os.path.join(here, "static")
 
@@ -119,6 +118,7 @@ def get_docs(year):
         "sutaziaci": "Zoznam súťažiacich",
         "otazky_a_ulohy": "Otázky a úlohy",
         "trasa": "Zoznam súradníc stanovísk",
+        "vysledky": "Celkové výsledky",
         "zememeric": "Článok z časopisu Zeměměřič",
         "organizacny_statut": "Organizačný štatút IG5",
         "navrh_formy_spoluprace": "Návrh formy spolupráce",
