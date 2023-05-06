@@ -56,9 +56,7 @@ def read_data():
     with open(os.path.join(data_dir, "summaries.json")) as f:
         summaries = json.load(f)
 
-    years = {
-        order: year for order, year in enumerate(summaries.keys(), start=1)
-    }
+    years = {order: year for order, year in enumerate(summaries.keys(), start=1)}
     return schools, sponsors, summaries, years
 
 
@@ -130,7 +128,7 @@ def get_docs(year):
         if doc.startswith(year):
             doc_path = os.path.join(path, doc)
             doc_size = os.path.getsize(doc_path)
-            doc_size = round(doc_size / 1024 ** 2, 2)
+            doc_size = round(doc_size / 1024**2, 2)
             doc_type = doc.replace(year, "").replace("_", "").split(".")[0]
             docs.append((doc, doc_size, doc_types[doc_type]))
     return docs

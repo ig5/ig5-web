@@ -68,7 +68,7 @@ def summary(order):
         photos=utils.get_photos(photos_dir),
         photos_special=utils.get_photos(os.path.join(photos_dir, "special")),
         docs=utils.get_docs(year),
-        google_maps_api_key=GOOGLE_MAPS_API_KEY
+        google_maps_api_key=GOOGLE_MAPS_API_KEY,
     )
 
 
@@ -78,7 +78,7 @@ def contacts():
         "contacts.html",
         schools=schools,
         schools_flattened=utils.flatten_schools(schools),
-        google_maps_api_key=GOOGLE_MAPS_API_KEY
+        google_maps_api_key=GOOGLE_MAPS_API_KEY,
     )
 
 
