@@ -9,5 +9,9 @@ services:
       - .env
     volumes:
       - .:/code
+      - web_vscode_server:/root/.vscode-server/
     ports:
       - 5000:8000
+
+volumes:
+  web_vscode_server:
