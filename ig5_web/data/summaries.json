@@ -3032,5 +3032,26 @@
       ]
     },
     "video": "https://www.youtube.com/embed/ecqN5T9JYAU"
+  },
+  "2023": {
+    "basic": {
+      "date": "21. - 22. apríl",
+      "organizer": "Střední průmyslová škola zeměměřická a Geografické gymnázium, Praha",
+      "teamCount": 33
+    },
+    "results": {
+      "category1": [
+        "Praha A1",
+        "Praha C30",
+        "Brno A6"
+      ],
+      "category2": [
+        "Praha A1",
+        "Letohrad B33",
+        "Žilina A9"
+      ]
+    },
+    "route": {},
+    "video": "https://www.youtube.com/embed/3voANaxy0mM"
   }
 }
