@@ -25,7 +25,7 @@ def build_navbar(years):
                 f"{year} | {order}. ročník",
             )
         )
-    navigation_bar.insert(2, {"Výsledky IG5": results_subnav})
+    navigation_bar.insert(2, {"Výsledky IG5": reversed(results_subnav)})
 
     return navigation_bar
 
