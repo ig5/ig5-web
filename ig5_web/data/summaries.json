@@ -3051,7 +3051,190 @@
         "Žilina A9"
       ]
     },
-    "route": {},
+    "route": {
+      "location": "Kubětín - Zvánovice - Holý vrch - Černé Voděrady - Pecný",
+      "start": "Areál observatoře Astronomického ústavu, Kubětín",
+      "finish": "Geodetická observatoř VÚGTK, Pecný",
+      "length": 12,
+      "orientationSiteCount": 14,
+      "googleMapsSettings": {
+        "zoom": 13,
+        "center": [
+          49.93390001,
+          14.78031001
+        ]
+      },
+      "points": [
+        {
+          "coordinates": [
+            49.91538498,
+            14.77937903
+          ],
+          "description": "Areál observatoře Astronomického ústavu, Kubětín",
+          "name": "Štart"
+        },
+        {
+          "coordinates": [
+            49.91719698,
+            14.77987298
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.91890999,
+            14.77808696
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.92221598,
+            14.782638
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.92687296,
+            14.78298199
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.93390001,
+            14.78031001
+          ],
+          "description": "Trigonometrické určenie výšky predmetu",
+          "name": "1. stanovisko"
+        },
+        {
+          "coordinates": [
+            49.93764798,
+            14.78069399
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.94402803,
+            14.773521
+          ],
+          "description": "Určenie výmery",
+          "name": "2. stanovisko"
+        },
+        {
+          "coordinates": [
+            49.95049903,
+            14.77549603
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.95210299,
+            14.77423003
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.95325299,
+            14.78688402
+          ],
+          "description": "Zemepisný test",
+          "name": "3. stanovisko"
+        },
+        {
+          "coordinates": [
+            49.94696002,
+            14.79791896
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.94597004,
+            14.794834
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.94128296,
+            14.79506501
+          ],
+          "description": "Centrácia a horizontácia prístroja",
+          "name": "4. stanovisko"
+        },
+        {
+          "coordinates": [
+            49.93353398,
+            14.801419
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.93209396,
+            14.79879303
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.92288603,
+            14.79164796
+          ],
+          "description": "Určenie nivelačného prevýšenia",
+          "name": "5. stanovisko"
+        },
+        {
+          "coordinates": [
+            49.91595897,
+            14.79006001
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.91478399,
+            14.784148
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.91351103,
+            14.78415898
+          ],
+          "description": "",
+          "name": ""
+        },
+        {
+          "coordinates": [
+            49.91405502,
+            14.78569597
+          ],
+          "description": "Geodetická observatoř VÚGTK, Pecný",
+          "name": "Cieľ"
+        }
+      ]
+    },
     "video": "https://www.youtube.com/embed/3voANaxy0mM"
   }
 }

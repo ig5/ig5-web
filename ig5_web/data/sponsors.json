@@ -315,7 +315,8 @@
     "name": "GEFOS a.s.",
     "url": "http://www.gefos.cz/",
     "supported": [
-      2019
+      2019,
+      2023
     ]
   },
   {
@@ -910,7 +911,8 @@
     "name": "Hrdlička spol. s.r.o.",
     "url": "https://hrdlicka.cz/",
     "supported": [
-      2019
+      2019,
+      2023
     ]
   },
   {
@@ -1044,6 +1046,132 @@
     "url": "",
     "supported": [
       2022
+    ]
+  },
+  {
+    "name": "Magistrát hlavního města Prahy",
+    "url": "https://www.praha.eu",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "3G Praha",
+    "url": "https://www.3g.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "GEOTRONICS Praha",
+    "url": "https://geotronics.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "3gon Positioning",
+    "url": "https://cz.3gon.eu",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "CS Praha",
+    "url": "https://it.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "Správa železnic",
+    "url": "https://www.spravazeleznic.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "Geodetická kancelář Nedoma & Řezník, Praha",
+    "url": "https://www.nedomareznik.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "Asociace podnikatelů v geomatice",
+    "url": "https://www.apgeo.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "Stavinsport",
+    "url": "http://www.stavinsport.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "REPACO services",
+    "url": "https://www.repaco.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "Atlas DMT",
+    "url": "https://www.atlasltd.cz/dmt",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "Gepro",
+    "url": "https://www.gepro.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "SG Geotechnika",
+    "url": "https://www.geotechnika.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "Lg1",
+    "url": "https://www.lg1.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "Výzkumný ústav geodetický, topografický a kartografický",
+    "url": "https://www.vugtk.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "Astronomický ústav AV ČR",
+    "url": "https://www.asu.cas.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "Kampi office",
+    "url": "https://www.kampioffice.cz",
+    "supported": [
+      2023
+    ]
+  },
+  {
+    "name": "GKS - geodetická kancelář, Sokolov",
+    "url": "https://www.gks-sokolov.cz",
+    "supported": [
+      2023
     ]
   }
 ]
