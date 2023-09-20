@@ -8,5 +8,5 @@ WORKDIR /code
 
 COPY requirements.txt requirements.txt
 RUN \
-    pip install --no-cache-dir --upgrade pip flake8 black && \
+    pip install --no-cache-dir --upgrade pip && \
     pip install -r /code/requirements.txt

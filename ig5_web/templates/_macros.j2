@@ -70,12 +70,14 @@
 {%- endmacro %}
 
 
+{# TODO obsolete, can be removed #}
 {% macro google_map() %}
   <div id="elevation_chart" style="width: 100%; margin-top:75px; position:absolute; z-index:0"></div>
   <div id="map_canvas" style="width: 100%; height:550px; position:relative"></div>
 {%- endmacro %}
 
 
+{# TODO obsolete, can be removed aong with js/maps.js and js/vendor/markerwithlabel.js #}
 {% macro google_map_scripts(center, zoom, points, google_maps_api_key) %}
   <!-- Google maps -->
   <!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script> -->

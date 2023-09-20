@@ -34,7 +34,7 @@
   Kontakty (linky na weby) všetkých škôl, ktoré sa zúčastnili súťaze:
 </p>
 {{ macros.school_list(schools.schools) }}
-{{ macros.google_map() }}
+{{ map_iframe|safe }}
 
 
 <h2>Web stavgeo.sk</h2>
@@ -44,16 +44,4 @@
   <br>
   A môžete aj priložiť ruku k dielu: <a href="https://github.com/ig5">github.com/ig5</a>
 </p>
-{% endblock %}
-
-{% block scripts %}
-{{ super() }}
-{{
-    macros.google_map_scripts(
-      schools.googleMapsSettings.center|join(","),
-      schools.googleMapsSettings.zoom,
-      schools_flattened|safe,
-      google_maps_api_key
-    )
-}}
 {% endblock %}
