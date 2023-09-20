@@ -1,4 +1,5 @@
 import os
+
 from datetime import datetime
 
 from flask import Flask, abort, render_template
@@ -7,7 +8,6 @@ from flask_pretty import Prettify
 
 from ig5_web import utils
 
-GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 
 app = Flask(__name__)
 minify_html = True
@@ -55,20 +55,21 @@ def summary(order):
     if year is None:
         abort(404)
 
+    summary = summaries[year]
     photos_dir = os.path.join("summary", year)
     attended_schools = utils.filter_schools_by_year(schools, year)
     return render_template(
         "summary.html",
         order=order,
         year=year,
-        summary=summaries[year],
+        summary=summary,
         sponsors=utils.filter_sponsors_by_year(sponsors, year),
         school_count=utils.school_count(attended_schools),
         schools=attended_schools,
         photos=utils.get_photos(photos_dir),
         photos_special=utils.get_photos(os.path.join(photos_dir, "special")),
         docs=utils.get_docs(year),
-        google_maps_api_key=GOOGLE_MAPS_API_KEY,
+        map_iframe=utils.create_route_map_iframe(summary.get("route")),
     )
 
 
@@ -78,7 +79,7 @@ def contacts():
         "contacts.html",
         schools=schools,
         schools_flattened=utils.flatten_schools(schools),
-        google_maps_api_key=GOOGLE_MAPS_API_KEY,
+        map_iframe=utils.create_schools_map_iframe(schools),
     )
 
 

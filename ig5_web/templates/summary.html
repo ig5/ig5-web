@@ -81,9 +81,8 @@
   <li><span class="red">Dĺžka: </span>{{ summary.route.length }} km</li>
   <li><span class="red">Počet orientačných stanovísk: </span>{{ summary.route.orientationSiteCount }}</li>
 </ul>
-{{ macros.google_map() }}
+{{ map_iframe|safe }}
 {% endif %}
-
 
 {% if photos %}
 <a name="fotos" href="#fotos"><h2>Fotogaléria</h2></a>
@@ -114,16 +113,6 @@
 
 {% block scripts %}
   {{ super() }}
-  {% if summary.route %}
-    {{
-        macros.google_map_scripts(
-          summary.route.googleMapsSettings.center|join(","),
-          summary.route.googleMapsSettings.zoom,
-          summary.route.points|safe,
-          google_maps_api_key
-        )
-    }}
-  {% endif %}
 
 <!-- Fancybox -->
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>

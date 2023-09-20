@@ -2,6 +2,7 @@ import itertools
 import json
 import os
 from unicodedata import normalize
+import folium
 
 from flask import url_for
 
@@ -132,3 +133,115 @@ def get_docs(year):
             doc_type = doc.replace(year, "").replace("_", "").split(".")[0]
             docs.append((doc, doc_size, doc_types[doc_type]))
     return docs
+
+
+def get_marker_color(point: dict) -> str:
+    name = point["name"]
+
+    if name in ("Štart", "Cieľ"):
+        return "red"
+
+    if not name or "orientačné" in name.lower():
+        return "lightgray"
+
+    return "darkblue"
+
+
+def get_marker_icon(point: dict):
+    name = point["name"]
+
+    if name == "Štart":
+        return "play"
+
+    if name == "Cieľ":
+        return "stop"
+
+    if not name or "orientačné" in name.lower():
+        return ""
+
+    return "record"
+
+
+def format_coordinates(coordinates):
+    return f"N {coordinates[0]}° &nbsp&nbsp E {coordinates[1]}°"
+
+
+def create_route_map_iframe(route: dict):
+    if not route:
+        return ""
+
+    map_ = folium.Map(
+        location=route["googleMapsSettings"]["center"],
+        zoom_start=route["googleMapsSettings"]["zoom"],
+    )
+    map_.get_root().width = "100%"
+    map_.get_root().height = "550px"
+
+    points = []
+    for point in route["points"]:
+        coordinates = point["coordinates"]
+        coordinates_str = format_coordinates(coordinates)
+        points.append(coordinates)
+
+        if point["name"] and point["description"]:
+            text = f'{point["name"]}: {point["description"]}<br>{coordinates_str}'
+        else:
+            text = ""
+
+        if point["name"] or point["description"]:
+            opacity = 1
+        else:
+            opacity = 0.7
+
+        folium.Marker(
+            location=coordinates,
+            tooltip=text if text else None,
+            popup=folium.Popup(text or coordinates_str, min_width=250, max_width=500),
+            icon=folium.Icon(
+                color=get_marker_color(point), icon=get_marker_icon(point)
+            ),
+            opacity=opacity,
+        ).add_to(map_)
+
+    folium.PolyLine(points, color="#0093dd", weight=5).add_to(map_)
+
+    iframe = map_.get_root()._repr_html_()
+    return iframe
+
+
+def create_schools_map_iframe(schools: dict):
+    map_ = folium.Map(
+        location=schools["googleMapsSettings"]["center"],
+        zoom_start=schools["googleMapsSettings"]["zoom"],
+    )
+    map_.get_root().width = "100%"
+    map_.get_root().height = "550px"
+
+    flat_schools = flatten_schools(schools)
+
+    lucenec = {}
+    for school in flat_schools:
+        if school["city"] == "Lučenec":
+            lucenec = school
+            break
+
+    for school in flat_schools:
+        is_lucenec = school["city"] == "Lučenec"
+        coordinates = school["coordinates"]
+
+        name_and_city = f'{school["name"]}, {school["city"]}'
+        text = f"{name_and_city}<br>{format_coordinates(coordinates)}"
+
+        folium.Marker(
+            location=coordinates,
+            tooltip=name_and_city,
+            popup=folium.Popup(text, min_width=250, max_width=500),
+            icon=folium.Icon(color="red" if is_lucenec else "darkblue", icon="record"),
+        ).add_to(map_)
+
+        if not is_lucenec:
+            points = [lucenec["coordinates"], coordinates]
+            folium.PolyLine(points, color="#0093dd", weight=3).add_to(map_)
+
+    iframe = map_.get_root()._repr_html_()
+    return iframe
