@@ -195,7 +195,6 @@ def create_route_map_iframe(route: dict):
 
         folium.Marker(
             location=coordinates,
-            tooltip=text if text else None,
             popup=folium.Popup(text or coordinates_str, min_width=250, max_width=500),
             icon=folium.Icon(
                 color=get_marker_color(point), icon=get_marker_icon(point)
@@ -234,7 +233,6 @@ def create_schools_map_iframe(schools: dict):
 
         folium.Marker(
             location=coordinates,
-            tooltip=name_and_city,
             popup=folium.Popup(text, min_width=250, max_width=500),
             icon=folium.Icon(color="red" if is_lucenec else "darkblue", icon="record"),
         ).add_to(map_)
