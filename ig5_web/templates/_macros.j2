@@ -70,32 +70,6 @@
 {%- endmacro %}
 
 
-{# TODO obsolete, can be removed #}
-{% macro google_map() %}
-  <div id="elevation_chart" style="width: 100%; margin-top:75px; position:absolute; z-index:0"></div>
-  <div id="map_canvas" style="width: 100%; height:550px; position:relative"></div>
-{%- endmacro %}
-
-
-{# TODO obsolete, can be removed aong with js/maps.js and js/vendor/markerwithlabel.js #}
-{% macro google_map_scripts(center, zoom, points, google_maps_api_key) %}
-  <!-- Google maps -->
-  <!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script> -->
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/maps.js')}}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/vendor/markerwithlabel.js')}}"></script>
-  <script type="text/javascript">
-    var center = new google.maps.LatLng({{ center }});
-    var zoom = {{ zoom }};
-    var points = {{ points }};
-
-    $(document).ready(function() {
-    		maps_initialize()
-    });
-  </script>
-{%- endmacro %}
-
-
 {% macro added_summary_link(order) -%}
   {% set href = url_for("summary", order=order, _external=True) %}
   <a href="{{ href }}">{{ href }}</a>

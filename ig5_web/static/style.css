@@ -4,16 +4,25 @@ body {
 }
 
 /* Headings --------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #0093dd;
   font-family: Arial, "Nimbus Sans L", FreeSans, sans-serif;
 }
+
 h1 {
   text-align: center;
 }
-h3, h4 {
+
+h3,
+h4 {
   color: #db3041;
 }
+
 h4 {
   font-size: 1.15rem;
 }
@@ -22,6 +31,7 @@ h4 {
 p {
   color: #373737;
 }
+
 iframe {
   margin-bottom: 1rem;
 }
@@ -31,35 +41,43 @@ a {
   color: #373737;
   text-decoration: underline;
 }
+
 a:hover {
   color: #373737;
   text-decoration: none;
 }
+
 /* file type icons */
 a[href$=".pdf"] {
   padding-right: 25px;
   background: transparent url(img/style/icon_pdf.gif) no-repeat center right;
 }
+
 a[href$=".pps"] {
   padding-right: 25px;
   background: transparent url(img/style/icon_pps.gif) no-repeat center right;
 }
+
 a[href$=".doc"] {
   padding-right: 25px;
   background: transparent url(img/style/icon_doc.gif) no-repeat center right;
 }
+
 a[href$=".xlsx"] {
   padding-right: 25px;
   background: transparent url(img/style/icon_xls.gif) no-repeat center right;
 }
+
 a[href^="mailto"] {
   padding-right: 20px;
   background: transparent url(img/style/icon_email.gif) no-repeat center right;
 }
+
 /* Summary headers local links */
 a[name] {
   text-decoration: none !important;
 }
+
 a[name]:hover h2:after {
   content: " #";
 }
@@ -68,35 +86,44 @@ a[name]:hover h2:after {
 #content {
   padding-top: 2rem;
 }
+
 #sub_nav {
   text-align: center;
   padding-bottom: 20px;
 }
+
 #sponzoring {
   text-align: center;
 }
+
 #sponzoring ul li {
   display: inline-block;
   padding-right: 30px;
 }
+
 #map_canvas {
   margin-bottom: 1rem;
 }
+
 /* for blue highlighting */
 .blue {
   color: #0093dd;
 }
+
 /* for red ul headings */
 .red {
   color: #db3041;
 }
+
 ul.no-bullet {
   list-style: none;
 }
+
 /* About - practical tasks and questions */
 ol.tasks li {
   list-style-type: upper-alpha;
 }
+
 ol.questions li:after {
   content: "?";
 }
@@ -113,48 +140,6 @@ ol.questions li:after {
 
 .thumbnail img:hover {
   border: 2px solid #db3041;
-}
-
-/* Google maps labeling --------------------------------------------------- */
-#HomeControl,
-#ProfileControl {
-  margin-top: 5px;
-  margin-right: 5px;
-  border: 1px solid #000;
-  background-color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  line-height: 16px;
-  padding: 5px 5px 5px 5px;
-}
-#HomeControl:hover,
-#ProfileControl:hover {
-  cursor: pointer;
-  border: 1px solid #fff;
-}
-.labels {
-  color: #fff;
-  padding: 2px;
-  font-size: 11px;
-  line-height: 13px;
-  text-align: center;
-  white-space: nowrap;
-}
-.start {
-  background-color: #005580;
-  border: 2px solid #0093dd;
-}
-.stanovisko {
-  background-color: #801c26;
-  border: 2px solid #db3041;
-}
-.orientacne {
-  background-color: #db3041;
-  border: 2px solid #801c26;
-}
-.finish {
-  background-color: #808080;
-  border: 2px solid #fff;
 }
 
 
