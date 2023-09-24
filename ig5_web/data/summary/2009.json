@@ -1,0 +1,141 @@
+{
+  "basic": {
+    "date": "24. - 25. apríl",
+    "organizer": "Občianske združenie STAV-GEO Lučenec a SPŠ stavebná Oskara Winklera Lučenec",
+    "teamCount": 25,
+    "mainSponsor": "Garmin"
+  },
+  "results": {
+    "category1": [
+      "Praha A",
+      "Lučenec B",
+      "Žilina A"
+    ],
+    "category2": [
+      "Žilina A",
+      "Lučenec B",
+      "Praha A"
+    ]
+  },
+  "route": {
+    "location": "Kataster obce Budiná",
+    "start": "SZ obce Budiná",
+    "finish": "Budiná - Kamenné vráta",
+    "length": 10,
+    "mapSettings": {
+      "zoom": 13,
+      "center": [
+        48.47185,
+        19.46745
+      ]
+    },
+    "points": [
+      {
+        "coordinates": [
+          48.4578,
+          19.476
+        ],
+        "description": "SZ obce Budiná",
+        "name": "Štart"
+      },
+      {
+        "coordinates": [
+          48.46415,
+          19.47042
+        ],
+        "description": "Určenie nivelačného prevýšenia",
+        "name": "1. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.46658,
+          19.47152
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.46978,
+          19.46822
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.47185,
+          19.46745
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.4783,
+          19.46638
+        ],
+        "description": "Vedomostný test",
+        "name": "2. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.48133,
+          19.46068
+        ],
+        "description": "Určenie výmery",
+        "name": "3. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.48598,
+          19.46178
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.48772,
+          19.44743
+        ],
+        "description": "Trigonometrické určenie výšky predmetu",
+        "name": "4. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.48023,
+          19.45447
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.47328,
+          19.45222
+        ],
+        "description": "Centrácia a horizontácia prístroja",
+        "name": "5. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.47135,
+          19.44957
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.46575,
+          19.46472
+        ],
+        "description": "Budiná - kamenné vráta",
+        "name": "Cieľ"
+      }
+    ]
+  },
+  "video": "https://www.youtube.com/embed/hRkiAtpn3t0",
+  "hasSpecial": true
+}

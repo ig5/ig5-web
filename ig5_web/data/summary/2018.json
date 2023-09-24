@@ -1,0 +1,275 @@
+{
+  "basic": {
+    "date": "27. - 28. apríl",
+    "organizer": "Stredná priemyselná škola stavebná Žilina",
+    "teamCount": 31
+  },
+  "results": {
+    "category1": [
+      "Praha",
+      "Letohrad",
+      "Žilina"
+    ],
+    "category2": [
+      "Praha",
+      "Žilina",
+      "Lučenec"
+    ]
+  },
+  "route": {
+    "location": "Budatín - Brodno",
+    "start": "Budatínsky park sútok Váhu a Kysuce",
+    "finish": "obec Brodno",
+    "length": 12,
+    "mapSettings": {
+      "zoom": 13,
+      "center": [
+        49.253691,
+        18.759184
+      ]
+    },
+    "points": [
+      {
+        "coordinates": [
+          49.235321,
+          18.73094
+        ],
+        "description": "",
+        "name": "Štart"
+      },
+      {
+        "coordinates": [
+          49.23554,
+          18.73096
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.23494,
+          18.73744
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.23539,
+          18.73766
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.2381,
+          18.74051
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.24269,
+          18.74356
+        ],
+        "description": "Centrácia a horizontácia prístroja",
+        "name": "1. stanovisko"
+      },
+      {
+        "coordinates": [
+          49.2445,
+          18.74503
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.24529,
+          18.74757
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.24542,
+          18.75434
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.24675,
+          18.76082
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.24711,
+          18.76391
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.24547,
+          18.76816
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.24669,
+          18.77293
+        ],
+        "description": "Určenie nivelačného prevýšenia",
+        "name": "2. stanovisko"
+      },
+      {
+        "coordinates": [
+          49.24857,
+          18.77994
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.24776,
+          18.78707
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.24805,
+          18.79147
+        ],
+        "description": "Určenie výmery pozemku",
+        "name": "3. stanovisko"
+      },
+      {
+        "coordinates": [
+          49.25107,
+          18.78368
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.25625,
+          18.78453
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.26068,
+          18.77606
+        ],
+        "description": "Trigonometrické určenie výšky objektu",
+        "name": "4. stanovisko"
+      },
+      {
+        "coordinates": [
+          49.26351,
+          18.7737
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.26186,
+          18.76978
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.26157,
+          18.76561
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.26017,
+          18.76338
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.2611,
+          18.76237
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.2626,
+          18.75982
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.26533,
+          18.75601
+        ],
+        "description": "Vedomostný test",
+        "name": "5. stanovisko"
+      },
+      {
+        "coordinates": [
+          49.26373,
+          18.75415
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.25715,
+          18.75884
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.25728,
+          18.75627
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.25572,
+          18.75574
+        ],
+        "description": "",
+        "name": "Cieľ"
+      }
+    ]
+  },
+  "video": "https://www.youtube.com/embed/oSY-0rxLJt0"
+}

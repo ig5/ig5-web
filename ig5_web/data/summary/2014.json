@@ -1,0 +1,148 @@
+{
+  "basic": {
+    "date": "11. - 13. apríl",
+    "organizer": "Průmyslová střední škola Letohrad",
+    "teamCount": 31,
+    "sponsorsSpecial": "Partneri, vďaka ktorým sa SPŠS Oskara Winklera Lučenec zúčastnila 9. ročníka IG5:"
+  },
+  "results": {
+    "category1": [
+      "Praha A",
+      "Žilina A",
+      "Trenčín A"
+    ],
+    "category2": [
+      "Praha A",
+      "Trenčín A",
+      "Žilina A"
+    ]
+  },
+  "route": {
+    "location": "Kunčice - Dolní Dobrouč - Lanšperk",
+    "start": "Kunčice",
+    "finish": "Hrad Lanšperk",
+    "length": 12,
+    "mapSettings": {
+      "zoom": 13,
+      "center": [
+        50,
+        16.495
+      ]
+    },
+    "points": [
+      {
+        "coordinates": [
+          50.01535,
+          16.52696
+        ],
+        "description": "",
+        "name": "Štart"
+      },
+      {
+        "coordinates": [
+          50.01049,
+          16.5234
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          50.01845,
+          16.51556
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          50.01541,
+          16.50577
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          50.01247,
+          16.50603
+        ],
+        "description": "Nepriame určenie dĺžky",
+        "name": "1. stanovisko"
+      },
+      {
+        "coordinates": [
+          50.00462,
+          16.52092
+        ],
+        "description": "Určenie výmery",
+        "name": "2. stanovisko"
+      },
+      {
+        "coordinates": [
+          49.99998,
+          16.5241
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.99977,
+          16.51558
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.99795,
+          16.50473
+        ],
+        "description": "Určenie nivelačného prevýšenia",
+        "name": "3. stanovisko"
+      },
+      {
+        "coordinates": [
+          49.99846,
+          16.49479
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.99618,
+          16.49059
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          49.99657,
+          16.47471
+        ],
+        "description": "Centrácia a horizontácia prístroja",
+        "name": "4. stanovisko"
+      },
+      {
+        "coordinates": [
+          49.99632,
+          16.45665
+        ],
+        "description": "Trigonometrické určenie výšky predmetu",
+        "name": "5. stanovisko"
+      },
+      {
+        "coordinates": [
+          49.9948,
+          16.45451
+        ],
+        "description": "",
+        "name": "Cieľ"
+      }
+    ]
+  },
+  "video": "https://www.youtube.com/embed/S7Fr_r9KlNI"
+}

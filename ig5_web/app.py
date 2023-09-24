@@ -1,5 +1,4 @@
 import os
-
 from datetime import datetime
 
 from flask import Flask, abort, render_template
@@ -7,7 +6,6 @@ from flask_htmlmin import HTMLMIN
 from flask_pretty import Prettify
 
 from ig5_web import utils
-
 
 app = Flask(__name__)
 minify_html = True
@@ -63,6 +61,7 @@ def summary(order):
         order=order,
         year=year,
         summary=summary,
+        helper_points_count=utils.get_helper_points_count(summary),
         sponsors=utils.filter_sponsors_by_year(sponsors, year),
         school_count=utils.school_count(attended_schools),
         schools=attended_schools,

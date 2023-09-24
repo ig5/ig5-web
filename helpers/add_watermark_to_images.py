@@ -2,7 +2,6 @@ import argparse
 import os
 import subprocess
 
-
 here = os.path.dirname(os.path.abspath(__file__))
 watermark_image = os.path.join(here, "watermark_leica.png")
 
@@ -22,16 +21,13 @@ def main(photos_dir: str):
 
         img_path = os.path.join(photos_dir, img_name)
         command = (
-            "composite -gravity SouthEast -quality 100 "
-            f"( {watermark_image} -resize 20% ) {img_path} {img_path}"
+            "composite -gravity SouthEast -quality 100 " f"( {watermark_image} -resize 20% ) {img_path} {img_path}"
         )
         subprocess.check_output(command.split())
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "-p", "--photos-dir", required=True, help="Photos dir absolute path"
-    )
+    parser.add_argument("-p", "--photos-dir", required=True, help="Photos dir absolute path")
     args = parser.parse_args()
     main(args.photos_dir)

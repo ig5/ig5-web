@@ -1,0 +1,147 @@
+{
+  "basic": {
+    "date": "18. - 19. apríl",
+    "organizer": "SPŠ stavebná Oskara Winklera Lučenec",
+    "teamCount": 27
+  },
+  "results": {
+    "category1": [
+      "Praha B 34",
+      "Žilina B 39",
+      "Lučenec B 66"
+    ],
+    "category2": [
+      "Praha B 34",
+      "Lučenec B 66",
+      "Žilina B 39"
+    ]
+  },
+  "route": {
+    "location": "Praha - Políchno - Tuhár - Divín",
+    "start": "SZ obce Praha",
+    "finish": "Zrúcanina hradu Divín",
+    "length": 12,
+    "mapSettings": {
+      "zoom": 12,
+      "center": [
+        48.407,
+        19.515
+      ]
+    },
+    "points": [
+      {
+        "coordinates": [
+          48.36226,
+          19.50607
+        ],
+        "description": "SZ obce Praha",
+        "name": "Štart"
+      },
+      {
+        "coordinates": [
+          48.3699,
+          19.49772
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.37558,
+          19.49323
+        ],
+        "description": "Trigonometrické určenie výšky predmetu",
+        "name": "1. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.39118,
+          19.48883
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.39505,
+          19.49462
+        ],
+        "description": "Vedomostný test",
+        "name": "2. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.40658,
+          19.49237
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.41458,
+          19.49705
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.42373,
+          19.50165
+        ],
+        "description": "Centrácia a horizontácia prístroja",
+        "name": "3. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.42592,
+          19.50757
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.42825,
+          19.5085
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.4301,
+          19.50872
+        ],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [
+          48.42962,
+          19.52068
+        ],
+        "description": "Určenie nivelačného prevýšenia",
+        "name": "4. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.44737,
+          19.53264
+        ],
+        "description": "Určenie výmery",
+        "name": "5. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.44837,
+          19.53313
+        ],
+        "description": "Zrúcanina hradu Divín",
+        "name": "Cieľ"
+      }
+    ]
+  },
+  "video": "https://www.youtube.com/embed/30_g-M6mJbk"
+}

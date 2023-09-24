@@ -1,0 +1,131 @@
+{
+  "basic": {
+    "date": "13. - 14. apríl",
+    "organizer": "SPŠ stavebná Oskara Winklera Lučenec",
+    "teamCount": 23
+  },
+  "results": {
+    "category1": [
+      "Praha 2",
+      "Lučenec 2",
+      "Bratislava"
+    ],
+    "category2": [
+      "Lučenec 1",
+      "Praha 1",
+      "Lučenec 2"
+    ]
+  },
+  "route": {
+    "location": "Okolie mesta Lučenec",
+    "start": "Námestie Republiky, Lučenec",
+    "finish": "Mestský park, Lučenec",
+    "length": 14,
+    "mapSettings": {
+      "zoom": 13,
+      "center": [
+        48.315,
+        19.625
+      ]
+    },
+    "points": [
+      {
+        "coordinates": [
+          48.33093,
+          19.66107
+        ],
+        "description": "Námestie Republiky, Lučenec",
+        "name": "Štart"
+      },
+      {
+        "coordinates": [
+          48.33322,
+          19.63822
+        ],
+        "description": "Orientácia na mape",
+        "name": "1. orientačné stanovisko"
+      },
+      {
+        "coordinates": [
+          48.3297,
+          19.62933
+        ],
+        "description": "Určenie nivelačného prevýšenia",
+        "name": "1. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.32672,
+          19.60807
+        ],
+        "description": "Vedomostný test",
+        "name": "2. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.3219,
+          19.59527
+        ],
+        "description": "Trigonometrické určenie výšky predmetu",
+        "name": "3. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.31258,
+          19.59937
+        ],
+        "description": "Orientácia na mape",
+        "name": "2. orientačné stanovisko"
+      },
+      {
+        "coordinates": [
+          48.30485,
+          19.59773
+        ],
+        "description": "Vyhľadanie bodu na základe Geodetických údajov PBPP",
+        "name": "4. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.29528,
+          19.60445
+        ],
+        "description": "Orientácia na mape",
+        "name": "3. orientačné stanovisko"
+      },
+      {
+        "coordinates": [
+          48.31182,
+          19.61458
+        ],
+        "description": "Centrácia a horizontácia prístroja",
+        "name": "5. stanovisko"
+      },
+      {
+        "coordinates": [
+          48.31098,
+          19.6244
+        ],
+        "description": "Orientácia na mape",
+        "name": "4. orientačné stanovisko"
+      },
+      {
+        "coordinates": [
+          48.32355,
+          19.634
+        ],
+        "description": "Usmernenie do cieľa",
+        "name": "5. orientačné stanovisko"
+      },
+      {
+        "coordinates": [
+          48.32768,
+          19.6518
+        ],
+        "description": "Mestský park, Lučenec",
+        "name": "Cieľ"
+      }
+    ]
+  },
+  "video": "https://www.youtube.com/embed/CIvA6AypOKE"
+}

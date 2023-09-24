@@ -79,7 +79,7 @@
   <li><span class="red">Štart: </span>{{ summary.route.start }}</li>
   <li><span class="red">Cieľ: </span>{{ summary.route.finish }}</li>
   <li><span class="red">Dĺžka: </span>{{ summary.route.length }} km</li>
-  <li><span class="red">Počet orientačných stanovísk: </span>{{ summary.route.orientationSiteCount }}</li>
+  <li><span class="red">Počet orientačných stanovísk: </span>{{ helper_points_count }}</li>
 </ul>
 {{ map_iframe|safe }}
 {% endif %}

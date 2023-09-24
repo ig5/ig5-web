@@ -2,9 +2,11 @@ import itertools
 import json
 import os
 from unicodedata import normalize
-import folium
 
 from flask import url_for
+from folium import FeatureGroup, Icon, LayerControl, Map, Marker, PolyLine, Popup
+
+from ig5_web.constants import MAP_POLY_LINE_COLOR, MapMarkerColors, MapMarkerIcons
 
 here = os.path.dirname(os.path.abspath(__file__))
 static_path = os.path.join(here, "static")
@@ -54,8 +56,11 @@ def read_data():
         sponsors = json.load(f)
         inplace_list_of_dicts_sort(sponsors, "name")
 
-    with open(os.path.join(data_dir, "summaries.json")) as f:
-        summaries = json.load(f)
+    summaries = {}
+    for summary_file in sorted(os.listdir(os.path.join(data_dir, "summary"))):
+        with open(os.path.join(data_dir, "summary", summary_file)) as f:
+            year = summary_file.split(".")[0]
+            summaries[year] = json.load(f)
 
     years = {order: year for order, year in enumerate(summaries.keys(), start=1)}
     return schools, sponsors, summaries, years
@@ -135,47 +140,65 @@ def get_docs(year):
     return docs
 
 
+def is_helper_point(point: dict):
+    name = point["name"].lower()
+
+    if not name or "orientačné" in name:
+        return True
+
+    return False
+
+
+def get_helper_points_count(summary: dict) -> int:
+    return len([p for p in summary.get("route", {}).get("points", []) if is_helper_point(p)])
+
+
 def get_marker_color(point: dict) -> str:
-    name = point["name"]
+    name = point["name"].lower()
 
-    if name in ("Štart", "Cieľ"):
-        return "red"
+    if name in ("štart", "cieľ"):
+        return MapMarkerColors.RED
 
-    if not name or "orientačné" in name.lower():
-        return "lightgray"
+    if is_helper_point(point):
+        return MapMarkerColors.LIGHT_GRAY
 
-    return "darkblue"
+    return MapMarkerColors.DARKBLUE
 
 
 def get_marker_icon(point: dict):
-    name = point["name"]
+    name = point["name"].lower()
 
-    if name == "Štart":
-        return "play"
+    if name == "štart":
+        return MapMarkerIcons.PLAY
 
-    if name == "Cieľ":
-        return "stop"
+    if name == "cieľ":
+        return MapMarkerIcons.STOP
 
-    if not name or "orientačné" in name.lower():
+    if is_helper_point(point):
         return ""
 
-    return "record"
+    return MapMarkerIcons.RECORD
 
 
 def format_coordinates(coordinates):
     return f"N {coordinates[0]}° &nbsp&nbsp E {coordinates[1]}°"
 
 
+def init_map(map_settings: dict):
+    map_ = Map(location=map_settings["center"], zoom_start=map_settings["zoom"])
+    map_.get_root().width = "100%"
+    map_.get_root().height = "550px"
+    return map_
+
+
 def create_route_map_iframe(route: dict):
     if not route:
         return ""
 
-    map_ = folium.Map(
-        location=route["googleMapsSettings"]["center"],
-        zoom_start=route["googleMapsSettings"]["zoom"],
-    )
-    map_.get_root().width = "100%"
-    map_.get_root().height = "550px"
+    map_ = init_map(route["mapSettings"])
+
+    markers_main = FeatureGroup(name="Stanoviská", control=False).add_to(map_)
+    markers_helper = FeatureGroup(name="Orientačné body", show=False).add_to(map_)
 
     points = []
     for point in route["points"]:
@@ -188,33 +211,32 @@ def create_route_map_iframe(route: dict):
         else:
             text = ""
 
-        if point["name"] or point["description"]:
-            opacity = 1
-        else:
+        if is_helper_point(point):
             opacity = 0.7
+        else:
+            opacity = 1
 
-        folium.Marker(
+        marker = Marker(
             location=coordinates,
-            popup=folium.Popup(text or coordinates_str, min_width=250, max_width=500),
-            icon=folium.Icon(
-                color=get_marker_color(point), icon=get_marker_icon(point)
-            ),
+            popup=Popup(text or coordinates_str, min_width=250, max_width=500),
+            icon=Icon(color=get_marker_color(point), icon=get_marker_icon(point)),
             opacity=opacity,
-        ).add_to(map_)
+        )
 
-    folium.PolyLine(points, color="#0093dd", weight=5).add_to(map_)
+        if is_helper_point(point):
+            markers_helper.add_child(marker)
+        else:
+            markers_main.add_child(marker)
+
+    PolyLine(points, color=MAP_POLY_LINE_COLOR, weight=5).add_to(map_)
+    LayerControl().add_to(map_)
 
     iframe = map_.get_root()._repr_html_()
     return iframe
 
 
 def create_schools_map_iframe(schools: dict):
-    map_ = folium.Map(
-        location=schools["googleMapsSettings"]["center"],
-        zoom_start=schools["googleMapsSettings"]["zoom"],
-    )
-    map_.get_root().width = "100%"
-    map_.get_root().height = "550px"
+    map_ = init_map(schools["mapSettings"])
 
     flat_schools = flatten_schools(schools)
 
@@ -225,21 +247,22 @@ def create_schools_map_iframe(schools: dict):
             break
 
     for school in flat_schools:
-        is_lucenec = school["city"] == "Lučenec"
+        is_lucenec = school == lucenec
         coordinates = school["coordinates"]
 
         name_and_city = f'{school["name"]}, {school["city"]}'
         text = f"{name_and_city}<br>{format_coordinates(coordinates)}"
+        icon_color = MapMarkerColors.RED if is_lucenec else MapMarkerColors.DARKBLUE
 
-        folium.Marker(
+        Marker(
             location=coordinates,
-            popup=folium.Popup(text, min_width=250, max_width=500),
-            icon=folium.Icon(color="red" if is_lucenec else "darkblue", icon="record"),
+            popup=Popup(text, min_width=250, max_width=500),
+            icon=Icon(color=icon_color, icon=MapMarkerIcons.RECORD),
         ).add_to(map_)
 
         if not is_lucenec:
             points = [lucenec["coordinates"], coordinates]
-            folium.PolyLine(points, color="#0093dd", weight=3).add_to(map_)
+            PolyLine(points, color=MAP_POLY_LINE_COLOR, weight=3).add_to(map_)
 
     iframe = map_.get_root()._repr_html_()
     return iframe
