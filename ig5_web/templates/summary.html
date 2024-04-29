@@ -38,7 +38,7 @@
   <li><span class="red">Organizátor: </span>{{ summary.basic.organizer }}</li>
   <li><span class="red">Počet zúčastnených škôl: </span>{{ school_count }}</li>
   <li><span class="red">Počet súťažných týmov: </span>{{ summary.basic.teamCount }}</li>
-  <li><span class="red">Celkový počet účastníkov: </span>{{ summary.basic.teamCount * 3 }}</li>
+  <li><span class="red">Celkový počet účastníkov: </span>{{ summary.basic.teamCount * 3 + summary.basic.teamCountExtra | default(0, true) }}</li>
 </ul>
 {{ macros.sponsor_list(sponsors, summary.basic.sponsorsSpecial) }}
 

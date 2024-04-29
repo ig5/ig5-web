@@ -12,7 +12,6 @@ or
     N50°31.077' E13°39.344'
 """
 
-
 from pprint import pprint
 
 
