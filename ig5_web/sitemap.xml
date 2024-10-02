@@ -9,97 +9,102 @@
 
 <url>
   <loc>https://stavgeo.sk/</loc>
-  <lastmod>2023-05-06T10:47:44+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:26+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/o_ig5.html</loc>
-  <lastmod>2023-05-06T10:47:47+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stavgeo.sk/17rocnik.html</loc>
+  <lastmod>2024-10-02T16:07:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/16rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:37+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:26+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/15rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:43+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/14rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:44+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/13rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:51+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:22+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/12rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:48+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/11rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:49+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/10rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:46+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/9rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:39+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/8rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:45+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/7rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:37+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/6rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:42+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/5rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:41+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/4rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:40+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/3rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:50+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:16+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/2rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:50+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/1rocnik.html</loc>
-  <lastmod>2023-05-06T10:47:36+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://stavgeo.sk/kontakty.html</loc>
-  <lastmod>2023-05-06T10:47:38+00:00</lastmod>
+  <lastmod>2024-10-02T16:07:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -120,6 +125,16 @@
 <url>
   <loc>https://stavgeo.sk/static/doc/_navrh_formy_spoluprace.pdf</loc>
   <lastmod>2019-05-04T13:56:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://stavgeo.sk/static/doc/2024_trasa.pdf</loc>
+  <lastmod>2024-10-02T16:06:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://stavgeo.sk/static/doc/2024_vysledky.pdf</loc>
+  <lastmod>2024-10-02T16:06:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
