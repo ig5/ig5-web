@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% set active_page = "stats" -%}
+{% block title %}Stats{% endblock %}
+
+{% block content %}
+
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      // datasets: [
+      //   {
+      //     label: 'lucenec',
+      //     data: [{"x": 1, "y": 2006}, {"x": 2, "y": 2007}],
+      //   },
+      //   {
+      //     label: 'brno',
+      //     data: [{"x": 1, "y": 2008}, {"x": 2, "y": 2009}],
+      //   }
+      // ]
+      datasets: {{ dataset|safe }}
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: "right"
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            stepSize: 1
+          }
+        },
+        y: {
+          // min: 0
+          // max: 3,
+          // reverse: true,
+          ticks: {
+            stepSize: 1,
+            callback: function(val, index) {
+              return val;
+            }
+          }
+        }
+      }
+    }
+  });
+</script>
+
+{% endblock %}

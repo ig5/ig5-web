@@ -16,6 +16,7 @@ def build_navbar(years):
     navigation_bar = [
         (url_for("index"), "index", "Novinky"),
         (url_for("about"), "about", "O IG5"),
+        # (url_for("stats"), "stats", "Stats"),
         (url_for("contacts"), "contacts", "Kontakty"),
     ]
 

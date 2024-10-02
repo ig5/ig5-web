@@ -1,4 +1,6 @@
+import json
 import os
+from collections import defaultdict
 from datetime import datetime
 
 from flask import Flask, abort, render_template
@@ -69,6 +71,65 @@ def summary(order):
         photos_special=utils.get_photos(os.path.join(photos_dir, "special")),
         docs=utils.get_docs(year),
         map_iframe=utils.create_route_map_iframe(summary.get("route")),
+    )
+
+
+# @app.route("/stats.html")
+def stats():
+    kat1_stats = defaultdict(dict)
+    for year, data in summaries.items():
+        results = data.get("results", {}).get("category1", [])
+
+        top3 = []
+        for position, team in enumerate(results, start=1):
+            team_parts = team.split(" ")
+            city = " ".join(team_parts[:-1])
+            if not city:
+                city = team
+
+            kat1_stats[year][position] = city
+            top3.append(city)
+
+        # {
+        #   label: 'lucenec',
+        #   data: [{"x": 1, "y": 2006}, {"x": 2, "y": 2007}],
+        # },
+
+    from pprint import pprint
+
+    pprint(kat1_stats)
+
+    dataset = {}
+    for year, data in kat1_stats.items():
+        for position, city in data.items():
+            if city not in dataset:
+                dataset[city] = {"label": city, "data": [], "pointRadius": 5}
+
+            dataset[city]["data"].append({"x": position, "y": int(year)})
+
+    pprint(dataset.keys())
+
+    city_colors = {
+        "Lučenec": "red",
+        "Banská Štiavnica": "violet",
+        "Pécs": "grey",
+        "Praha": "green",
+        "Bratislava": "orange",
+        "Žilina": "pink",
+        "Letohrad": "black",
+        "Brno": "blue",
+        "Trenčín": "grey",
+    }
+
+    for city, data in dataset.items():
+        color = city_colors[city]
+        data["backgroundColor"] = color
+
+    return render_template(
+        "stats.html",
+        years=list(years.values()),
+        dataset=json.dumps(list(dataset.values()), ensure_ascii=False),
+        # dataset=dataset,
     )
 
 
