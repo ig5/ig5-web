@@ -60,8 +60,8 @@
           48.43115,
           18.41695
         ],
-        "description": "",
-        "name": ""
+        "description": "Určenie výmery",
+        "name": "1. stanovisko"
       },
       {
         "coordinates": [
@@ -116,8 +116,8 @@
           48.46481,
           18.42078
         ],
-        "description": "",
-        "name": ""
+        "description": "Centrácia a horizontácia prístroja",
+        "name": "2. stanovisko"
       },
       {
         "coordinates": [
@@ -148,8 +148,8 @@
           48.47947,
           18.4261
         ],
-        "description": "",
-        "name": ""
+        "description": "Určenie nivelačného prevýšenia",
+        "name": "3. stanovisko"
       },
       {
         "coordinates": [
@@ -220,8 +220,8 @@
           48.46022,
           18.43737
         ],
-        "description": "",
-        "name": ""
+        "description": "Trigonometrické určenie výšky predmetu",
+        "name": "4. stanovisko"
       },
       {
         "coordinates": [
@@ -292,8 +292,8 @@
           48.42899,
           18.42317
         ],
-        "description": "",
-        "name": ""
+        "description": "Zemepisný test",
+        "name": "5. stanovisko"
       },
       {
         "coordinates": [
