@@ -1,0 +1,181 @@
+{
+  "basic": {
+    "date": "25. - 26. apríl",
+    "organizer": "Průmyslová střední škola Letohrad",
+    "teamCount": 34
+  },
+  "results": {
+    "category1": [
+      "Letohrad A27",
+      "Letohrad C36",
+      "Duchcov A30"
+
+    ],
+    "category2": [
+      "Letohrad A27",
+      "Letohrad C36",
+      "Duchcov A30"
+    ]
+  },
+  "route": {
+    "location": "todo",
+    "start": "todo",
+    "finish": "todo",
+    "length": 15,
+    "mapSettings": {
+      "zoom": 13,
+      "center": [
+        50.04, 16.47096
+      ]
+    },
+    "points": [
+      {
+        "coordinates": [50.02540, 16.47096],
+        "description": "",
+        "name": "Štart"
+      },
+      {
+        "coordinates": [50.02444, 16.46737],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.02466, 16.46481],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.02688, 16.46611],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.02922, 16.46462],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.02798, 16.46064],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.02930, 16.45926],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.02712, 16.44746],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.02999, 16.45158],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.03278, 16.45436],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.03463, 16.45112],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.03477, 16.44572],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.03811, 16.43479],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.03950, 16.43087],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.04228, 16.43101],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.04596, 16.43611],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.04771, 16.43955],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.05221, 16.43558],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.05569, 16.43521],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.05572, 16.44477],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.05079, 16.44870],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.04996, 16.45146],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.04775, 16.45325],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.04939, 16.45673],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.04786, 16.46072],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.04618, 16.46529],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.04851, 16.46298],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.05402, 16.47311],
+        "description": "",
+        "name": ""
+      },
+      {
+        "coordinates": [50.05210, 16.47967],
+        "description": "",
+        "name": "Cieľ"
+      }
+    ]
+
+  },
+  "video": "TODO"
+}
