@@ -4,9 +4,6 @@ import os
 from unicodedata import normalize
 
 from flask import url_for
-from folium import FeatureGroup, Icon, LayerControl, Map, Marker, PolyLine, Popup
-
-from ig5_web.constants import MAP_POLY_LINE_COLOR, MapMarkerColors, MapMarkerIcons
 
 here = os.path.dirname(os.path.abspath(__file__))
 static_path = os.path.join(here, "static")
@@ -154,91 +151,57 @@ def get_helper_points_count(summary: dict) -> int:
     return len([p for p in summary.get("route", {}).get("points", []) if is_helper_point(p)])
 
 
-def get_marker_color(point: dict) -> str:
-    name = point["name"].lower()
-
-    if name in ("štart", "cieľ"):
-        return MapMarkerColors.RED
-
-    if is_helper_point(point):
-        return MapMarkerColors.LIGHT_GRAY
-
-    return MapMarkerColors.DARKBLUE
-
-
-def get_marker_icon(point: dict):
+def get_point_type(point: dict):
     name = point["name"].lower()
 
     if name == "štart":
-        return MapMarkerIcons.PLAY
+        return "start"
 
     if name == "cieľ":
-        return MapMarkerIcons.STOP
+        return "finish"
 
     if is_helper_point(point):
-        return ""
+        return "helper"
 
-    return MapMarkerIcons.RECORD
-
-
-def format_coordinates(coordinates):
-    return f"N {coordinates[0]}° &nbsp&nbsp E {coordinates[1]}°"
+    return "site"
 
 
-def init_map(map_settings: dict):
-    map_ = Map(location=map_settings["center"], zoom_start=map_settings["zoom"])
-    map_.get_root().width = "100%"
-    map_.get_root().height = "550px"
-    return map_
-
-
-def create_route_map_iframe(route: dict):
+def create_route_geojson(route: dict):
     if not route:
         return ""
 
-    map_ = init_map(route["mapSettings"])
-
-    markers_main = FeatureGroup(name="Stanoviská", control=False).add_to(map_)
-    markers_helper = FeatureGroup(name="Orientačné body", show=False).add_to(map_)
-
-    points = []
+    features = []
+    line_string_coordinates = []
     for point in route["points"]:
-        coordinates = point["coordinates"]
-        coordinates_str = format_coordinates(coordinates)
-        points.append(coordinates)
+        coordinates = list(reversed(point["coordinates"]))
 
-        if point["name"] and point["description"]:
-            text = f'{point["name"]}: {point["description"]}<br>{coordinates_str}'
-        else:
-            text = ""
+        point_feature = {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": coordinates,
+            },
+            "properties": {
+                "type": get_point_type(point),
+                "name": point["name"],
+                "description": point["description"],
+            },
+        }
+        features.append(point_feature)
+        line_string_coordinates.append(coordinates)
 
-        if is_helper_point(point):
-            opacity = 0.7
-        else:
-            opacity = 1
-
-        marker = Marker(
-            location=coordinates,
-            popup=Popup(text or coordinates_str, min_width=250, max_width=500),
-            icon=Icon(color=get_marker_color(point), icon=get_marker_icon(point)),
-            opacity=opacity,
-        )
-
-        if is_helper_point(point):
-            markers_helper.add_child(marker)
-        else:
-            markers_main.add_child(marker)
-
-    PolyLine(points, color=MAP_POLY_LINE_COLOR, weight=5).add_to(map_)
-    LayerControl().add_to(map_)
-
-    iframe = map_.get_root()._repr_html_()
-    return iframe
+    line_string_feature = {
+        "type": "Feature",
+        "geometry": {
+            "type": "LineString",
+            "coordinates": line_string_coordinates,
+        },
+    }
+    features.append(line_string_feature)
+    return {"type": "FeatureCollection", "features": features}
 
 
-def create_schools_map_iframe(schools: dict):
-    map_ = init_map(schools["mapSettings"])
-
+def create_schools_geojson(schools: dict):
     flat_schools = flatten_schools(schools)
 
     lucenec = {}
@@ -247,23 +210,34 @@ def create_schools_map_iframe(schools: dict):
             lucenec = school
             break
 
+    lucenec_coordinates = list(reversed(lucenec["coordinates"]))
+
+    features = []
     for school in flat_schools:
         is_lucenec = school == lucenec
-        coordinates = school["coordinates"]
+        coordinates = list(reversed(school["coordinates"]))
 
-        name_and_city = f'{school["name"]}, {school["city"]}'
-        text = f"{name_and_city}<br>{format_coordinates(coordinates)}"
-        icon_color = MapMarkerColors.RED if is_lucenec else MapMarkerColors.DARKBLUE
-
-        Marker(
-            location=coordinates,
-            popup=Popup(text, min_width=250, max_width=500),
-            icon=Icon(color=icon_color, icon=MapMarkerIcons.RECORD),
-        ).add_to(map_)
+        point_feature = {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": coordinates,
+            },
+            "properties": {
+                "name": school["name"],
+                "city": school["city"],
+            },
+        }
+        features.append(point_feature)
 
         if not is_lucenec:
-            points = [lucenec["coordinates"], coordinates]
-            PolyLine(points, color=MAP_POLY_LINE_COLOR, weight=3).add_to(map_)
+            line_string_feature = {
+                "type": "Feature",
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [lucenec_coordinates, coordinates],
+                },
+            }
+            features.append(line_string_feature)
 
-    iframe = map_.get_root()._repr_html_()
-    return iframe
+    return {"type": "FeatureCollection", "features": features}

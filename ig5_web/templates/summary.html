@@ -6,6 +6,11 @@
 {{ super() }}
 <!-- Fancybox -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<!-- FontAwesome -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css">
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.css">
 {% endblock %}
 
 {% block content %}
@@ -50,8 +55,7 @@
 <a name="results" href="#results"><h2>Výsledky</h2></a>
 {% if "category1" in summary.results %}
   <div>
-    <h3>1. Kategória</h3>
-    <h4>Celkový čas absolvovania trasy a jednotlivých úloh na stanoviskách s pridelenými trestnými a bonusovými minútami</h4>
+    {{ macros.category1_headings() }}
     <ol>
     {% for result in summary.results.category1 %}
       <li>{{ result }}</li>
@@ -62,8 +66,7 @@
 
 {% if "category2" in summary.results %}
   <div>
-    <h3>2. Kategória</h3>
-    <h4>Kvalita a rýchlosť vykonávania úloh na stanoviskách bez ohľadu na celkový čas</h4>
+    {{ macros.category2_headings() }}
     <ol>
     {% for result in summary.results.category2 %}
       <li>{{ result }}</li>
@@ -81,7 +84,8 @@
   <li><span class="red">Dĺžka: </span>{{ summary.route.length }} km</li>
   <li><span class="red">Počet orientačných stanovísk: </span>{{ helper_points_count }}</li>
 </ul>
-{{ map_iframe|safe }}
+<div id="map" style="width: 100%; height: 550px;"></div>
+<br>
 {% endif %}
 
 {% if photos %}
@@ -116,4 +120,17 @@
 
 <!-- Fancybox -->
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<!-- FontAwesome -->
+<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+<!-- Leaflet -->
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.js"></script>
+<!-- App -->
+<script src="{{ url_for('static', filename='js/maps.js') }}"></script>
+<script>
+  const CENTER = {{ map.center|safe }};
+  const ZOOM = {{ map.zoom }};
+  const DATA = {{ map.data|safe }};
+  renderRouteMap(CENTER, ZOOM, DATA);
+</script>
 {% endblock %}

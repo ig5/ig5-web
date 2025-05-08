@@ -4,56 +4,58 @@
 {% block title %}Stats{% endblock %}
 
 {% block content %}
+<!-- <form id="weightsForm" class="mb-4">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="weight1">Váha 1. miesto</label>
+      <input type="number" class="form-control" id="weight1" value="4" min="0">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="weight2">Váha 2. miesto</label>
+      <input type="number" class="form-control" id="weight2" value="2" min="0">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="weight3">Váha 3. miesto</label>
+      <input type="number" class="form-control" id="weight3" value="1" min="0">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Prekresliť grafy</button>
+</form> -->
 
 <div>
-  <canvas id="myChart"></canvas>
+  {{ macros.category1_headings() }}
+  <canvas id="cat1_chart"></canvas>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div>
+  {{ macros.category2_headings() }}
+  <canvas id="cat2_chart"></canvas>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<!-- Chart JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+<!-- Stacked Bar Chart -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/stacked_bar_chart.js') }}"></script>
 <script>
-  const ctx = document.getElementById('myChart');
+  const cat1_data = {{ cat1_stats | safe }};
+  const cat2_data = {{ cat2_stats | safe }};
+  // Should be the same as in weightsForm.
+  const initial_weights = [4, 2, 1];
 
-  new Chart(ctx, {
-    type: 'scatter',
-    data: {
-      // datasets: [
-      //   {
-      //     label: 'lucenec',
-      //     data: [{"x": 1, "y": 2006}, {"x": 2, "y": 2007}],
-      //   },
-      //   {
-      //     label: 'brno',
-      //     data: [{"x": 1, "y": 2008}, {"x": 2, "y": 2009}],
-      //   }
-      // ]
-      datasets: {{ dataset|safe }}
-    },
-    options: {
-      plugins: {
-        legend: {
-          position: "right"
-        }
-      },
-      scales: {
-        x: {
-          ticks: {
-            stepSize: 1
-          }
-        },
-        y: {
-          // min: 0
-          // max: 3,
-          // reverse: true,
-          ticks: {
-            stepSize: 1,
-            callback: function(val, index) {
-              return val;
-            }
-          }
-        }
-      }
-    }
-  });
+  stacked_bar_chart(cat1_data, "cat1_chart", initial_weights);
+  stacked_bar_chart(cat2_data, "cat2_chart", initial_weights);
+
+  // document.getElementById('weightsForm').addEventListener('submit', function (e) {
+  //   e.preventDefault();
+  //   let w1 = parseInt(document.getElementById('weight1').value, 10);
+  //   let w2 = parseInt(document.getElementById('weight2').value, 10);
+  //   let w3 = parseInt(document.getElementById('weight3').value, 10);
+
+  //   stacked_bar_chart(cat1_data, "cat1_chart", [w1, w2, w3]);
+  //   stacked_bar_chart(cat2_data, "cat2_chart", [w1, w2, w3]);
+  // });
 </script>
-
 {% endblock %}

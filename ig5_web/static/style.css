@@ -142,7 +142,6 @@ ol.questions li:after {
   border: 2px solid #db3041;
 }
 
-
 /* Bootstrap nav override ------------------------------------------------- */
 .dropdown-item {
   font-size: 1.1rem;
@@ -174,4 +173,11 @@ ol.questions li:after {
 .nav-pills .dropdown-item.active {
   color: #ffffff !important;
   background-color: #db3041;
+}
+
+/* Leaflet Awesome Markers -------------------------------------------------*/
+.icon-white {
+  font-size: 15px;
+  margin-top: 12px;
+  margin-left: 1px;
 }

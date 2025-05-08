@@ -4,4 +4,3 @@ flask
 Flask-HTMLmin
 Flask-Pretty
 Frozen-Flask
-folium

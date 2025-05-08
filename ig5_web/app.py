@@ -58,6 +58,9 @@ def summary(order):
     summary = summaries[year]
     photos_dir = os.path.join("summary", year)
     attended_schools = utils.filter_schools_by_year(schools, year)
+
+    route = summary.get("route")
+
     return render_template(
         "summary.html",
         order=order,
@@ -70,66 +73,48 @@ def summary(order):
         photos=utils.get_photos(photos_dir),
         photos_special=utils.get_photos(os.path.join(photos_dir, "special")),
         docs=utils.get_docs(year),
-        map_iframe=utils.create_route_map_iframe(summary.get("route")),
+        map={
+            "center": route["mapSettings"]["center"],
+            "zoom": route["mapSettings"]["zoom"],
+            "data": utils.create_route_geojson(route),
+        },
     )
 
 
-# @app.route("/stats.html")
+@app.route("/stats.html")
 def stats():
-    kat1_stats = defaultdict(dict)
-    for year, data in summaries.items():
-        results = data.get("results", {}).get("category1", [])
+    def per_school_stats(category_key: str) -> dict:
+        stats = defaultdict(lambda: {1: [], 2: [], 3: []})
 
-        top3 = []
-        for position, team in enumerate(results, start=1):
-            team_parts = team.split(" ")
-            city = " ".join(team_parts[:-1])
-            if not city:
-                city = team
+        for year, data in sorted(summaries.items(), key=lambda item: item[0], reverse=True):
+            results = data.get("results", {}).get(category_key, [])
+            for position, team in enumerate(results, start=1):
+                team_parts = team.split(" ")
+                school = " ".join(team_parts[:-1])
+                if not school:
+                    school = team
 
-            kat1_stats[year][position] = city
-            top3.append(city)
+                stats[school][position].append(year)
 
-        # {
-        #   label: 'lucenec',
-        #   data: [{"x": 1, "y": 2006}, {"x": 2, "y": 2007}],
-        # },
+        sorted_stats = dict(
+            sorted(
+                stats.items(),
+                key=lambda item: (len(item[1][1]), len(item[1][2]), len(item[1][3])),
+                # key=lambda item: len(item[1][1]) * 3 + len(item[1][2]) * 2 + len(item[1][3]),
+                reverse=True,
+            )
+        )
 
-    from pprint import pprint
+        return sorted_stats
 
-    pprint(kat1_stats)
-
-    dataset = {}
-    for year, data in kat1_stats.items():
-        for position, city in data.items():
-            if city not in dataset:
-                dataset[city] = {"label": city, "data": [], "pointRadius": 5}
-
-            dataset[city]["data"].append({"x": position, "y": int(year)})
-
-    pprint(dataset.keys())
-
-    city_colors = {
-        "Lučenec": "red",
-        "Banská Štiavnica": "violet",
-        "Pécs": "grey",
-        "Praha": "green",
-        "Bratislava": "orange",
-        "Žilina": "pink",
-        "Letohrad": "black",
-        "Brno": "blue",
-        "Trenčín": "grey",
-    }
-
-    for city, data in dataset.items():
-        color = city_colors[city]
-        data["backgroundColor"] = color
+    cat1_stats = per_school_stats("category1")
+    cat2_stats = per_school_stats("category2")
 
     return render_template(
         "stats.html",
         years=list(years.values()),
-        dataset=json.dumps(list(dataset.values()), ensure_ascii=False),
-        # dataset=dataset,
+        cat1_stats=json.dumps(cat1_stats, ensure_ascii=False),
+        cat2_stats=json.dumps(cat2_stats, ensure_ascii=False),
     )
 
 
@@ -139,7 +124,11 @@ def contacts():
         "contacts.html",
         schools=schools,
         schools_flattened=utils.flatten_schools(schools),
-        map_iframe=utils.create_schools_map_iframe(schools),
+        map={
+            "center": schools["mapSettings"]["center"],
+            "zoom": schools["mapSettings"]["zoom"],
+            "data": utils.create_schools_geojson(schools),
+        },
     )
 
 

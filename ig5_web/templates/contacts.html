@@ -1,11 +1,18 @@
-{% extends "layout.html" %}
-
-{% set active_page = "contacts" -%}
-{% block title %}Kontakty{% endblock %}
-
-{% block content %}
-{% set you_will_be_in_touch_with = "Komunikovať s Vami budú:" %}
-{% set pavol_fodor_description = "Ing. Pavol Fodor" ~ pavol_fodor_description_suffix %}
+{% extends "layout.html" %} {% set active_page = "contacts" -%} {% block title %}Kontakty{% endblock %} {% block head %}
+{{ super() }}
+<!-- FontAwesome -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css"
+/>
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.css"
+/>
+{% endblock %} {% block content %} {% set you_will_be_in_touch_with = "Komunikovať s Vami budú:" %} {% set
+pavol_fodor_description = "Ing. Pavol Fodor" ~ pavol_fodor_description_suffix %}
 
 <h2>Občianske združenie STAV-GEO</h2>
 <p>{{ you_will_be_in_touch_with }}</p>
@@ -14,7 +21,6 @@
   <li><a href="mailto:geostav08@gmail.com">{{ pavol_fodor_description }}</a></li>
 </ul>
 
-
 <h2>Stredná priemyselná škola stavebná Oskara Winklera Lučenec</h2>
 <p>{{ you_will_be_in_touch_with }}</p>
 <ul>
@@ -22,26 +28,37 @@
   <li><a href="mailto:bonacs74@yahoo.co.uk">Mgr. Csaba Bóna - zástupca riaditeľa školy</a></li>
 </ul>
 
-
 <h2>Komunikácia vedúcich družstiev</h2>
 <ul>
   <li><a href="mailto:palf@seznam.cz">{{ pavol_fodor_description }}</a></li>
 </ul>
 
-
 <h2>Geodetické školy</h2>
-<p>
-  Kontakty (linky na weby) všetkých škôl, ktoré sa zúčastnili súťaze:
-</p>
+<p>Kontakty (linky na weby) všetkých škôl, ktoré sa zúčastnili súťaze:</p>
 {{ macros.school_list(schools.schools) }}
-{{ map_iframe|safe }}
-
+<div id="map" style="width: 100%; height: 550px"></div>
+<br />
 
 <h2>Web stavgeo.sk</h2>
 <p>
   Akékoľvek nápady, tipy alebo pripomienky (hlásie chýb) ohľadne webu píšte na adresu:
   <a href="mailto:stavgeo.web@gmail.com">stavgeo.web@gmail.com</a>.
-  <br>
+  <br />
   A môžete aj priložiť ruku k dielu: <a href="https://github.com/ig5">github.com/ig5</a>
 </p>
+{% endblock %} {% block scripts %} {{ super() }}
+
+<!-- FontAwesome -->
+<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+<!-- Leaflet -->
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.js"></script>
+<!-- App -->
+<script src="{{ url_for('static', filename='js/maps.js') }}"></script>
+<script>
+  const CENTER = {{ map.center|safe }};
+  const ZOOM = {{ map.zoom }};
+  const DATA = {{ map.data|safe }};
+  renderSchoolsMap(CENTER, ZOOM, DATA);
+</script>
 {% endblock %}
