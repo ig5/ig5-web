@@ -106,6 +106,10 @@ let osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // Maps ----------------------------------------------------------------------
 //
 function renderRouteMap(center, zoom, data) {
+  if (Object.keys(data).length === 0) {
+    return;
+  }
+
   let routeGeojson = L.geoJson(data, {
     style: {
       color: "#0093dd",

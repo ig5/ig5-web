@@ -60,6 +60,18 @@ def summary(order):
     attended_schools = utils.filter_schools_by_year(schools, year)
 
     route = summary.get("route")
+    if route:
+        map_ = {
+            "center": route["mapSettings"]["center"],
+            "zoom": route["mapSettings"]["zoom"],
+            "data": utils.create_route_geojson(route),
+        }
+    else:
+        map_ = {
+            "center": [0, 0],
+            "zoom": 0,
+            "data": {},
+        }
 
     return render_template(
         "summary.html",
@@ -73,11 +85,7 @@ def summary(order):
         photos=utils.get_photos(photos_dir),
         photos_special=utils.get_photos(os.path.join(photos_dir, "special")),
         docs=utils.get_docs(year),
-        map={
-            "center": route["mapSettings"]["center"],
-            "zoom": route["mapSettings"]["zoom"],
-            "data": utils.create_route_geojson(route),
-        },
+        map=map_,
     )
 
 
