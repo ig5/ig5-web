@@ -1,16 +1,14 @@
-version: '3.7'
-
 services:
   app:
     build: .
     image: ig5_web
-    entrypoint: tail -f /dev/null
-    # entrypoint: python3 ig5_web/app.py --host 0.0.0.0 --port 5000
+    # entrypoint: tail -f /dev/null
+    entrypoint: python3 ig5_web/app.py --host 0.0.0.0 --port 5000
     volumes:
       - .:/code
       - web_vscode_server:/root/.vscode-server/
     ports:
-      - 5005:5000
+      - 5000:5000
 
 volumes:
   web_vscode_server:
