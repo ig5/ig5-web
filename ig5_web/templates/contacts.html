@@ -1,4 +1,8 @@
-{% extends "layout.html" %} {% set active_page = "contacts" -%} {% block title %}Kontakty{% endblock %} {% block head %}
+{% extends "layout.html" %}
+
+{% set active_page = "contacts" -%}
+{% block title %}Kontakty{% endblock %}
+{% block head %}
 {{ super() }}
 <!-- FontAwesome -->
 <link
@@ -11,8 +15,11 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.css"
 />
-{% endblock %} {% block content %} {% set you_will_be_in_touch_with = "Komunikovať s Vami budú:" %} {% set
-pavol_fodor_description = "Ing. Pavol Fodor" ~ pavol_fodor_description_suffix %}
+{% endblock %}
+
+{% block content %}
+{% set you_will_be_in_touch_with = "Komunikovať s Vami budú:" %}
+{% set pavol_fodor_description = "Ing. Pavol Fodor" ~ pavol_fodor_description_suffix %}
 
 <h2>Občianske združenie STAV-GEO</h2>
 <p>{{ you_will_be_in_touch_with }}</p>
@@ -46,8 +53,10 @@ pavol_fodor_description = "Ing. Pavol Fodor" ~ pavol_fodor_description_suffix %}
   <br />
   A môžete aj priložiť ruku k dielu: <a href="https://github.com/ig5">github.com/ig5</a>
 </p>
-{% endblock %} {% block scripts %} {{ super() }}
+{% endblock %}
 
+{% block scripts %}
+{{ super() }}
 <!-- FontAwesome -->
 <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
 <!-- Leaflet -->
