@@ -6,16 +6,8 @@
     "mainSponsor": "Garmin"
   },
   "results": {
-    "category1": [
-      "Lučenec B",
-      "Praha A",
-      "Letohrad A"
-    ],
-    "category2": [
-      "Lučenec C",
-      "Lučenec B",
-      "Trenčín A"
-    ]
+    "category1": ["Lučenec B", "Praha A", "Letohrad A"],
+    "category2": ["Lučenec C", "Lučenec B", "Trenčín A"]
   },
   "route": {
     "location": "Mikroregión Medveš",
@@ -24,121 +16,76 @@
     "length": 11.5,
     "mapSettings": {
       "zoom": 13,
-      "center": [
-        48.2,
-        19.96
-      ]
+      "center": [48.2, 19.96]
     },
     "points": [
       {
-        "coordinates": [
-          48.19474,
-          19.97626
-        ],
+        "coordinates": [48.19474, 19.97626],
         "description": "ZŠ Gemerský Jablonec",
         "name": "Štart"
       },
       {
-        "coordinates": [
-          48.19437,
-          19.95622
-        ],
+        "coordinates": [48.19437, 19.95622],
         "description": "Centrácia a horizontácia prístroja",
         "name": "1. stanovisko"
       },
       {
-        "coordinates": [
-          48.19197,
-          19.95315
-        ],
+        "coordinates": [48.19197, 19.95315],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.19122,
-          19.94608
-        ],
+        "coordinates": [48.19122, 19.94608],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.18737,
-          19.93082
-        ],
+        "coordinates": [48.18737, 19.93082],
         "description": "Určenie výmery",
         "name": "2. stanovisko"
       },
       {
-        "coordinates": [
-          48.19287,
-          19.92653
-        ],
+        "coordinates": [48.19287, 19.92653],
         "description": "Vedomostný test",
         "name": "3. stanovisko"
       },
       {
-        "coordinates": [
-          48.19727,
-          19.92683
-        ],
+        "coordinates": [48.19727, 19.92683],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.19972,
-          19.92498
-        ],
+        "coordinates": [48.19972, 19.92498],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.20797,
-          19.9312
-        ],
+        "coordinates": [48.20797, 19.9312],
         "description": "Trigonometrické určenie výšky predmetu",
         "name": "4. stanovisko"
       },
       {
-        "coordinates": [
-          48.21098,
-          19.93885
-        ],
+        "coordinates": [48.21098, 19.93885],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.2127,
-          19.94883
-        ],
+        "coordinates": [48.2127, 19.94883],
         "description": "Určenie nivelačného prevýšenia",
         "name": "5. stanovisko"
       },
       {
-        "coordinates": [
-          48.2156,
-          19.94782
-        ],
+        "coordinates": [48.2156, 19.94782],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21663,
-          19.95748
-        ],
+        "coordinates": [48.21663, 19.95748],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21795,
-          19.95498
-        ],
+        "coordinates": [48.21795, 19.95498],
         "description": "Zrúcanina hradu Hajnáčka",
         "name": "Cieľ"
       }

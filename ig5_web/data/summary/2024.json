@@ -7,16 +7,8 @@
     "teamCountExtraExplanation": "Nitra + Havlickuv Brod mix team had 6 members"
   },
   "results": {
-    "category1": [
-      "Praha A1",
-      "Letohrad A11",
-      "Lučenec A13"
-    ],
-    "category2": [
-      "Lučenec A13",
-      "Praha A1",
-      "Nitra C28"
-    ]
+    "category1": ["Praha A1", "Letohrad A11", "Lučenec A13"],
+    "category2": ["Lučenec A13", "Praha A1", "Nitra C28"]
   },
   "route": {
     "location": "Topoľčianky",
@@ -25,289 +17,181 @@
     "length": 16,
     "mapSettings": {
       "zoom": 13,
-      "center": [
-        48.4525,
-        18.43209
-      ]
+      "center": [48.4525, 18.43209]
     },
     "points": [
       {
-        "coordinates": [
-          48.42248,
-          18.41815
-        ],
+        "coordinates": [48.42248, 18.41815],
         "description": "Areál futbalového štadióna Topoľčianky",
         "name": "Štart"
       },
       {
-        "coordinates": [
-          48.4224,
-          18.41484
-        ],
+        "coordinates": [48.4224, 18.41484],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.42739,
-          18.41635
-        ],
+        "coordinates": [48.42739, 18.41635],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.43115,
-          18.41695
-        ],
+        "coordinates": [48.43115, 18.41695],
         "description": "Určenie výmery",
         "name": "1. stanovisko"
       },
       {
-        "coordinates": [
-          48.4315,
-          18.41498
-        ],
+        "coordinates": [48.4315, 18.41498],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.43616,
-          18.41489
-        ],
+        "coordinates": [48.43616, 18.41489],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.44097,
-          18.41564
-        ],
+        "coordinates": [48.44097, 18.41564],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.44646,
-          18.41783
-        ],
+        "coordinates": [48.44646, 18.41783],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.45503,
-          18.41863
-        ],
+        "coordinates": [48.45503, 18.41863],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.46118,
-          18.41865
-        ],
+        "coordinates": [48.46118, 18.41865],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.46481,
-          18.42078
-        ],
+        "coordinates": [48.46481, 18.42078],
         "description": "Centrácia a horizontácia prístroja",
         "name": "2. stanovisko"
       },
       {
-        "coordinates": [
-          48.46829,
-          18.41975
-        ],
+        "coordinates": [48.46829, 18.41975],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4724,
-          18.42518
-        ],
+        "coordinates": [48.4724, 18.42518],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.47613,
-          18.42902
-        ],
+        "coordinates": [48.47613, 18.42902],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.47947,
-          18.4261
-        ],
+        "coordinates": [48.47947, 18.4261],
         "description": "Určenie nivelačného prevýšenia",
         "name": "3. stanovisko"
       },
       {
-        "coordinates": [
-          48.48037,
-          18.42588
-        ],
+        "coordinates": [48.48037, 18.42588],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.48207,
-          18.42992
-        ],
+        "coordinates": [48.48207, 18.42992],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.48192,
-          18.43317
-        ],
+        "coordinates": [48.48192, 18.43317],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.48088,
-          18.43593
-        ],
+        "coordinates": [48.48088, 18.43593],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.47664,
-          18.43431
-        ],
+        "coordinates": [48.47664, 18.43431],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.46882,
-          18.42957
-        ],
+        "coordinates": [48.46882, 18.42957],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.46575,
-          18.43209
-        ],
+        "coordinates": [48.46575, 18.43209],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.46255,
-          18.43623
-        ],
+        "coordinates": [48.46255, 18.43623],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.46022,
-          18.43737
-        ],
+        "coordinates": [48.46022, 18.43737],
         "description": "Trigonometrické určenie výšky predmetu",
         "name": "4. stanovisko"
       },
       {
-        "coordinates": [
-          48.45631,
-          18.43533
-        ],
+        "coordinates": [48.45631, 18.43533],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4557,
-          18.4341
-        ],
+        "coordinates": [48.4557, 18.4341],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4552,
-          18.43127
-        ],
+        "coordinates": [48.4552, 18.43127],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.45035,
-          18.42876
-        ],
+        "coordinates": [48.45035, 18.42876],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4417,
-          18.42439
-        ],
+        "coordinates": [48.4417, 18.42439],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.43843,
-          18.4243
-        ],
+        "coordinates": [48.43843, 18.4243],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.43307,
-          18.42408
-        ],
+        "coordinates": [48.43307, 18.42408],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.42946,
-          18.42124
-        ],
+        "coordinates": [48.42946, 18.42124],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.42899,
-          18.42317
-        ],
+        "coordinates": [48.42899, 18.42317],
         "description": "Zemepisný test",
         "name": "5. stanovisko"
       },
       {
-        "coordinates": [
-          48.4286,
-          18.42274
-        ],
+        "coordinates": [48.4286, 18.42274],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.42367,
-          18.41831
-        ],
+        "coordinates": [48.42367, 18.41831],
         "description": "Areál futbalového štadióna Topoľčianky",
         "name": "Cieľ"
       }

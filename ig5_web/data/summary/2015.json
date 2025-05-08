@@ -5,10 +5,6 @@
     "teamCount": 32
   },
   "results": {
-    "category2": [
-      "Žilina 2",
-      "Lučenec 1",
-      "Bratislava 1"
-    ]
+    "category2": ["Žilina 2", "Lučenec 1", "Bratislava 1"]
   }
 }

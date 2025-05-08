@@ -5,16 +5,8 @@
     "teamCount": 29
   },
   "results": {
-    "category1": [
-      "Praha B",
-      "Lučenec B",
-      "Letohrad A"
-    ],
-    "category2": [
-      "Lučenec B",
-      "Praha B",
-      "Letohrad A"
-    ]
+    "category1": ["Praha B", "Lučenec B", "Letohrad A"],
+    "category2": ["Lučenec B", "Praha B", "Letohrad A"]
   },
   "route": {
     "location": "Ružiná - Divín - Tuhár - Polichno",
@@ -23,281 +15,176 @@
     "length": 14,
     "mapSettings": {
       "zoom": 13,
-      "center": [
-        48.4294,
-        19.5206
-      ]
+      "center": [48.4294, 19.5206]
     },
     "points": [
       {
-        "coordinates": [
-          48.445201,
-          19.558536
-        ],
+        "coordinates": [48.445201, 19.558536],
         "description": "",
         "name": "Štart"
       },
       {
-        "coordinates": [
-          48.4372,
-          19.5702
-        ],
+        "coordinates": [48.4372, 19.5702],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4309,
-          19.5633
-        ],
+        "coordinates": [48.4309, 19.5633],
         "description": "Centrácia a horizontácia prístroja",
         "name": "1. stanovisko"
       },
       {
-        "coordinates": [
-          48.4297,
-          19.5614
-        ],
+        "coordinates": [48.4297, 19.5614],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4312,
-          19.5568
-        ],
+        "coordinates": [48.4312, 19.5568],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4334,
-          19.5549
-        ],
+        "coordinates": [48.4334, 19.5549],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4341,
-          19.5484
-        ],
+        "coordinates": [48.4341, 19.5484],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4387,
-          19.5391
-        ],
+        "coordinates": [48.4387, 19.5391],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4397,
-          19.5384
-        ],
+        "coordinates": [48.4397, 19.5384],
         "description": "Geografický minitest",
         "name": "Orientačné stanovisko"
       },
       {
-        "coordinates": [
-          48.4409,
-          19.5376
-        ],
+        "coordinates": [48.4409, 19.5376],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4425,
-          19.5333
-        ],
+        "coordinates": [48.4425, 19.5333],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4435,
-          19.5317
-        ],
+        "coordinates": [48.4435, 19.5317],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4456,
-          19.5315
-        ],
+        "coordinates": [48.4456, 19.5315],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4463,
-          19.5345
-        ],
+        "coordinates": [48.4463, 19.5345],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4476,
-          19.5328
-        ],
+        "coordinates": [48.4476, 19.5328],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.448,
-          19.5334
-        ],
+        "coordinates": [48.448, 19.5334],
         "description": "Určenie nivelačného prevýšenia",
         "name": "2. stanovisko"
       },
       {
-        "coordinates": [
-          48.4474,
-          19.5319
-        ],
+        "coordinates": [48.4474, 19.5319],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4466,
-          19.5316
-        ],
+        "coordinates": [48.4466, 19.5316],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4433,
-          19.5297
-        ],
+        "coordinates": [48.4433, 19.5297],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4389,
-          19.5287
-        ],
+        "coordinates": [48.4389, 19.5287],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4294,
-          19.5206
-        ],
+        "coordinates": [48.4294, 19.5206],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.43,
-          19.5101
-        ],
+        "coordinates": [48.43, 19.5101],
         "description": "Obrazový test",
         "name": "3. stanovisko"
       },
       {
-        "coordinates": [
-          48.4283,
-          19.5086
-        ],
+        "coordinates": [48.4283, 19.5086],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4268,
-          19.5082
-        ],
+        "coordinates": [48.4268, 19.5082],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4236,
-          19.5042
-        ],
+        "coordinates": [48.4236, 19.5042],
         "description": "Určenie výmery pozemku",
         "name": "4. stanovisko"
       },
       {
-        "coordinates": [
-          48.4211,
-          19.5053
-        ],
+        "coordinates": [48.4211, 19.5053],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.419,
-          19.5059
-        ],
+        "coordinates": [48.419, 19.5059],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4169,
-          19.5065
-        ],
+        "coordinates": [48.4169, 19.5065],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4139,
-          19.504
-        ],
+        "coordinates": [48.4139, 19.504],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4123,
-          19.5014
-        ],
+        "coordinates": [48.4123, 19.5014],
         "description": "Slepá mapa",
         "name": "Orientačné stanovisko"
       },
       {
-        "coordinates": [
-          48.4102,
-          19.5007
-        ],
+        "coordinates": [48.4102, 19.5007],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4128,
-          19.4949
-        ],
+        "coordinates": [48.4128, 19.4949],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.4118,
-          19.4938
-        ],
+        "coordinates": [48.4118, 19.4938],
         "description": "Trigonometrické určenie výšky objektu",
         "name": "5. stanovisko"
       },
       {
-        "coordinates": [
-          48.40547,
-          19.4967
-        ],
+        "coordinates": [48.40547, 19.4967],
         "description": "",
         "name": "Cieľ"
       }

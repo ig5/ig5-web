@@ -6,16 +6,8 @@
     "mainSponsor": "Garmin"
   },
   "results": {
-    "category1": [
-      "Praha A",
-      "Lučenec B",
-      "Praha B"
-    ],
-    "category2": [
-      "Praha A",
-      "Trenčín B",
-      "Banská Štiavnica A"
-    ]
+    "category1": ["Praha A", "Lučenec B", "Praha B"],
+    "category2": ["Praha A", "Trenčín B", "Banská Štiavnica A"]
   },
   "route": {
     "location": "Mikroregión Medveš",
@@ -24,161 +16,101 @@
     "length": 12.5,
     "mapSettings": {
       "zoom": 13,
-      "center": [
-        48.2008,
-        19.99
-      ]
+      "center": [48.2008, 19.99]
     },
     "points": [
       {
-        "coordinates": [
-          48.19197,
-          19.97344
-        ],
+        "coordinates": [48.19197, 19.97344],
         "description": "JV Obce Gemerský Jablonec",
         "name": "Štart"
       },
       {
-        "coordinates": [
-          48.18966,
-          19.97675
-        ],
+        "coordinates": [48.18966, 19.97675],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.18083,
-          19.99312
-        ],
+        "coordinates": [48.18083, 19.99312],
         "description": "Určenie nivelačného prevýšenia",
         "name": "1. stanovisko"
       },
       {
-        "coordinates": [
-          48.18454,
-          19.99918
-        ],
+        "coordinates": [48.18454, 19.99918],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.18928,
-          20.00154
-        ],
+        "coordinates": [48.18928, 20.00154],
         "description": "Centrácia a horizontácia prístroja",
         "name": "2. stanovisko"
       },
       {
-        "coordinates": [
-          48.18832,
-          20.00883
-        ],
+        "coordinates": [48.18832, 20.00883],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.19356,
-          20.01314
-        ],
+        "coordinates": [48.19356, 20.01314],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.20153,
-          20.00698
-        ],
+        "coordinates": [48.20153, 20.00698],
         "description": "Trigonometrické určenie výšky predmetu",
         "name": "3. stanovisko"
       },
       {
-        "coordinates": [
-          48.20525,
-          20.0005
-        ],
+        "coordinates": [48.20525, 20.0005],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.20418,
-          19.99457
-        ],
+        "coordinates": [48.20418, 19.99457],
         "description": "Určenie výmery",
         "name": "4. stanovisko"
       },
       {
-        "coordinates": [
-          48.2117,
-          19.99182
-        ],
+        "coordinates": [48.2117, 19.99182],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21459,
-          19.98749
-        ],
+        "coordinates": [48.21459, 19.98749],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21546,
-          19.98741
-        ],
+        "coordinates": [48.21546, 19.98741],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.2216,
-          19.98421
-        ],
+        "coordinates": [48.2216, 19.98421],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.22252,
-          19.98257
-        ],
+        "coordinates": [48.22252, 19.98257],
         "description": "Po zelenej značke na ďalšie stanovisko",
         "name": "Kontrolný bod"
       },
       {
-        "coordinates": [
-          48.22467,
-          19.97654
-        ],
+        "coordinates": [48.22467, 19.97654],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.22488,
-          19.97404
-        ],
+        "coordinates": [48.22488, 19.97404],
         "description": "Vedomostný test",
         "name": "5. stanovisko"
       },
       {
-        "coordinates": [
-          48.21863,
-          19.96027
-        ],
+        "coordinates": [48.21863, 19.96027],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21836,
-          19.95785
-        ],
+        "coordinates": [48.21836, 19.95785],
         "description": "Obec Hajnáčka",
         "name": "Cieľ"
       }

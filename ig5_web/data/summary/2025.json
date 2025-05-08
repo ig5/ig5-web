@@ -5,17 +5,8 @@
     "teamCount": 34
   },
   "results": {
-    "category1": [
-      "Letohrad A27",
-      "Letohrad C36",
-      "Duchcov A30"
-
-    ],
-    "category2": [
-      "Letohrad A27",
-      "Letohrad C36",
-      "Duchcov A30"
-    ]
+    "category1": ["Letohrad A27", "Letohrad C36", "Duchcov A30"],
+    "category2": ["Letohrad A27", "Letohrad C36", "Duchcov A30"]
   },
   "route": {
     "location": "todo",
@@ -24,13 +15,11 @@
     "length": 15,
     "mapSettings": {
       "zoom": 13,
-      "center": [
-        50.04, 16.47096
-      ]
+      "center": [50.04, 16.47096]
     },
     "points": [
       {
-        "coordinates": [50.02540, 16.47096],
+        "coordinates": [50.0254, 16.47096],
         "description": "",
         "name": "Štart"
       },
@@ -60,7 +49,7 @@
         "name": ""
       },
       {
-        "coordinates": [50.02930, 16.45926],
+        "coordinates": [50.0293, 16.45926],
         "description": "",
         "name": ""
       },
@@ -95,7 +84,7 @@
         "name": ""
       },
       {
-        "coordinates": [50.03950, 16.43087],
+        "coordinates": [50.0395, 16.43087],
         "description": "",
         "name": ""
       },
@@ -130,7 +119,7 @@
         "name": ""
       },
       {
-        "coordinates": [50.05079, 16.44870],
+        "coordinates": [50.05079, 16.4487],
         "description": "",
         "name": ""
       },
@@ -170,12 +159,11 @@
         "name": ""
       },
       {
-        "coordinates": [50.05210, 16.47967],
+        "coordinates": [50.0521, 16.47967],
         "description": "",
         "name": "Cieľ"
       }
     ]
-
   },
-  "video": "TODO"
+  "video": "https://www.youtube.com/embed/QqWPTNr88io?si=NkAhINWX0-I0oWkY"
 }

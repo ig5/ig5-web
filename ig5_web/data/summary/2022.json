@@ -5,16 +5,8 @@
     "teamCount": 28
   },
   "results": {
-    "category1": [
-      "Brno B12",
-      "Letohrad A18",
-      "Brno A6"
-    ],
-    "category2": [
-      "Brno B12",
-      "Lučenec B23",
-      "Letohrad A18"
-    ]
+    "category1": ["Brno B12", "Letohrad A18", "Brno A6"],
+    "category2": ["Brno B12", "Lučenec B23", "Letohrad A18"]
   },
   "route": {
     "location": "Okolie obcí Halič a Lupoč",
@@ -23,289 +15,181 @@
     "length": 15,
     "mapSettings": {
       "zoom": 14,
-      "center": [
-        48.36674,
-        19.55
-      ]
+      "center": [48.36674, 19.55]
     },
     "points": [
       {
-        "coordinates": [
-          48.355,
-          19.57547
-        ],
+        "coordinates": [48.355, 19.57547],
         "description": "Obecný úrad Halič",
         "name": "Štart"
       },
       {
-        "coordinates": [
-          48.35396,
-          19.57876
-        ],
+        "coordinates": [48.35396, 19.57876],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.35567,
-          19.57832
-        ],
+        "coordinates": [48.35567, 19.57832],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.35685,
-          19.5797
-        ],
+        "coordinates": [48.35685, 19.5797],
         "description": "Centrácia a horizontácia prístroja",
         "name": "1. stanovisko"
       },
       {
-        "coordinates": [
-          48.36045,
-          19.57555
-        ],
+        "coordinates": [48.36045, 19.57555],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.36301,
-          19.57226
-        ],
+        "coordinates": [48.36301, 19.57226],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.36251,
-          19.5696
-        ],
+        "coordinates": [48.36251, 19.5696],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.36674,
-          19.5658
-        ],
+        "coordinates": [48.36674, 19.5658],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.37156,
-          19.56126
-        ],
+        "coordinates": [48.37156, 19.56126],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.37922,
-          19.55347
-        ],
+        "coordinates": [48.37922, 19.55347],
         "description": "Určenie nivelačného prevýšenia",
         "name": "2. stanovisko"
       },
       {
-        "coordinates": [
-          48.3739,
-          19.54786
-        ],
+        "coordinates": [48.3739, 19.54786],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.37265,
-          19.54908
-        ],
+        "coordinates": [48.37265, 19.54908],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.37347,
-          19.53913
-        ],
+        "coordinates": [48.37347, 19.53913],
         "description": "Určenie výmery",
         "name": "3. stanovisko"
       },
       {
-        "coordinates": [
-          48.37409,
-          19.53701
-        ],
+        "coordinates": [48.37409, 19.53701],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.37496,
-          19.53689
-        ],
+        "coordinates": [48.37496, 19.53689],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.37567,
-          19.53568
-        ],
+        "coordinates": [48.37567, 19.53568],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.3767,
-          19.53526
-        ],
+        "coordinates": [48.3767, 19.53526],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.37792,
-          19.53159
-        ],
+        "coordinates": [48.37792, 19.53159],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.37796,
-          19.53073
-        ],
+        "coordinates": [48.37796, 19.53073],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.37425,
-          19.5347
-        ],
+        "coordinates": [48.37425, 19.5347],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.373,
-          19.5358
-        ],
+        "coordinates": [48.373, 19.5358],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.36984,
-          19.5349
-        ],
+        "coordinates": [48.36984, 19.5349],
         "description": "Trigonometrické určenie výšky predmetu",
         "name": "4. stanovisko"
       },
       {
-        "coordinates": [
-          48.36927,
-          19.53272
-        ],
+        "coordinates": [48.36927, 19.53272],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.36693,
-          19.52875
-        ],
+        "coordinates": [48.36693, 19.52875],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.36533,
-          19.52947
-        ],
+        "coordinates": [48.36533, 19.52947],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.36476,
-          19.5294
-        ],
+        "coordinates": [48.36476, 19.5294],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.36479,
-          19.5288
-        ],
+        "coordinates": [48.36479, 19.5288],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.36222,
-          19.52817
-        ],
+        "coordinates": [48.36222, 19.52817],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.35776,
-          19.54036
-        ],
+        "coordinates": [48.35776, 19.54036],
         "description": "Vedomostný test",
         "name": "5. stanovisko"
       },
       {
-        "coordinates": [
-          48.35779,
-          19.54522
-        ],
+        "coordinates": [48.35779, 19.54522],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.35868,
-          19.54606
-        ],
+        "coordinates": [48.35868, 19.54606],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.35482,
-          19.56684
-        ],
+        "coordinates": [48.35482, 19.56684],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.35299,
-          19.56932
-        ],
+        "coordinates": [48.35299, 19.56932],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.35327,
-          19.56962
-        ],
+        "coordinates": [48.35327, 19.56962],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.35383,
-          19.57046
-        ],
+        "coordinates": [48.35383, 19.57046],
         "description": "Základná škola Halič",
         "name": "Cieľ"
       }

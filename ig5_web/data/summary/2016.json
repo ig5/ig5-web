@@ -5,16 +5,8 @@
     "teamCount": 25
   },
   "results": {
-    "category1": [
-      "Lučenec B",
-      "Lučenec A",
-      "Letohrad B"
-    ],
-    "category2": [
-      "Lučenec A",
-      "Lučenec B",
-      "Letohrad B"
-    ]
+    "category1": ["Lučenec B", "Lučenec A", "Letohrad B"],
+    "category2": ["Lučenec A", "Lučenec B", "Letohrad B"]
   },
   "route": {
     "location": "Geopark Novohrad-Nógrád",
@@ -23,353 +15,221 @@
     "length": 15,
     "mapSettings": {
       "zoom": 13,
-      "center": [
-        48.21694,
-        19.71128
-      ]
+      "center": [48.21694, 19.71128]
     },
     "points": [
       {
-        "coordinates": [
-          48.232802,
-          19.65115
-        ],
+        "coordinates": [48.232802, 19.65115],
         "description": "",
         "name": "Štart"
       },
       {
-        "coordinates": [
-          48.23205,
-          19.65243
-        ],
+        "coordinates": [48.23205, 19.65243],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.2314,
-          19.65282
-        ],
+        "coordinates": [48.2314, 19.65282],
         "description": "Centrácia a horizontácia prístroja",
         "name": "1. stanovisko"
       },
       {
-        "coordinates": [
-          48.22898,
-          19.65864
-        ],
+        "coordinates": [48.22898, 19.65864],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.22982,
-          19.65927
-        ],
+        "coordinates": [48.22982, 19.65927],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.2326,
-          19.66116
-        ],
+        "coordinates": [48.2326, 19.66116],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.23449,
-          19.66381
-        ],
+        "coordinates": [48.23449, 19.66381],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.23529,
-          19.66767
-        ],
+        "coordinates": [48.23529, 19.66767],
         "description": "Určenie nivelačného prevýšenia",
         "name": "2. stanovisko"
       },
       {
-        "coordinates": [
-          48.23448,
-          19.66927
-        ],
+        "coordinates": [48.23448, 19.66927],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.23417,
-          19.67082
-        ],
+        "coordinates": [48.23417, 19.67082],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.23237,
-          19.6735
-        ],
+        "coordinates": [48.23237, 19.6735],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.23227,
-          19.677
-        ],
+        "coordinates": [48.23227, 19.677],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.23338,
-          19.67686
-        ],
+        "coordinates": [48.23338, 19.67686],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.23318,
-          19.67614
-        ],
+        "coordinates": [48.23318, 19.67614],
         "description": "Vedomostný test",
         "name": "3. stanovisko"
       },
       {
-        "coordinates": [
-          48.23227,
-          19.677
-        ],
+        "coordinates": [48.23227, 19.677],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.23172,
-          19.67869
-        ],
+        "coordinates": [48.23172, 19.67869],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.22759,
-          19.67981
-        ],
+        "coordinates": [48.22759, 19.67981],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.22647,
-          19.68144
-        ],
+        "coordinates": [48.22647, 19.68144],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.22244,
-          19.68573
-        ],
+        "coordinates": [48.22244, 19.68573],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21909,
-          19.69535
-        ],
+        "coordinates": [48.21909, 19.69535],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.22068,
-          19.6962
-        ],
+        "coordinates": [48.22068, 19.6962],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21953,
-          19.70173
-        ],
+        "coordinates": [48.21953, 19.70173],
         "description": "Trigonometrické určenie výšky predmetu",
         "name": "4. stanovisko"
       },
       {
-        "coordinates": [
-          48.22122,
-          19.70026
-        ],
+        "coordinates": [48.22122, 19.70026],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21947,
-          19.70759
-        ],
+        "coordinates": [48.21947, 19.70759],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.22064,
-          19.7089
-        ],
+        "coordinates": [48.22064, 19.7089],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21694,
-          19.71128
-        ],
+        "coordinates": [48.21694, 19.71128],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21431,
-          19.70918
-        ],
+        "coordinates": [48.21431, 19.70918],
         "description": "Určenie výmery",
         "name": "5. stanovisko"
       },
       {
-        "coordinates": [
-          48.20628,
-          19.71574
-        ],
+        "coordinates": [48.20628, 19.71574],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.20312,
-          19.71631
-        ],
+        "coordinates": [48.20312, 19.71631],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.20188,
-          19.71867
-        ],
+        "coordinates": [48.20188, 19.71867],
         "description": "Orientácia na mape",
         "name": "6. stanovisko"
       },
       {
-        "coordinates": [
-          48.2027,
-          19.72279
-        ],
+        "coordinates": [48.2027, 19.72279],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.20511,
-          19.72601
-        ],
+        "coordinates": [48.20511, 19.72601],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.20786,
-          19.72888
-        ],
+        "coordinates": [48.20786, 19.72888],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21515,
-          19.73462
-        ],
+        "coordinates": [48.21515, 19.73462],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21609,
-          19.74212
-        ],
+        "coordinates": [48.21609, 19.74212],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.2158,
-          19.7477
-        ],
+        "coordinates": [48.2158, 19.7477],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21635,
-          19.75013
-        ],
+        "coordinates": [48.21635, 19.75013],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.21806,
-          19.75148
-        ],
+        "coordinates": [48.21806, 19.75148],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.22107,
-          19.75186
-        ],
+        "coordinates": [48.22107, 19.75186],
         "description": "Orientácia na mape",
         "name": "7. stanovisko"
       },
       {
-        "coordinates": [
-          48.22188,
-          19.75038
-        ],
+        "coordinates": [48.22188, 19.75038],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.22664,
-          19.74743
-        ],
+        "coordinates": [48.22664, 19.74743],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.23181,
-          19.7493
-        ],
+        "coordinates": [48.23181, 19.7493],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.2325,
-          19.751
-        ],
+        "coordinates": [48.2325, 19.751],
         "description": "",
         "name": "Cieľ"
       }

@@ -5,16 +5,8 @@
     "teamCount": 33
   },
   "results": {
-    "category1": [
-      "Lučenec B",
-      "Brno A",
-      "Žilina A"
-    ],
-    "category2": [
-      "Lučenec A",
-      "Lučenec B",
-      "Žilina A"
-    ]
+    "category1": ["Lučenec B", "Brno A", "Žilina A"],
+    "category2": ["Lučenec A", "Lučenec B", "Žilina A"]
   },
   "route": {
     "location": "Cerová vrchovina",
@@ -23,185 +15,116 @@
     "length": 11.5,
     "mapSettings": {
       "zoom": 13,
-      "center": [
-        48.17369,
-        19.89542
-      ]
+      "center": [48.17369, 19.89542]
     },
     "points": [
       {
-        "coordinates": [
-          48.16782,
-          19.85745
-        ],
+        "coordinates": [48.16782, 19.85745],
         "description": "Obec Šomoška (Maďarsko)",
         "name": "Štart"
       },
       {
-        "coordinates": [
-          48.17139,
-          19.857
-        ],
+        "coordinates": [48.17139, 19.857],
         "description": "Centrácia a horizontácia prístroja",
         "name": "1. stanovisko"
       },
       {
-        "coordinates": [
-          48.17833,
-          19.85486
-        ],
+        "coordinates": [48.17833, 19.85486],
         "description": "Určenie nivelačného prevýšenia",
         "name": "2. stanovisko"
       },
       {
-        "coordinates": [
-          48.17808,
-          19.85592
-        ],
+        "coordinates": [48.17808, 19.85592],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.18044,
-          19.86078
-        ],
+        "coordinates": [48.18044, 19.86078],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.18228,
-          19.86028
-        ],
+        "coordinates": [48.18228, 19.86028],
         "description": "Kontrolný bod ",
         "name": "Orientácia na mape"
       },
       {
-        "coordinates": [
-          48.18244,
-          19.86347
-        ],
+        "coordinates": [48.18244, 19.86347],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.17917,
-          19.88178
-        ],
+        "coordinates": [48.17917, 19.88178],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.17511,
-          19.89603
-        ],
+        "coordinates": [48.17511, 19.89603],
         "description": "Určenie výmery",
         "name": "3. stanovisko"
       },
       {
-        "coordinates": [
-          48.17369,
-          19.89542
-        ],
+        "coordinates": [48.17369, 19.89542],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.17519,
-          19.90442
-        ],
+        "coordinates": [48.17519, 19.90442],
         "description": "Trigonometrické určenie výšky predmetu",
         "name": "4. stanovisko"
       },
       {
-        "coordinates": [
-          48.17581,
-          19.90319
-        ],
+        "coordinates": [48.17581, 19.90319],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.17811,
-          19.90803
-        ],
+        "coordinates": [48.17811, 19.90803],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.17969,
-          19.91919
-        ],
+        "coordinates": [48.17969, 19.91919],
         "description": "Kontrolný bod",
         "name": "Orientačné stanovisko"
       },
       {
-        "coordinates": [
-          48.18053,
-          19.91897
-        ],
+        "coordinates": [48.18053, 19.91897],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.181,
-          19.91983
-        ],
+        "coordinates": [48.181, 19.91983],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.18169,
-          19.91964
-        ],
+        "coordinates": [48.18169, 19.91964],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.18611,
-          19.92081
-        ],
+        "coordinates": [48.18611, 19.92081],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.18725,
-          19.92847
-        ],
+        "coordinates": [48.18725, 19.92847],
         "description": "Geopuzzle - drevené puzzle Európy",
         "name": "5. stanovisko"
       },
       {
-        "coordinates": [
-          48.18847,
-          19.93033
-        ],
+        "coordinates": [48.18847, 19.93033],
         "description": "",
         "name": ""
       },
       {
-        "coordinates": [
-          48.19286,
-          19.9265
-        ],
+        "coordinates": [48.19286, 19.9265],
         "description": "",
         "name": "Cieľ"
       },
       {
-        "coordinates": [
-          48.18089,
-          19.946
-        ],
+        "coordinates": [48.18089, 19.946],
         "description": "Obec Stará Bašta",
         "name": "Cieľ Extra"
       }
