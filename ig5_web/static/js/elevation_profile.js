@@ -37,7 +37,7 @@ function renderElevationProfileChart(elevation_data, elevation_data_sites) {
           borderWidth: 5,
           fill: true,
           tension: 0.4,
-          pointRadius: 2,
+          pointRadius: 0,
         },
       ],
     },
@@ -65,6 +65,7 @@ function renderElevationProfileChart(elevation_data, elevation_data_sites) {
       },
       scales: {
         x: {
+          type: "category",
           title: {
             display: true,
             text: "Vzdialenosť od štartu (m)",
