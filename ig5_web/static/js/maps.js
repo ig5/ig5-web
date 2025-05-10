@@ -112,7 +112,7 @@ function renderRouteMap(center, zoom, data) {
 
   let routeGeojson = L.geoJson(data, {
     style: {
-      color: "#0093dd",
+      color: LINE_COLOR,
       weight: 5,
     },
     filter: excludePoints,
@@ -465,13 +465,7 @@ function renderRouteMap(center, zoom, data) {
   //     },
   //   ],
   // };
-  // // console.log(geojson);
-
-  // // controlElevation.load("/static/js/foo.json");
   // controlElevation.load(JSON.stringify(geojson));
-  //
-  // https://www.opentopodata.org/api/
-  // https://api.opentopodata.org/v1/eudem25m?locations=48.355,19.57547|48.35396,19.57876|48.35567,19.57832|48.35685,19.5797|48.36045,19.57555|48.36301,19.57226|48.36251,19.5696|48.36674,19.5658|48.37156,19.56126|48.37922,19.55347|48.3739,19.54786|48.37265,19.54908|48.37347,19.53913|48.37409,19.53701|48.37496,19.53689|48.37567,19.53568|48.3767,19.53526|48.37792,19.53159|48.37796,19.53073|48.37425,19.5347|48.373,19.5358|48.36984,19.5349|48.36927,19.53272|48.36693,19.52875|48.36533,19.52947|48.36476,19.5294|48.36479,19.5288|48.36222,19.52817|48.35776,19.54036|48.35779,19.54522|48.35868,19.54606|48.35482,19.56684|48.35299,19.56932|48.35327,19.56962|48.35383,19.57046
 }
 
 function renderSchoolsMap(center, zoom, data) {

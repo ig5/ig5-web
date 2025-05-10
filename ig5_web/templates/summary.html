@@ -84,6 +84,8 @@
 </ul>
 <div id="map" style="width: 100%; height: 550px"></div>
 <br />
+<canvas id="elevationChart"></canvas>
+<br />
 {% endif %}
 
 {% if photos %}
@@ -120,12 +122,22 @@
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/@raruto/leaflet-elevation@2.5.1/dist/leaflet-elevation.min.js"></script> -->
+<!-- Chart JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+<!-- Stacked Bar Chart -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/elevation_profile.js') }}"></script>
 <!-- App -->
 <script src="{{ url_for('static', filename='js/maps.js') }}"></script>
 <script>
+  const LINE_COLOR = "rgba(0,147,221)";
+
   const CENTER = {{ map.center|safe }};
   const ZOOM = {{ map.zoom }};
   const DATA = {{ map.data|safe }};
   renderRouteMap(CENTER, ZOOM, DATA);
+
+  const ELEVATION_DATA = {{ map.elevation_profile|safe }};
+  const ELEVATION_DATA_SITES = {{ map.elevation_profile_sites|safe }};
+  renderElevationProfileChart(ELEVATION_DATA, ELEVATION_DATA_SITES);
 </script>
 {% endblock %}

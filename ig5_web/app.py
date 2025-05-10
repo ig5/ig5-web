@@ -2,6 +2,7 @@ import json
 import os
 from collections import defaultdict
 from datetime import datetime
+from pathlib import Path
 
 from flask import Flask, abort, render_template
 from flask_htmlmin import HTMLMIN
@@ -72,6 +73,36 @@ def summary(order):
             "zoom": 0,
             "data": {},
         }
+
+    sites = {
+        tuple(reversed(feature["geometry"]["coordinates"])): feature["properties"]
+        for feature in map_["data"].get("features", [])
+        if feature["geometry"]["type"] == "Point" and feature["properties"]["type"] == "site"
+    }
+
+    distances = []
+    elevations = []
+    site_distances = []
+    site_elevations = []
+    elevation_profile_path = Path(__file__).parent / "data" / "elevations" / f"{year}_elevation_profile.json"
+    if elevation_profile_path.exists():
+        with open(elevation_profile_path, "r") as file_:
+            for distance, point_data in json.load(file_).items():
+                distance = float(distance)
+                distances.append(distance)
+                elevations.append(point_data["elevation"])
+
+                point_coordinates = (point_data["lat"], point_data["lon"])
+                site = sites.get(point_coordinates)
+                if site:
+                    site = {**site}
+                    site.pop("type")
+                    site["elevation"] = point_data["elevation"]
+                    site_distances.append(distance)
+                    site_elevations.append(site)
+
+    map_["elevation_profile"] = [distances, elevations]
+    map_["elevation_profile_sites"] = [site_distances, site_elevations]
 
     return render_template(
         "summary.html",
