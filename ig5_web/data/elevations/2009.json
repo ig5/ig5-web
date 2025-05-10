@@ -1,0 +1,109 @@
+{
+  "results": [
+    {
+      "dataset": "eudem25m",
+      "elevation": 659.34375,
+      "location": {
+        "lat": 48.4578,
+        "lng": 19.476
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 762.7416381835938,
+      "location": {
+        "lat": 48.46415,
+        "lng": 19.47042
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 695.7684326171875,
+      "location": {
+        "lat": 48.46658,
+        "lng": 19.47152
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 638.7608642578125,
+      "location": {
+        "lat": 48.46978,
+        "lng": 19.46822
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 604.0657348632812,
+      "location": {
+        "lat": 48.47185,
+        "lng": 19.46745
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 667.6065063476562,
+      "location": {
+        "lat": 48.4783,
+        "lng": 19.46638
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 717.0027465820312,
+      "location": {
+        "lat": 48.48133,
+        "lng": 19.46068
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 815.1975708007812,
+      "location": {
+        "lat": 48.48598,
+        "lng": 19.46178
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 665.81884765625,
+      "location": {
+        "lat": 48.48772,
+        "lng": 19.44743
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 674.5233154296875,
+      "location": {
+        "lat": 48.48023,
+        "lng": 19.45447
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 691.7412719726562,
+      "location": {
+        "lat": 48.47328,
+        "lng": 19.45222
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 682.5630493164062,
+      "location": {
+        "lat": 48.47135,
+        "lng": 19.44957
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 733.1484375,
+      "location": {
+        "lat": 48.46575,
+        "lng": 19.46472
+      }
+    }
+  ],
+  "status": "OK"
+}

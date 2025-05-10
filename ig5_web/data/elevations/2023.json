@@ -1,0 +1,173 @@
+{
+  "results": [
+    {
+      "dataset": "eudem25m",
+      "elevation": 531.9407958984375,
+      "location": {
+        "lat": 49.91538498,
+        "lng": 14.77937903
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 515.98193359375,
+      "location": {
+        "lat": 49.91719698,
+        "lng": 14.77987298
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 518.3303833007812,
+      "location": {
+        "lat": 49.91890999,
+        "lng": 14.77808696
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 521.6451416015625,
+      "location": {
+        "lat": 49.92221598,
+        "lng": 14.782638
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 476.9444580078125,
+      "location": {
+        "lat": 49.92687296,
+        "lng": 14.78298199
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 438.0895690917969,
+      "location": {
+        "lat": 49.93390001,
+        "lng": 14.78031001
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 463.78948974609375,
+      "location": {
+        "lat": 49.93764798,
+        "lng": 14.78069399
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 511.1689147949219,
+      "location": {
+        "lat": 49.94402803,
+        "lng": 14.773521
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 467.5995178222656,
+      "location": {
+        "lat": 49.95049903,
+        "lng": 14.77549603
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 472.439697265625,
+      "location": {
+        "lat": 49.95210299,
+        "lng": 14.77423003
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 508.0030517578125,
+      "location": {
+        "lat": 49.95325299,
+        "lng": 14.78688402
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 478.7164306640625,
+      "location": {
+        "lat": 49.94696002,
+        "lng": 14.79791896
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 471.9425964355469,
+      "location": {
+        "lat": 49.94597004,
+        "lng": 14.794834
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 415.3362121582031,
+      "location": {
+        "lat": 49.94128296,
+        "lng": 14.79506501
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 392.5340881347656,
+      "location": {
+        "lat": 49.93353398,
+        "lng": 14.801419
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 400.65545654296875,
+      "location": {
+        "lat": 49.93209396,
+        "lng": 14.79879303
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 524.438232421875,
+      "location": {
+        "lat": 49.92288603,
+        "lng": 14.79164796
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 523.41162109375,
+      "location": {
+        "lat": 49.91595897,
+        "lng": 14.79006001
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 541.0554809570312,
+      "location": {
+        "lat": 49.91478399,
+        "lng": 14.784148
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 533.1483764648438,
+      "location": {
+        "lat": 49.91351103,
+        "lng": 14.78415898
+      }
+    },
+    {
+      "dataset": "eudem25m",
+      "elevation": 547.9562377929688,
+      "location": {
+        "lat": 49.91405502,
+        "lng": 14.78569597
+      }
+    }
+  ],
+  "status": "OK"
+}
