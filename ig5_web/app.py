@@ -120,9 +120,9 @@ def summary(order):
     )
 
 
-@app.route("/stats.html")
+@app.route("/statistiky.html")
 def stats():
-    def per_school_stats(category_key: str) -> dict:
+    def per_category_stats(category_key: str) -> dict:
         stats = defaultdict(lambda: {1: [], 2: [], 3: []})
 
         for year, data in sorted(summaries.items(), key=lambda item: item[0], reverse=True):
@@ -136,24 +136,68 @@ def stats():
                 stats[school][position].append(year)
 
         sorted_stats = dict(
-            sorted(
-                stats.items(),
-                key=lambda item: (len(item[1][1]), len(item[1][2]), len(item[1][3])),
-                # key=lambda item: len(item[1][1]) * 3 + len(item[1][2]) * 2 + len(item[1][3]),
-                reverse=True,
-            )
+            sorted(stats.items(), key=lambda item: (len(item[1][1]), len(item[1][2]), len(item[1][3])), reverse=True)
         )
 
         return sorted_stats
 
-    cat1_stats = per_school_stats("category1")
-    cat2_stats = per_school_stats("category2")
+    def per_school_stats(category_keys: list[str]) -> dict:
+        stats = defaultdict(lambda: {1: [], 2: [], 3: []})
+
+        for year, data in sorted(summaries.items(), key=lambda item: item[0], reverse=True):
+            for category_key in category_keys:
+                results = data.get("results", {}).get(category_key, [])
+                for position, team in enumerate(results, start=1):
+                    team_parts = team.split(" ")
+                    school = " ".join(team_parts[:-1])
+                    if not school:
+                        school = team
+
+                    stats[school][position].append(year)
+
+        sorted_stats = dict(
+            sorted(stats.items(), key=lambda item: (len(item[1][1]), len(item[1][2]), len(item[1][3])), reverse=True)
+        )
+
+        return sorted_stats
+
+    def get_organizers_stats():
+        organizers = []
+        for school in utils.flatten_schools(schools):
+            hosted = school.get("hosted", [])
+            if hosted:
+                organizers.append((f'{school["name"]} {school["city"]}', list(reversed(hosted))))
+
+        organizers.sort(key=lambda school: (len(school[1]), school[1]), reverse=True)
+        return organizers
+
+    def get_schools_attendance():
+        school_count_to_years = defaultdict(list)
+        for year, _ in sorted(summaries.items(), key=lambda item: item[0], reverse=True):
+            attended_schools = utils.filter_schools_by_year(schools, year)
+            attended_schools = utils.flatten_schools(attended_schools)
+            school_count_to_years[len(attended_schools)].append(year)
+
+        attendance = list(sorted(school_count_to_years.items(), key=lambda item: item[0], reverse=True))
+        return attendance
+
+    cat1_stats = per_category_stats("category1")
+    cat2_stats = per_category_stats("category2")
+    total_stats = per_school_stats(["category1", "category2"])
+
+    for country, country_schools in schools["schools"].items():
+        schools["schools"][country] = list(
+            sorted(country_schools, key=lambda school: len(school["attended"]), reverse=True)
+        )
 
     return render_template(
         "stats.html",
-        years=list(years.values()),
+        organizers=get_organizers_stats(),
+        schools=schools,
+        schools_attendance=get_schools_attendance(),
         cat1_stats=json.dumps(cat1_stats, ensure_ascii=False),
         cat2_stats=json.dumps(cat2_stats, ensure_ascii=False),
+        total_stats=json.dumps(total_stats, ensure_ascii=False),
     )
 
 
@@ -162,7 +206,6 @@ def contacts():
     return render_template(
         "contacts.html",
         schools=schools,
-        schools_flattened=utils.flatten_schools(schools),
         map={
             "center": schools["mapSettings"]["center"],
             "zoom": schools["mapSettings"]["zoom"],

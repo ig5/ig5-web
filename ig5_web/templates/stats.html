@@ -1,27 +1,38 @@
 {% extends "layout.html" %}
 
-{% set active_page = "stats" -%}
-{% block title %}Stats{% endblock %}
+{% set active_page = "results-stats" -%}
+{% block title %}Štatistiky{% endblock %}
 
 {% block content %}
-<!-- <form id="weightsForm" class="mb-4">
-  <div class="form-row">
-    <div class="form-group col-md-4">
-      <label for="weight1">Váha 1. miesto</label>
-      <input type="number" class="form-control" id="weight1" value="4" min="0">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="weight2">Váha 2. miesto</label>
-      <input type="number" class="form-control" id="weight2" value="2" min="0">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="weight3">Váha 3. miesto</label>
-      <input type="number" class="form-control" id="weight3" value="1" min="0">
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Prekresliť grafy</button>
-</form> -->
+<h1>Štatistiky všetkých ročníkov IG5</h1>
+<div id="sub_nav">
+  <a href="#basic">Základné údaje</a>
+  &bull; <a href="#schools">Zúčastnené školy</a>
+  &bull; <a href="#results">Výsledky</a>
+</div>
 
+<a name="basic" href="#basic"><h2>Základné údaje</h2></a>
+<ul class="no-bullet">
+  <li><span class="red">Organizátor:</span>
+    <ul class="no-bullet">
+    {% for organizer in organizers %}
+      <li>{{ organizer[1]|length }}x {{ organizer[0] }} ({{ organizer[1]|join(', ') }})</li>
+    {% endfor %}
+    </ul>
+  </li>
+  <li><span class="red">Počet zúčastnených škôl:</span>
+    <ul class="no-bullet">
+    {% for (attendance, years) in schools_attendance %}
+      <li>{{ attendance }} ({{ years|join(', ') }})</li>
+    {% endfor %}
+    </ul>
+  </li>
+</ul>
+
+<a name="schools" href="#schools"><h2>Zúčastnené školy</h2></a>
+{{ macros.school_list(schools.schools, True) }}
+
+<a name="results" href="#results"><h2>Výsledky</h2></a>
 <div>
   {{ macros.category1_headings() }}
   <canvas id="cat1_chart"></canvas>
@@ -30,6 +41,12 @@
 <div>
   {{ macros.category2_headings() }}
   <canvas id="cat2_chart"></canvas>
+</div>
+
+<div>
+  <h3>Top 3 umiestnenia</h3>
+  <h4>Celkový počet top 3 umiestnení v oboch kategóriách</h4>
+  <canvas id="total_chart"></canvas>
 </div>
 {% endblock %}
 
@@ -42,20 +59,10 @@
 <script>
   const cat1_data = {{ cat1_stats | safe }};
   const cat2_data = {{ cat2_stats | safe }};
-  // Should be the same as in weightsForm.
-  const initial_weights = [4, 2, 1];
+  const total_data = {{ total_stats | safe }};
 
-  stacked_bar_chart(cat1_data, "cat1_chart", initial_weights);
-  stacked_bar_chart(cat2_data, "cat2_chart", initial_weights);
-
-  // document.getElementById('weightsForm').addEventListener('submit', function (e) {
-  //   e.preventDefault();
-  //   let w1 = parseInt(document.getElementById('weight1').value, 10);
-  //   let w2 = parseInt(document.getElementById('weight2').value, 10);
-  //   let w3 = parseInt(document.getElementById('weight3').value, 10);
-
-  //   stacked_bar_chart(cat1_data, "cat1_chart", [w1, w2, w3]);
-  //   stacked_bar_chart(cat2_data, "cat2_chart", [w1, w2, w3]);
-  // });
+  stacked_bar_chart(cat1_data, "cat1_chart", 18);
+  stacked_bar_chart(cat2_data, "cat2_chart", 18);
+  stacked_bar_chart(total_data, "total_chart", 30);
 </script>
 {% endblock %}

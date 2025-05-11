@@ -13,7 +13,6 @@ def build_navbar(years):
     navigation_bar = [
         (url_for("index"), "index", "Novinky"),
         (url_for("about"), "about", "O IG5"),
-        # (url_for("stats"), "stats", "Stats"),
         (url_for("contacts"), "contacts", "Kontakty"),
     ]
 
@@ -26,7 +25,10 @@ def build_navbar(years):
                 f"{year} | {order}. ročník",
             )
         )
-    navigation_bar.insert(2, {"Výsledky IG5": reversed(results_subnav)})
+
+    results_subnav = list(reversed(results_subnav))
+    results_subnav.insert(0, (url_for("stats"), "results-stats", "Štatistiky"))
+    navigation_bar.insert(2, {"Výsledky IG5": results_subnav})
 
     return navigation_bar
 

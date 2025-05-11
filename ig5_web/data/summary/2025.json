@@ -9,9 +9,9 @@
     "category2": ["Letohrad A27", "Letohrad C36", "Duchcov A30"]
   },
   "route": {
-    "location": "todo",
-    "start": "todo",
-    "finish": "todo",
+    "location": "Červená - Žampach - Písečná - Lukavice",
+    "start": "Obec Červená",
+    "finish": "Obec Lukavice",
     "length": 15,
     "mapSettings": {
       "zoom": 13,
