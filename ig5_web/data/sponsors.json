@@ -808,5 +808,100 @@
     "name": "GEO NITRA s.r.o.",
     "url": "",
     "supported": [2024]
+  },
+  {
+    "name": "Pardubický kraj",
+    "url": "https://www.pardubickykraj.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "Město Letohrad",
+    "url": "https://www.letohrad.eu/",
+    "supported": [2025]
+  },
+  {
+    "name": "coalfamily",
+    "url": "https://www.coalfamily.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "Subterra",
+    "url": "https://www.subterra.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "Geodézie Východní Čechy",
+    "url": "https://geodezie-vc.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "Geošrafo",
+    "url": "https://geosrafo.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "Vodovody a kanalizace Jablonné nad Orlicí",
+    "url": "https://www.vak.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "OEZ",
+    "url": "https://www.oez.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "CH&T Pardubice",
+    "url": "https://www.cht-pce.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "M&M reality Ústí nad Orlicí",
+    "url": "https://www.mmreality.cz/realitni-kancelare/usti-nad-orlici/",
+    "supported": [2025]
+  },
+  {
+    "name": "Starmon",
+    "url": "https://starmon.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "Testa",
+    "url": "https://www.testa.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "Fostrade",
+    "url": "https://fostrade.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "Pirell",
+    "url": "https://pirell.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "Jiří Krejsa",
+    "url": "https://www.krejsa.info/",
+    "supported": [2025]
+  },
+  {
+    "name": "VAKSTAV",
+    "url": "https://www.vakstav.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "Bravo spotřebiče",
+    "url": "https://bravospotrebice.cz/",
+    "supported": [2025]
+  },
+  {
+    "name": "Trigema",
+    "url": "https://www.trigema.cz/",
+    "supported": [2025]
+  },
+    {
+    "name": "geoGEN",
+    "url": "https://www.geoobchod.cz/",
+    "supported": [2025]
   }
 ]
