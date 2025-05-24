@@ -19,7 +19,10 @@
 </div>
 
 <a name="schools" href="#schools"><h2>Zúčastnené školy</h2></a>
-{{ macros.school_list(schools.schools, True) }}
+<div>
+  <canvas id="schools_matrix_chart" height="300px"></canvas>
+  <br />
+</div>
 
 <a name="results" href="#results"><h2>Výsledky</h2></a>
 <div>
@@ -46,14 +49,17 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2.1.1/dist/chartjs-chart-matrix.min.js"></script>
 <!-- Stacked Bar Chart -->
 <script type="text/javascript" src="{{ url_for('static', filename='js/stacked_bar_chart.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/scatter_chart.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/hosts_and_school_count_chart.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/schools_matrix_chart.js') }}"></script>
 <script>
+  const hosts_and_school_count_data = {{ hosts_and_school_count_stats | safe }};
+  const schools_attendance_data = {{ schools_attendance_stats | safe }};
   const cat1_data = {{ cat1_stats | safe }};
   const cat2_data = {{ cat2_stats | safe }};
   const total_data = {{ total_stats | safe }};
-  const hosts_and_school_count_data = {{ hosts_and_school_count_stats | safe }};
 
   hosts_and_school_count_chart(hosts_and_school_count_data, "hosts_and_school_count_chart");
+  schools_matrix_chart(schools_attendance_data, "schools_matrix_chart");
   stacked_bar_chart(cat1_data, "cat1_chart", 18);
   stacked_bar_chart(cat2_data, "cat2_chart", 18);
   stacked_bar_chart(total_data, "total_chart", 30);

@@ -36,7 +36,7 @@
     {% endif -%}
 
     <ul>
-    {%- for school in country_schools %}
+    {%- for school in country_schools|sort(attribute='city') %}
       <li>
         <a href="{{ school.url }}">{{ school.name -}}<span class="blue"> {{ school.city }}</span></a>
 
