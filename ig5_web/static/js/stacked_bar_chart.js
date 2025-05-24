@@ -70,6 +70,9 @@ function stacked_bar_chart(category_stats, chart_canvas_id, x_scale_max) {
         y: {
           stacked: true,
           beginAtZero: true,
+          grid: {
+            display: false,
+          },
         },
       },
     },

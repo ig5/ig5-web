@@ -161,26 +161,44 @@ def stats():
 
         return sorted_stats
 
-    def get_organizers_stats():
-        organizers = []
+    def get_hosts_stats():
+        hosts = []
         for school in utils.flatten_schools(schools):
             hosted = school.get("hosted", [])
             if hosted:
-                organizers.append((f'{school["name"]} {school["city"]}', list(reversed(hosted))))
+                hosts.append((school["city"], list(reversed(hosted))))
 
-        organizers.sort(key=lambda school: (len(school[1]), school[1]), reverse=True)
-        return organizers
+        hosts.sort(key=lambda school: (len(school[1]), school[1]))
 
-    def get_schools_attendance():
+        chart_data = []
+        for city, years in hosts:
+            for year in years:
+                chart_data.append({"x": year, "y": city})
+
+        chart_data = list(sorted(chart_data, key=lambda item: item["x"]))
+        chart_labels = list(reversed([host[0] for host in hosts]))
+        return {"hosts": hosts, "chart_data": chart_data, "chart_labels": chart_labels}
+
+    def get_schools_attendance_stats():
         school_count_to_years = defaultdict(list)
         for year, _ in sorted(summaries.items(), key=lambda item: item[0], reverse=True):
+            year = int(year)
             attended_schools = utils.filter_schools_by_year(schools, year)
             attended_schools = utils.flatten_schools(attended_schools)
             school_count_to_years[len(attended_schools)].append(year)
 
         attendance = list(sorted(school_count_to_years.items(), key=lambda item: item[0], reverse=True))
-        return attendance
 
+        chart_data = []
+        for school_count, years in attendance:
+            for year in years:
+                chart_data.append({"x": year, "y": school_count})
+
+        chart_data = list(sorted(chart_data, key=lambda item: item["x"]))
+        return {"attendance": attendance, "chart_data": chart_data}
+
+    hosts_stats = get_hosts_stats()
+    schools_attendance_stats = get_schools_attendance_stats()
     cat1_stats = per_category_stats("category1")
     cat2_stats = per_category_stats("category2")
     total_stats = per_school_stats(["category1", "category2"])
@@ -192,12 +210,15 @@ def stats():
 
     return render_template(
         "stats.html",
-        organizers=get_organizers_stats(),
+        hosts_and_school_count_stats={
+            "hosts": hosts_stats["chart_data"],
+            "hosts_labels": hosts_stats["chart_labels"],
+            "school_count": schools_attendance_stats["chart_data"],
+        },
         schools=schools,
-        schools_attendance=get_schools_attendance(),
-        cat1_stats=json.dumps(cat1_stats, ensure_ascii=False),
-        cat2_stats=json.dumps(cat2_stats, ensure_ascii=False),
-        total_stats=json.dumps(total_stats, ensure_ascii=False),
+        cat1_stats=cat1_stats,
+        cat2_stats=cat2_stats,
+        total_stats=total_stats,
     )
 
 

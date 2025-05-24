@@ -12,22 +12,11 @@
 </div>
 
 <a name="basic" href="#basic"><h2>Základné údaje</h2></a>
-<ul class="no-bullet">
-  <li><span class="red">Organizátor:</span>
-    <ul class="no-bullet">
-    {% for organizer in organizers %}
-      <li>{{ organizer[1]|length }}x {{ organizer[0] }} ({{ organizer[1]|join(', ') }})</li>
-    {% endfor %}
-    </ul>
-  </li>
-  <li><span class="red">Počet zúčastnených škôl:</span>
-    <ul class="no-bullet">
-    {% for (attendance, years) in schools_attendance %}
-      <li>{{ attendance }} ({{ years|join(', ') }})</li>
-    {% endfor %}
-    </ul>
-  </li>
-</ul>
+<div>
+  <h3>Organizátori &amp; Počet zúčastnených škôl</h3>
+  <canvas id="hosts_and_school_count_chart"></canvas>
+  <br />
+</div>
 
 <a name="schools" href="#schools"><h2>Zúčastnené školy</h2></a>
 {{ macros.school_list(schools.schools, True) }}
@@ -54,13 +43,17 @@
 {{ super() }}
 <!-- Chart JS -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2.1.1/dist/chartjs-chart-matrix.min.js"></script>
 <!-- Stacked Bar Chart -->
 <script type="text/javascript" src="{{ url_for('static', filename='js/stacked_bar_chart.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/scatter_chart.js') }}"></script>
 <script>
   const cat1_data = {{ cat1_stats | safe }};
   const cat2_data = {{ cat2_stats | safe }};
   const total_data = {{ total_stats | safe }};
+  const hosts_and_school_count_data = {{ hosts_and_school_count_stats | safe }};
 
+  hosts_and_school_count_chart(hosts_and_school_count_data, "hosts_and_school_count_chart");
   stacked_bar_chart(cat1_data, "cat1_chart", 18);
   stacked_bar_chart(cat2_data, "cat2_chart", 18);
   stacked_bar_chart(total_data, "total_chart", 30);
