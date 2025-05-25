@@ -230,6 +230,24 @@ def stats():
     cat2_stats = per_category_stats("category2")
     total_stats = per_school_stats(["category1", "category2"])
 
+    for index, data in enumerate(schools_attendance_stats["chart_data"]):
+        year = str(data["x"])
+        city = data["y"]
+        city_cat1_stats = cat1_stats.get(city, {})
+        city_cat2_stats = cat2_stats.get(city, {})
+        schools_attendance_stats["chart_data"][index]["data"] = {
+            "cat1": {
+                1: year in city_cat1_stats.get(1, []),
+                2: year in city_cat1_stats.get(2, []),
+                3: year in city_cat1_stats.get(3, [])
+            },
+            "cat2": {
+                1: year in city_cat2_stats.get(1, []),
+                2: year in city_cat2_stats.get(2, []),
+                3: year in city_cat2_stats.get(3, [])
+            }
+        }
+
     for country, country_schools in schools["schools"].items():
         schools["schools"][country] = list(
             sorted(country_schools, key=lambda school: len(school["attended"]), reverse=True)
@@ -242,7 +260,7 @@ def stats():
             "hosts_labels": hosts_stats["chart_labels"],
             "school_count": schools_count_stats["chart_data"],
         },
-        schools_attendance_stats=schools_attendance_stats,
+        schools_attendance_stats=json.dumps(schools_attendance_stats, ensure_ascii=False),
         schools=schools,
         cat1_stats=cat1_stats,
         cat2_stats=cat2_stats,
