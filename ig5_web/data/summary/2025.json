@@ -20,7 +20,7 @@
     "points": [
       {
         "coordinates": [50.0254, 16.47096],
-        "description": "",
+        "description": "Obec Červená",
         "name": "Štart"
       },
       {
@@ -50,8 +50,8 @@
       },
       {
         "coordinates": [50.0293, 16.45926],
-        "description": "",
-        "name": ""
+        "description": "Určenie nivelačného prevýšenia",
+        "name": "1. stanovisko"
       },
       {
         "coordinates": [50.02712, 16.44746],
@@ -85,8 +85,8 @@
       },
       {
         "coordinates": [50.0395, 16.43087],
-        "description": "",
-        "name": ""
+        "description": "Trigonometrické určenie výšky predmetu",
+        "name": "2. stanovisko"
       },
       {
         "coordinates": [50.04228, 16.43101],
@@ -105,8 +105,8 @@
       },
       {
         "coordinates": [50.05221, 16.43558],
-        "description": "",
-        "name": ""
+        "description": "Centrácia a horizontácia prístroja",
+        "name": "3. stanovisko"
       },
       {
         "coordinates": [50.05569, 16.43521],
@@ -145,8 +145,8 @@
       },
       {
         "coordinates": [50.04618, 16.46529],
-        "description": "",
-        "name": ""
+        "description": "Trigonometrické určenie dĺžky predmetu",
+        "name": "4. stanovisko"
       },
       {
         "coordinates": [50.04851, 16.46298],
@@ -155,12 +155,12 @@
       },
       {
         "coordinates": [50.05402, 16.47311],
-        "description": "",
-        "name": ""
+        "description": "Určenie výmery",
+        "name": "5. stanovisko"
       },
       {
         "coordinates": [50.0521, 16.47967],
-        "description": "",
+        "description": "Obec Lukavice",
         "name": "Cieľ"
       }
     ]
